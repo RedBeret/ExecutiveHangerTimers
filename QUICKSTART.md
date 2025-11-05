@@ -23,7 +23,7 @@ That's it! The app is now running locally.
 
 1. **Update repository name** in `vite.config.js`:
    ```js
-   base: '/starcitizenhangers/',  // ← Your repo name
+   base: '/',  // Use '/' for custom domain, or '/repo-name/' for GitHub Pages subdomain
    ```
 
 2. **Push to GitHub:**
@@ -32,7 +32,7 @@ That's it! The app is now running locally.
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/yourusername/starcitizenhangers.git
+   git remote add origin https://github.com/RedBeret/ExecutiveHangerTimers.git
    git push -u origin main
    ```
 
@@ -42,7 +42,7 @@ That's it! The app is now running locally.
 npm run deploy
 ```
 
-Your site will be live at: `https://yourusername.github.io/starcitizenhangers/`
+Your site will be live at: `https://cztimer.com`
 
 ## 🌐 Custom Domain (Optional)
 
@@ -77,7 +77,7 @@ Your site will be live at: `https://yourusername.github.io/starcitizenhangers/`
 
    Type: CNAME
    Host: www
-   Value: yourusername.github.io
+   Value: redberet.github.io
    ```
 
 3. In GitHub repo settings:
@@ -120,8 +120,8 @@ npm run build
 ## 📚 Next Steps
 
 - Read [README.md](README.md) for full documentation
-- See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for advanced deployment
-- Check [CLAUDE.md](CLAUDE.md) for development guidelines
+- Check [LICENSE](LICENSE) for usage terms
+- Star the repo on GitHub if you find it useful!
 
 ## 🎮 Using the App
 
