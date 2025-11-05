@@ -44,8 +44,8 @@ A comprehensive web application for tracking Star Citizen's Executive Hangar cyc
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/starcitizenhangers.git
-cd starcitizenhangers
+git clone https://github.com/RedBeret/ExecutiveHangerTimers.git
+cd ExecutiveHangerTimers
 
 # Install dependencies
 npm install
@@ -100,12 +100,12 @@ git subtree push --prefix dist origin gh-pages
    - Source: Deploy from a branch
    - Branch: `gh-pages` / `root`
 
-Your site will be live at `https://yourusername.github.io/starcitizenhangers/`
+Your site will be live at `https://cztimer.com`
 
 ## 🏗️ Project Structure
 
 ```
-starcitizenhangers/
+ExecutiveHangerTimers/
 ├── src/
 │   ├── components/         # React components
 │   │   ├── ExecutiveHangar.jsx
@@ -207,8 +207,8 @@ Timer accuracy depends on your system clock. Use at your own risk. Game mechanic
 
 ## 📞 Support
 
-- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/yourusername/starcitizenhangers/issues)
-- 💬 **Discussions:** [GitHub Discussions](https://github.com/yourusername/starcitizenhangers/discussions)
+- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/RedBeret/ExecutiveHangerTimers/issues)
+- 💬 **Discussions:** [GitHub Discussions](https://github.com/RedBeret/ExecutiveHangerTimers/discussions)
 - 🌟 **Star the repo** if you find it useful!
 
 ---
