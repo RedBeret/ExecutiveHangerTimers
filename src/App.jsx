@@ -8,7 +8,7 @@ import { ContestedZonesPage } from './pages/ContestedZonesPage'
 
 function App() {
   return (
-    <Router basename="/starcitizenhangers">
+    <Router>
       <div className="min-h-screen bg-dark-950 flex flex-col">
         {/* Navigation */}
         <Navigation />
