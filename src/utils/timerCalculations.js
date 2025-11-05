@@ -7,9 +7,10 @@ const GREEN_PHASE_MS = 60 * 60 * 1000 // 60 minutes
 const BLACK_PHASE_MS = 5 * 60 * 1000 // 5 minutes
 
 // Reference epoch: A known time when the cycle started
-// This should be calibrated based on community data
-// Using a reference from 2025-01-01 00:00:00 UTC as baseline
-const REFERENCE_EPOCH = new Date('2025-01-01T00:00:00.000Z').getTime()
+// Calibrated based on community timer data (contestedzonetimers.com)
+// Updated: Nov 4, 2025 for SC Patch 4.3.2
+// Reference: September 13, 2025 12:44:48 UTC
+const REFERENCE_EPOCH = 1757767488000
 
 export const PHASES = {
   RED: 'RED',
