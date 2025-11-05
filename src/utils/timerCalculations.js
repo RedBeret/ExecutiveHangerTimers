@@ -7,10 +7,11 @@ const GREEN_PHASE_MS = 60 * 60 * 1000 // 60 minutes
 const BLACK_PHASE_MS = 5 * 60 * 1000 // 5 minutes
 
 // Reference epoch: A known time when the cycle started
-// Calibrated based on community timer data (exec.xyxyll.com)
-// Updated: Nov 5, 2025 for SC Patch 4.3.2
-// Reference: November 5, 2025 01:22:36 UTC
-const REFERENCE_EPOCH = 1762305756624
+// Calibrated based on exec.xyxyll.com schedule (cycle 153)
+// Updated: Nov 4, 2025 for SC Patch 4.3.2-LIVE
+// Reference: November 5, 2025 01:21:57 UTC (RED phase start)
+// Next GREEN: November 5, 2025 03:21:57 UTC
+const REFERENCE_EPOCH = 1762305717000
 
 export const PHASES = {
   RED: 'RED',
