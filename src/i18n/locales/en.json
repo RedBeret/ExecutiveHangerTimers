@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "executiveHangars": "Executive Hangars",
+    "contestedZones": "Contested Zones",
+    "hangarTracker": "Star Citizen Hangar Tracker"
+  },
+  "home": {
+    "title": "Pyro Timer Dashboard",
+    "subtitle": "All your Star Citizen timers at a glance",
+    "about": {
+      "title": "About This Tool",
+      "description": "<strong>Pyro Timer</strong> is a comprehensive fan-made tool for Star Citizen's contested zone operations in the Pyro system. Track executive hangar cycles, keycard printer cooldowns, and compboard collection all in one place.",
+      "features": "Features",
+      "featuresList": {
+        "precision": "High-precision executive hangar timer (±1 second accuracy)",
+        "czTimers": "All contested zone objective timers (Checkmate, Orbituary, Ruin Station)",
+        "compboards": "Compboard collection tracker with progress visualization",
+        "localStorage": "Local storage - your data never leaves your device",
+        "offline": "Works offline after first load",
+        "noLogin": "No login or account required"
+      },
+      "howItWorks": "How It Works",
+      "howItWorksText": "All timers run in your browser using React and JavaScript. The executive hangar timer calculates the current cycle phase based on the known 185-minute cycle. Contested zone timers and your checklist are saved in your browser's local storage, so they persist even if you close the page.",
+      "credits": "Credits & Sources",
+      "creditsList": {
+        "algorithm": "<strong>Timer Algorithm:</strong> Based on Xyxyll's research (exec.xyxyll.com)",
+        "gameData": "<strong>Game Data:</strong> Star Citizen Wiki & community testing",
+        "inspiration": "<strong>Inspiration:</strong> ContestedZoneTimers.com, Exectimer.com",
+        "game": "<strong>Game:</strong> Star Citizen by Cloud Imperium Games"
+      },
+      "disclaimer": "<strong>Disclaimer:</strong> This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games. Timer accuracy depends on your system clock being properly synced. Use at your own risk."
+    }
+  },
+  "execHangar": {
+    "title": "Executive Hangar Status",
+    "subtitle": "PYAM-EXHANG Global Cycle • Synchronized Across All Servers",
+    "loading": "Loading hangar status...",
+    "timeUntil": "Time Until",
+    "opening": "Opening",
+    "closing": "Closing",
+    "cycleProgress": "Cycle Progress",
+    "syncTimer": "Sync Timer",
+    "resetSync": "Reset Sync",
+    "precisionTiming": "Precision Timing:",
+    "syncWhenSee": "Sync when you see the hangar change in-game",
+    "syncPanel": {
+      "title": "Sync to In-Game Phase",
+      "description": "When you see the hangar change phases in Star Citizen, click the button below to sync the timer to the current game state.",
+      "green": "GREEN",
+      "greenOpened": "Hangar Just Opened",
+      "greenDesc": "(Can insert boards)",
+      "red": "RED",
+      "redClosed": "Hangar Just Closed",
+      "redDesc": "(LEDs counting down)",
+      "black": "BLACK",
+      "blackReset": "Hangar Resetting",
+      "blackDesc": "(Transition phase)",
+      "tip": "<strong>Tip:</strong> For best accuracy, sync the moment you see the phase change. The timer will remember your sync across browser sessions."
+    },
+    "syncActive": "Manual Sync Active:",
+    "offsetApplied": "Offset of {{offset}} seconds applied"
+  },
+  "phases": {
+    "green": "GREEN PHASE",
+    "greenDesc": "Hangar Open - Insert Compboards",
+    "red": "RED PHASE",
+    "redDesc": "Hangar Closed - Waiting",
+    "black": "BLACK PHASE",
+    "blackDesc": "Transition - Reset",
+    "nextPhase": "Next: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "Contested Zone Timers",
+    "subtitle": "Track objectives across Pyro's contested territories",
+    "addTimer": "Add Timer",
+    "noTimers": "No active timers. Click 'Add Timer' to start tracking.",
+    "selectZone": "Select Zone",
+    "selectObjective": "Select Objective",
+    "startTimer": "Start Timer",
+    "cancel": "Cancel",
+    "timeRemaining": "Time Remaining",
+    "expired": "EXPIRED",
+    "deleteTimer": "Delete timer",
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    }
+  },
+  "compboards": {
+    "title": "Compboard Collection Tracker",
+    "subtitle": "Track your progress collecting compboards across Pyro",
+    "progress": "{{collected}} of {{total}} Collected",
+    "resetAll": "Reset All",
+    "confirmReset": "Are you sure you want to reset all progress?"
+  },
+  "quickReference": {
+    "title": "Quick Reference Guide",
+    "execHangar": {
+      "title": "Executive Hangar",
+      "cycle": "185-minute repeating cycle",
+      "greenPhase": "<strong>GREEN (153min):</strong> Hangar open, insert compboards",
+      "redPhase": "<strong>RED (29min):</strong> Hangar closed, LEDs count down",
+      "blackPhase": "<strong>BLACK (3min):</strong> Transition, hangar resets"
+    },
+    "contestedZones": {
+      "title": "Contested Zones",
+      "checkmate": "<strong>Checkmate:</strong> 30-40 min objectives",
+      "orbituary": "<strong>Orbituary:</strong> 20-30 min objectives",
+      "ruinStation": "<strong>Ruin Station:</strong> 25-35 min objectives"
+    },
+    "tips": {
+      "title": "Tips",
+      "sync": "Sync the executive hangar timer when you see phase changes in-game",
+      "localStorage": "All data is saved locally in your browser",
+      "offline": "Works offline after the first load"
+    }
+  },
+  "footer": {
+    "madeBy": "Made by",
+    "forCommunity": "for the Star Citizen community",
+    "notAffiliated": "Not affiliated with Cloud Imperium Games"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "reset": "Reset",
+    "confirm": "Confirm"
+  }
+}
