@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "executiveHangars": "Hangars Exécutifs",
+    "contestedZones": "Zones Contestées",
+    "hangarTracker": "Suivi des Hangars Star Citizen"
+  },
+  "home": {
+    "title": "Tableau de bord Pyro Timer",
+    "subtitle": "Tous vos minuteurs Star Citizen en un coup d'œil",
+    "about": {
+      "title": "À propos de cet outil",
+      "description": "<strong>Pyro Timer</strong> est un outil complet créé par des fans pour les opérations dans les zones contestées de Star Citizen dans le système Pyro. Suivez les cycles des hangars exécutifs, les temps de recharge des imprimantes de cartes-clés et la collecte de compboards en un seul endroit.",
+      "features": "Fonctionnalités",
+      "featuresList": {
+        "precision": "Minuteur de hangar exécutif haute précision (précision ±1 seconde)",
+        "czTimers": "Tous les minuteurs d'objectifs de zones contestées (Checkmate, Orbituary, Ruin Station)",
+        "compboards": "Suivi de la collecte de compboards avec visualisation de la progression",
+        "localStorage": "Stockage local - vos données ne quittent jamais votre appareil",
+        "offline": "Fonctionne hors ligne après le premier chargement",
+        "noLogin": "Aucune connexion ou compte requis"
+      },
+      "howItWorks": "Comment ça marche",
+      "howItWorksText": "Tous les minuteurs fonctionnent dans votre navigateur en utilisant React et JavaScript. Le minuteur du hangar exécutif calcule la phase du cycle actuel en fonction du cycle connu de 185 minutes. Les minuteurs de zones contestées et votre liste de contrôle sont enregistrés dans le stockage local de votre navigateur, ils persistent même si vous fermez la page.",
+      "credits": "Crédits & Sources",
+      "creditsList": {
+        "algorithm": "<strong>Algorithme du minuteur:</strong> Basé sur les recherches de Xyxyll (exec.xyxyll.com)",
+        "gameData": "<strong>Données de jeu:</strong> Star Citizen Wiki & tests communautaires",
+        "inspiration": "<strong>Inspiration:</strong> ContestedZoneTimers.com, Exectimer.com",
+        "game": "<strong>Jeu:</strong> Star Citizen par Cloud Imperium Games"
+      },
+      "disclaimer": "<strong>Avertissement:</strong> Ceci est un outil non officiel créé par des fans, non affilié ou approuvé par Cloud Imperium Games. La précision du minuteur dépend de la synchronisation correcte de votre horloge système. Utilisation à vos propres risques."
+    }
+  },
+  "execHangar": {
+    "title": "Statut du Hangar Exécutif",
+    "subtitle": "Cycle Global PYAM-EXHANG • Synchronisé sur tous les serveurs",
+    "loading": "Chargement du statut du hangar...",
+    "timeUntil": "Temps jusqu'à",
+    "opening": "l'ouverture",
+    "closing": "la fermeture",
+    "cycleProgress": "Progression du cycle",
+    "syncTimer": "Synchroniser le minuteur",
+    "resetSync": "Réinitialiser la synchro",
+    "precisionTiming": "Timing de précision:",
+    "syncWhenSee": "Synchronisez lorsque vous voyez le hangar changer dans le jeu",
+    "syncPanel": {
+      "title": "Synchroniser avec la phase en jeu",
+      "description": "Lorsque vous voyez le hangar changer de phase dans Star Citizen, cliquez sur le bouton ci-dessous pour synchroniser le minuteur avec l'état actuel du jeu.",
+      "green": "VERT",
+      "greenOpened": "Hangar vient de s'ouvrir",
+      "greenDesc": "(Peut insérer des boards)",
+      "red": "ROUGE",
+      "redClosed": "Hangar vient de se fermer",
+      "redDesc": "(LEDs en compte à rebours)",
+      "black": "NOIR",
+      "blackReset": "Hangar en réinitialisation",
+      "blackDesc": "(Phase de transition)",
+      "tip": "<strong>Astuce:</strong> Pour une meilleure précision, synchronisez au moment où vous voyez le changement de phase. Le minuteur mémorisera votre synchronisation entre les sessions du navigateur."
+    },
+    "syncActive": "Synchronisation manuelle active:",
+    "offsetApplied": "Décalage de {{offset}} secondes appliqué"
+  },
+  "phases": {
+    "green": "PHASE VERTE",
+    "greenDesc": "Hangar ouvert - Insérer des compboards",
+    "red": "PHASE ROUGE",
+    "redDesc": "Hangar fermé - En attente",
+    "black": "PHASE NOIRE",
+    "blackDesc": "Transition - Réinitialisation",
+    "nextPhase": "Suivante: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "Minuteurs de Zones Contestées",
+    "subtitle": "Suivez les objectifs à travers les territoires contestés de Pyro",
+    "addTimer": "Ajouter un minuteur",
+    "noTimers": "Aucun minuteur actif. Cliquez sur 'Ajouter un minuteur' pour commencer le suivi.",
+    "selectZone": "Sélectionner une zone",
+    "selectObjective": "Sélectionner un objectif",
+    "startTimer": "Démarrer le minuteur",
+    "cancel": "Annuler",
+    "timeRemaining": "Temps restant",
+    "expired": "EXPIRÉ",
+    "deleteTimer": "Supprimer le minuteur",
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    }
+  },
+  "compboards": {
+    "title": "Suivi de la collecte de Compboards",
+    "subtitle": "Suivez votre progression dans la collecte de compboards à travers Pyro",
+    "progress": "{{collected}} sur {{total}} collectés",
+    "resetAll": "Tout réinitialiser",
+    "confirmReset": "Êtes-vous sûr de vouloir réinitialiser toute la progression?"
+  },
+  "quickReference": {
+    "title": "Guide de référence rapide",
+    "execHangar": {
+      "title": "Hangar Exécutif",
+      "cycle": "Cycle répétitif de 185 minutes",
+      "greenPhase": "<strong>VERT (153min):</strong> Hangar ouvert, insérer des compboards",
+      "redPhase": "<strong>ROUGE (29min):</strong> Hangar fermé, LEDs en compte à rebours",
+      "blackPhase": "<strong>NOIR (3min):</strong> Transition, hangar réinitialise"
+    },
+    "contestedZones": {
+      "title": "Zones Contestées",
+      "checkmate": "<strong>Checkmate:</strong> Objectifs de 30-40 min",
+      "orbituary": "<strong>Orbituary:</strong> Objectifs de 20-30 min",
+      "ruinStation": "<strong>Ruin Station:</strong> Objectifs de 25-35 min"
+    },
+    "tips": {
+      "title": "Conseils",
+      "sync": "Synchronisez le minuteur du hangar exécutif lorsque vous voyez les changements de phase en jeu",
+      "localStorage": "Toutes les données sont enregistrées localement dans votre navigateur",
+      "offline": "Fonctionne hors ligne après le premier chargement"
+    }
+  },
+  "footer": {
+    "madeBy": "Créé par",
+    "forCommunity": "pour la communauté Star Citizen",
+    "notAffiliated": "Non affilié à Cloud Imperium Games"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "reset": "Réinitialiser",
+    "confirm": "Confirmer"
+  }
+}

@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Home, Rocket, Swords } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Navigation() {
   const location = useLocation()
+  const { t } = useTranslation()
 
   const navItems = [
-    { path: '/', label: 'Dashboard', icon: Home },
-    { path: '/executive-hangars', label: 'Executive Hangars', icon: Rocket },
-    { path: '/contested-zones', label: 'Contested Zones', icon: Swords },
+    { path: '/', label: t('nav.dashboard'), icon: Home },
+    { path: '/executive-hangars', label: t('nav.executiveHangars'), icon: Rocket },
+    { path: '/contested-zones', label: t('nav.contestedZones'), icon: Swords },
   ]
 
   return (
@@ -24,12 +27,12 @@ export function Navigation() {
               <h1 className="text-xl font-bold bg-gradient-to-r from-accent-blue to-accent-green bg-clip-text text-transparent">
                 Pyro Timer
               </h1>
-              <p className="text-xs text-gray-500">Star Citizen Hangar Tracker</p>
+              <p className="text-xs text-gray-500">{t('nav.hangarTracker')}</p>
             </div>
           </Link>
 
-          {/* Navigation Tabs */}
-          <div className="flex gap-2">
+          {/* Navigation Tabs and Language Switcher */}
+          <div className="flex items-center gap-2 sm:gap-3">
             {navItems.map(({ path, label, icon: Icon }) => {
               const isActive = location.pathname === path
               return (
@@ -52,6 +55,9 @@ export function Navigation() {
                 </Link>
               )
             })}
+
+            {/* Language Switcher */}
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

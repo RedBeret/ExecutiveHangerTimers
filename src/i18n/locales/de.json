@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "executiveHangars": "Executive Hangars",
+    "contestedZones": "Umkämpfte Zonen",
+    "hangarTracker": "Star Citizen Hangar Tracker"
+  },
+  "home": {
+    "title": "Pyro Timer Dashboard",
+    "subtitle": "Alle deine Star Citizen Timer auf einen Blick",
+    "about": {
+      "title": "Über dieses Tool",
+      "description": "<strong>Pyro Timer</strong> ist ein umfassendes Fan-Tool für Star Citizen Operationen in umkämpften Zonen im Pyro-System. Verfolge Executive Hangar Zyklen, Schlüsselkarten-Drucker Abklingzeiten und Compboard-Sammlung an einem Ort.",
+      "features": "Funktionen",
+      "featuresList": {
+        "precision": "Hochpräziser Executive Hangar Timer (±1 Sekunde Genauigkeit)",
+        "czTimers": "Alle Timer für umkämpfte Zonen (Checkmate, Orbituary, Ruin Station)",
+        "compboards": "Compboard-Sammelfortschritt mit Visualisierung",
+        "localStorage": "Lokale Speicherung - deine Daten verlassen nie dein Gerät",
+        "offline": "Funktioniert offline nach dem ersten Laden",
+        "noLogin": "Kein Login oder Konto erforderlich"
+      },
+      "howItWorks": "Wie es funktioniert",
+      "howItWorksText": "Alle Timer laufen in deinem Browser mit React und JavaScript. Der Executive Hangar Timer berechnet die aktuelle Zyklusphase basierend auf dem bekannten 185-Minuten-Zyklus. Timer für umkämpfte Zonen und deine Checkliste werden im lokalen Speicher deines Browsers gespeichert und bleiben auch nach dem Schließen der Seite erhalten.",
+      "credits": "Credits & Quellen",
+      "creditsList": {
+        "algorithm": "<strong>Timer Algorithmus:</strong> Basierend auf Xyxylls Forschung (exec.xyxyll.com)",
+        "gameData": "<strong>Spieldaten:</strong> Star Citizen Wiki & Community-Tests",
+        "inspiration": "<strong>Inspiration:</strong> ContestedZoneTimers.com, Exectimer.com",
+        "game": "<strong>Spiel:</strong> Star Citizen von Cloud Imperium Games"
+      },
+      "disclaimer": "<strong>Haftungsausschluss:</strong> Dies ist ein inoffizielles Fan-Tool, nicht verbunden mit oder unterstützt von Cloud Imperium Games. Die Timer-Genauigkeit hängt davon ab, dass deine Systemuhr korrekt synchronisiert ist. Nutzung auf eigene Gefahr."
+    }
+  },
+  "execHangar": {
+    "title": "Executive Hangar Status",
+    "subtitle": "PYAM-EXHANG Globaler Zyklus • Über alle Server synchronisiert",
+    "loading": "Lade Hangar-Status...",
+    "timeUntil": "Zeit bis",
+    "opening": "Öffnung",
+    "closing": "Schließung",
+    "cycleProgress": "Zyklusfortschritt",
+    "syncTimer": "Timer synchronisieren",
+    "resetSync": "Sync zurücksetzen",
+    "precisionTiming": "Präzisions-Timing:",
+    "syncWhenSee": "Synchronisiere wenn du die Hangar-Änderung im Spiel siehst",
+    "syncPanel": {
+      "title": "Mit In-Game Phase synchronisieren",
+      "description": "Wenn du siehst, dass der Hangar die Phase in Star Citizen wechselt, klicke auf die Schaltfläche unten, um den Timer mit dem aktuellen Spielzustand zu synchronisieren.",
+      "green": "GRÜN",
+      "greenOpened": "Hangar gerade geöffnet",
+      "greenDesc": "(Boards einfügen möglich)",
+      "red": "ROT",
+      "redClosed": "Hangar gerade geschlossen",
+      "redDesc": "(LEDs zählen runter)",
+      "black": "SCHWARZ",
+      "blackReset": "Hangar setzt zurück",
+      "blackDesc": "(Übergangsphase)",
+      "tip": "<strong>Tipp:</strong> Für beste Genauigkeit, synchronisiere in dem Moment, in dem du den Phasenwechsel siehst. Der Timer merkt sich deine Synchronisation über Browser-Sitzungen hinweg."
+    },
+    "syncActive": "Manuelle Synchronisation aktiv:",
+    "offsetApplied": "Versatz von {{offset}} Sekunden angewendet"
+  },
+  "phases": {
+    "green": "GRÜNE PHASE",
+    "greenDesc": "Hangar offen - Compboards einfügen",
+    "red": "ROTE PHASE",
+    "redDesc": "Hangar geschlossen - Warten",
+    "black": "SCHWARZE PHASE",
+    "blackDesc": "Übergang - Zurücksetzen",
+    "nextPhase": "Nächste: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "Timer für umkämpfte Zonen",
+    "subtitle": "Verfolge Ziele in Pyros umkämpften Gebieten",
+    "addTimer": "Timer hinzufügen",
+    "noTimers": "Keine aktiven Timer. Klicke auf 'Timer hinzufügen', um mit der Verfolgung zu beginnen.",
+    "selectZone": "Zone auswählen",
+    "selectObjective": "Ziel auswählen",
+    "startTimer": "Timer starten",
+    "cancel": "Abbrechen",
+    "timeRemaining": "Verbleibende Zeit",
+    "expired": "ABGELAUFEN",
+    "deleteTimer": "Timer löschen",
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    }
+  },
+  "compboards": {
+    "title": "Compboard-Sammel-Tracker",
+    "subtitle": "Verfolge deinen Fortschritt beim Sammeln von Compboards in Pyro",
+    "progress": "{{collected}} von {{total}} gesammelt",
+    "resetAll": "Alles zurücksetzen",
+    "confirmReset": "Bist du sicher, dass du den gesamten Fortschritt zurücksetzen möchtest?"
+  },
+  "quickReference": {
+    "title": "Schnellreferenz",
+    "execHangar": {
+      "title": "Executive Hangar",
+      "cycle": "185-Minuten wiederkehrender Zyklus",
+      "greenPhase": "<strong>GRÜN (153min):</strong> Hangar offen, Compboards einfügen",
+      "redPhase": "<strong>ROT (29min):</strong> Hangar geschlossen, LEDs zählen runter",
+      "blackPhase": "<strong>SCHWARZ (3min):</strong> Übergang, Hangar setzt zurück"
+    },
+    "contestedZones": {
+      "title": "Umkämpfte Zonen",
+      "checkmate": "<strong>Checkmate:</strong> 30-40 min Ziele",
+      "orbituary": "<strong>Orbituary:</strong> 20-30 min Ziele",
+      "ruinStation": "<strong>Ruin Station:</strong> 25-35 min Ziele"
+    },
+    "tips": {
+      "title": "Tipps",
+      "sync": "Synchronisiere den Executive Hangar Timer, wenn du Phasenwechsel im Spiel siehst",
+      "localStorage": "Alle Daten werden lokal in deinem Browser gespeichert",
+      "offline": "Funktioniert offline nach dem ersten Laden"
+    }
+  },
+  "footer": {
+    "madeBy": "Erstellt von",
+    "forCommunity": "für die Star Citizen Community",
+    "notAffiliated": "Nicht verbunden mit Cloud Imperium Games"
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "reset": "Zurücksetzen",
+    "confirm": "Bestätigen"
+  }
+}
