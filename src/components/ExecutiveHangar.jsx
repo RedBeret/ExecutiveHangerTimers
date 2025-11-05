@@ -35,18 +35,18 @@ export function ExecutiveHangar() {
       {/* Background gradient effect */}
       <div className={`absolute inset-0 ${phaseGradient} rounded-2xl opacity-30 blur-3xl pointer-events-none`} />
 
-      <div className={`relative card p-8 border-2 ${phaseGlow} shadow-2xl`}>
+      <div className={`relative card p-4 sm:p-6 md:p-8 border-2 ${phaseGlow} shadow-2xl`}>
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <Rocket className="w-8 h-8 text-accent-blue" />
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-accent-blue to-accent-green bg-clip-text text-transparent">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <Rocket className="w-6 h-6 sm:w-8 sm:h-8 text-accent-blue" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent-blue to-accent-green bg-clip-text text-transparent">
               Executive Hangar Status
             </h2>
           </div>
           <div className="flex items-center justify-center gap-2 text-gray-400">
-            <Globe className="w-4 h-4" />
-            <p className="text-sm font-medium">PYAM-EXHANG Global Cycle • Synchronized Across All Servers</p>
+            <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
+            <p className="text-xs sm:text-sm font-medium">PYAM-EXHANG Global Cycle • Synchronized Across All Servers</p>
           </div>
         </div>
 
@@ -54,8 +54,8 @@ export function ExecutiveHangar() {
           {/* Main Timer Display - LARGE AND PROMINENT */}
           <div className="relative">
             {/* Glassmorphism container */}
-            <div className="backdrop-blur-md bg-dark-800/60 rounded-2xl p-10 border border-dark-700/50">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className="backdrop-blur-md bg-dark-800/60 rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 border border-dark-700/50">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-10">
                 {/* Phase Badge */}
                 <div className="flex-1 flex justify-center lg:justify-start">
                   <PhaseBadge phase={status.phase} nextPhase={status.nextPhase} />
@@ -63,16 +63,13 @@ export function ExecutiveHangar() {
 
                 {/* MASSIVE Countdown */}
                 <div className="text-center lg:text-right">
-                  <div className="text-sm text-gray-400 font-medium mb-3 uppercase tracking-wider">
+                  <div className="text-xs sm:text-sm text-gray-400 font-medium mb-2 sm:mb-3 uppercase tracking-wider">
                     Time Until {status.phase === PHASES.GREEN ? 'Closing' : 'Opening'}
                   </div>
-                  <div
-                    className="font-mono font-black tracking-tight leading-none"
-                    style={{ fontSize: '5.5rem' }}
-                  >
+                  <div className="font-mono font-black tracking-tight leading-none text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                     <CountdownTimer timeRemaining={status.timeRemaining} phase={status.phase} />
                   </div>
-                  <div className="mt-3 text-xs text-gray-500 font-medium">
+                  <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-gray-500 font-medium">
                     Cycle Progress: {Math.round(status.cycleProgress)}%
                   </div>
                 </div>
