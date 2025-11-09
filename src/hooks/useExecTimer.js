@@ -33,36 +33,33 @@ export function useExecTimer() {
 
   // Sync to a specific phase starting NOW
   const syncToPhase = (targetPhase) => {
-    const EXEC_CYCLE_MS = 185 * 60 * 1000 + 699
-    const RED_PHASE_MS = 120 * 60 * 1000
-    const GREEN_PHASE_MS = 60 * 60 * 1000
+    const OPEN_DURATION = 3900496 // 65 minutes - GREEN phase
+    const CLOSE_DURATION = 7200917 // 120 minutes - RED phase
+    const CYCLE_DURATION = OPEN_DURATION + CLOSE_DURATION
+    const INITIAL_OPEN_TIME = 1760636604402
 
     const now = Date.now()
-    const REFERENCE_EPOCH = new Date('2025-01-01T00:00:00.000Z').getTime()
-    const timeSinceRef = now - REFERENCE_EPOCH
-    const currentPositionInCycle = timeSinceRef % EXEC_CYCLE_MS
+    const timeSinceInitial = now - INITIAL_OPEN_TIME
+    const currentPositionInCycle = timeSinceInitial % CYCLE_DURATION
 
     let targetPositionInCycle
 
-    if (targetPhase === 'RED') {
-      // Red phase starts at position 0
+    if (targetPhase === 'GREEN') {
+      // Green phase starts at position 0 (cycle starts with GREEN/ONLINE)
       targetPositionInCycle = 0
-    } else if (targetPhase === 'GREEN') {
-      // Green phase starts after red phase (120 minutes)
-      targetPositionInCycle = RED_PHASE_MS
-    } else if (targetPhase === 'BLACK') {
-      // Black phase starts after red + green (180 minutes)
-      targetPositionInCycle = RED_PHASE_MS + GREEN_PHASE_MS
+    } else if (targetPhase === 'RED') {
+      // Red phase starts after green phase (65 minutes)
+      targetPositionInCycle = OPEN_DURATION
     }
 
     // Calculate the offset needed to shift current position to target position
     let offsetMs = targetPositionInCycle - currentPositionInCycle
 
     // Normalize offset to be within one cycle
-    if (offsetMs < -EXEC_CYCLE_MS / 2) {
-      offsetMs += EXEC_CYCLE_MS
-    } else if (offsetMs > EXEC_CYCLE_MS / 2) {
-      offsetMs -= EXEC_CYCLE_MS
+    if (offsetMs < -CYCLE_DURATION / 2) {
+      offsetMs += CYCLE_DURATION
+    } else if (offsetMs > CYCLE_DURATION / 2) {
+      offsetMs -= CYCLE_DURATION
     }
 
     const offsetSeconds = Math.round(offsetMs / 1000)

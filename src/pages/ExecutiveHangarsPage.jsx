@@ -30,7 +30,7 @@ export function ExecutiveHangarsPage() {
               <h3 className="font-bold text-lg">Hangar Cycle</h3>
             </div>
             <p className="text-sm text-gray-400">
-              185-minute cycle with Red (120min), Green (60min), and Black (5min) phases
+              185-minute cycle: Green (65min open) → Red (120min closed)
             </p>
           </div>
 
@@ -106,9 +106,8 @@ export function ExecutiveHangarsPage() {
             <div>
               <h3 className="font-bold text-lg mb-2 text-accent-red">Danger Zones</h3>
               <ul className="space-y-2 ml-5 list-disc text-sm">
-                <li>⚠️ Being inside during Black phase = instant death</li>
-                <li>⚠️ All ships inside are destroyed when doors close</li>
-                <li>⚠️ Exit before the countdown reaches zero!</li>
+                <li>⚠️ All ships inside are destroyed when doors close (Red phase)</li>
+                <li>⚠️ Exit before the Green phase countdown reaches zero!</li>
                 <li>⚠️ Have escape routes planned</li>
               </ul>
             </div>
