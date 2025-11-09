@@ -23,13 +23,11 @@ export function ExecutiveHangar() {
   const phaseGradient = {
     [PHASES.RED]: 'bg-gradient-radial-red',
     [PHASES.GREEN]: 'bg-gradient-radial-green',
-    [PHASES.BLACK]: '',
   }[status.phase]
 
   const phaseGlow = {
     [PHASES.RED]: 'shadow-accent-red/20',
     [PHASES.GREEN]: 'shadow-accent-green/20',
-    [PHASES.BLACK]: '',
   }[status.phase]
 
   return (
@@ -152,19 +150,6 @@ export function ExecutiveHangar() {
                     <div className="text-xs opacity-80">{t('execHangar.syncPanel.redClosed')}</div>
                     <div className="text-xs opacity-60">{t('execHangar.syncPanel.redDesc')}</div>
                   </button>
-
-                  <button
-                    onClick={() => {
-                      syncToPhase('BLACK')
-                      setShowSyncPanel(false)
-                    }}
-                    className="bg-gray-500/20 hover:bg-gray-500/30 border-2 border-gray-500/50 text-gray-300 rounded-lg p-4 transition-all duration-300 hover:scale-105 active:scale-95 min-h-[48px]"
-                    aria-label="Sync to black phase reset now"
-                  >
-                    <div className="font-bold text-lg mb-1">⚫ {t('execHangar.syncPanel.black')}</div>
-                    <div className="text-xs opacity-80">{t('execHangar.syncPanel.blackReset')}</div>
-                    <div className="text-xs opacity-60">{t('execHangar.syncPanel.blackDesc')}</div>
-                  </button>
                 </div>
 
                 <div className="text-xs text-gray-500 bg-dark-900/50 rounded p-3 border-l-4 border-accent-blue/50">
@@ -199,13 +184,11 @@ function CountdownTimer({ timeRemaining, phase }) {
   const phaseColor = {
     [PHASES.RED]: 'text-accent-red',
     [PHASES.GREEN]: 'text-accent-green',
-    [PHASES.BLACK]: 'text-gray-400',
   }[phase]
 
   const glowAnimation = {
     [PHASES.RED]: 'animate-glow-red',
     [PHASES.GREEN]: 'animate-glow-green',
-    [PHASES.BLACK]: '',
   }[phase]
 
   return (

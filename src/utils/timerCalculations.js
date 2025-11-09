@@ -1,61 +1,66 @@
 // Timer calculation utilities for Executive Hangar and other timers
 
-// Executive Hangar Constants (based on Xyxyll's research)
-const EXEC_CYCLE_MS = 185 * 60 * 1000 + 699 // 185 minutes + 0.699 seconds
-const RED_PHASE_MS = 120 * 60 * 1000 // 120 minutes
-const GREEN_PHASE_MS = 60 * 60 * 1000 // 60 minutes
-const BLACK_PHASE_MS = 5 * 60 * 1000 // 5 minutes
+// Executive Hangar Constants (exact values from exec.xyxyll.com)
+// Updated: Oct 26, 2025 for SC Patch 4.3.2-LIVE (Server Version 10487514)
+const OPEN_DURATION = 3900496 // 65.008 minutes - GREEN/ONLINE phase
+const CLOSE_DURATION = 7200917 // 120.015 minutes - RED/OFFLINE phase
+const CYCLE_DURATION = OPEN_DURATION + CLOSE_DURATION // 11101413 ms = 185.024 minutes
 
-// Reference epoch: A known time when the cycle started
-// Calibrated based on exec.xyxyll.com schedule (cycle 153)
-// Updated: Nov 4, 2025 for SC Patch 4.3.2-LIVE
-// Reference: November 5, 2025 01:21:57 UTC (RED phase start)
-// Next GREEN: November 5, 2025 03:21:57 UTC
-const REFERENCE_EPOCH = 1762305717000
+// Reference epoch: Initial open time when GREEN/ONLINE phase started
+// 2025-10-16T13:43:24.402-04:00 (EDT) = 2025-10-16T17:43:24.402Z (UTC)
+const INITIAL_OPEN_TIME = 1760636604402
 
 export const PHASES = {
   RED: 'RED',
   GREEN: 'GREEN',
-  BLACK: 'BLACK',
 }
 
 export function calculateExecStatus(offsetSeconds = 0) {
   const now = Date.now() + (offsetSeconds * 1000)
-  const timeSinceRef = now - REFERENCE_EPOCH
-  const positionInCycle = timeSinceRef % EXEC_CYCLE_MS
+  const elapsedTimeSinceInitialOpen = now - INITIAL_OPEN_TIME
+  const timeInCurrentCycle = elapsedTimeSinceInitialOpen % CYCLE_DURATION
 
   let phase, timeRemaining, nextPhase, ledStates
 
-  if (positionInCycle < RED_PHASE_MS) {
-    // RED PHASE (Closed)
-    phase = PHASES.RED
-    timeRemaining = RED_PHASE_MS - positionInCycle
-    nextPhase = PHASES.GREEN
+  // LED thresholds based on exec.xyxyll.com
+  const thresholds = [
+    { min: 0, max: 12*60*1000, colors: ['green', 'green', 'green', 'green', 'green'] }, // Online 5G
+    { min: 12*60*1000, max: 24*60*1000, colors: ['green', 'green', 'green', 'green', 'empty'] }, // Online 4G1E
+    { min: 24*60*1000, max: 36*60*1000, colors: ['green', 'green', 'green', 'empty', 'empty'] }, // Online 3G2E
+    { min: 36*60*1000, max: 48*60*1000, colors: ['green', 'green', 'empty', 'empty', 'empty'] }, // Online 2G3E
+    { min: 48*60*1000, max: 60*60*1000, colors: ['green', 'empty', 'empty', 'empty', 'empty'] }, // Online 1G4E
+    { min: 60*60*1000, max: 65*60*1000, colors: ['empty', 'empty', 'empty', 'empty', 'empty'] }, // Online 5E
+    { min: 65*60*1000, max: 89*60*1000, colors: ['red', 'red', 'red', 'red', 'red'] }, // Offline 5R
+    { min: 89*60*1000, max: 113*60*1000, colors: ['green', 'red', 'red', 'red', 'red'] }, // Offline 1G4R
+    { min: 113*60*1000, max: 137*60*1000, colors: ['green', 'green', 'red', 'red', 'red'] }, // Offline 2G3R
+    { min: 137*60*1000, max: 161*60*1000, colors: ['green', 'green', 'green', 'red', 'red'] }, // Offline 3G2R
+    { min: 161*60*1000, max: 185*60*1000, colors: ['green', 'green', 'green', 'green', 'red'] } // Offline 4G1R
+  ]
 
-    // LEDs light up progressively during red phase (5 lights over 120 min = 24 min each)
-    const ledInterval = RED_PHASE_MS / 5
-    const ledsLit = Math.floor(positionInCycle / ledInterval)
-    ledStates = Array(5).fill(false).map((_, i) => i < ledsLit)
-
-  } else if (positionInCycle < RED_PHASE_MS + GREEN_PHASE_MS) {
-    // GREEN PHASE (Open - can insert compboards)
+  if (timeInCurrentCycle < OPEN_DURATION) {
+    // GREEN PHASE (Online - hangars are open, can insert compboards)
     phase = PHASES.GREEN
-    timeRemaining = (RED_PHASE_MS + GREEN_PHASE_MS) - positionInCycle
-    nextPhase = PHASES.BLACK
-
-    // All LEDs are green during green phase, but turn off progressively
-    // 5 lights over 60 min = 12 min each
-    const posInGreen = positionInCycle - RED_PHASE_MS
-    const ledInterval = GREEN_PHASE_MS / 5
-    const ledsOff = Math.floor(posInGreen / ledInterval)
-    ledStates = Array(5).fill(true).map((_, i) => i >= ledsOff)
-
-  } else {
-    // BLACK PHASE (Reset/Transition)
-    phase = PHASES.BLACK
-    timeRemaining = EXEC_CYCLE_MS - positionInCycle
+    timeRemaining = OPEN_DURATION - timeInCurrentCycle
     nextPhase = PHASES.RED
-    ledStates = Array(5).fill(false)
+  } else {
+    // RED PHASE (Offline - hangars are closed)
+    phase = PHASES.RED
+    const remainingCloseDuration = timeInCurrentCycle - OPEN_DURATION
+    timeRemaining = CLOSE_DURATION - remainingCloseDuration
+    nextPhase = PHASES.GREEN
+  }
+
+  // Calculate LED states based on position in cycle
+  const currentThreshold = thresholds.find(t => timeInCurrentCycle >= t.min && timeInCurrentCycle < t.max)
+  if (currentThreshold) {
+    ledStates = currentThreshold.colors.map(color => {
+      if (color === 'green') return true
+      if (color === 'red') return false
+      return null // empty/transparent
+    })
+  } else {
+    // Fallback if outside all thresholds
+    ledStates = [null, null, null, null, null]
   }
 
   return {
@@ -63,7 +68,7 @@ export function calculateExecStatus(offsetSeconds = 0) {
     timeRemaining,
     nextPhase,
     ledStates,
-    cycleProgress: (positionInCycle / EXEC_CYCLE_MS) * 100,
+    cycleProgress: (timeInCurrentCycle / CYCLE_DURATION) * 100,
   }
 }
 

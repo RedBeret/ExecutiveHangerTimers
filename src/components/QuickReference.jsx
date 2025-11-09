@@ -7,9 +7,8 @@ const references = [
     title: 'Executive Hangar Cycle',
     items: [
       'Total Cycle: 185 minutes (3h 5min)',
+      'Green Phase: ~65 min (OPEN - Insert boards now!)',
       'Red Phase: ~120 min (Closed - Do NOT insert boards)',
-      'Green Phase: ~60 min (OPEN - Insert boards now!)',
-      'Black Phase: ~5 min (Resetting)',
       'Synchronized globally across all servers',
     ],
   },

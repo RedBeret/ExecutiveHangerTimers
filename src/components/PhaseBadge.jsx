@@ -15,18 +15,11 @@ const phaseStyles = {
     borderColor: 'border-accent-green',
     icon: '🟢',
   },
-  [PHASES.BLACK]: {
-    color: 'bg-dark-600',
-    textColor: 'text-gray-100',
-    borderColor: 'border-dark-500',
-    icon: '⚫',
-  },
 }
 
 const phaseKeys = {
   [PHASES.RED]: { label: 'phases.red', desc: 'phases.redDesc' },
   [PHASES.GREEN]: { label: 'phases.green', desc: 'phases.greenDesc' },
-  [PHASES.BLACK]: { label: 'phases.black', desc: 'phases.blackDesc' },
 }
 
 export function PhaseBadge({ phase, nextPhase }) {
