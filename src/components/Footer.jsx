@@ -1,5 +1,5 @@
 import React from 'react'
-import { Github, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -13,15 +13,6 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href="https://github.com/RedBeret/ExecutiveHangerTimers"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-accent-blue transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              <span>GitHub</span>
-            </a>
             <span className="text-gray-600">v1.0.0</span>
           </div>
         </div>
