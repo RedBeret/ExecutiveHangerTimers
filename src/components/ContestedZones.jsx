@@ -1,5 +1,6 @@
-import React from 'react'
-import { Target, Zap, Landmark } from 'lucide-react'
+import React, { useState } from 'react'
+import { Target, Zap, Landmark, Database } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { TimerCard } from './TimerCard'
 import { VaultTimerCard } from './VaultTimerCard'
 
@@ -9,10 +10,10 @@ const zones = [
     name: 'Checkmate Station',
     icon: Target,
     timers: [
-      { id: 'checkmate-blue-1', label: 'Blue Keycard Printer 1' },
-      { id: 'checkmate-blue-2', label: 'Blue Keycard Printer 2' },
-      { id: 'checkmate-blue-3', label: 'Blue Keycard Printer 3' },
-      { id: 'checkmate-blue-4', label: 'Blue Keycard Printer 4' },
+      { id: 'checkmate-blue-1', label: 'Blue Keycard Printer 1', duration: 15 * 60 * 1000 },
+      { id: 'checkmate-blue-2', label: 'Blue Keycard Printer 2', duration: 15 * 60 * 1000 },
+      { id: 'checkmate-blue-3', label: 'Blue Keycard Printer 3', duration: 15 * 60 * 1000 },
+      { id: 'checkmate-blue-4', label: 'Blue Keycard Printer 4', duration: 15 * 60 * 1000 },
     ],
   },
   {
@@ -20,23 +21,47 @@ const zones = [
     name: 'Orbituary Station',
     icon: Zap,
     timers: [
-      { id: 'orbituary-blue-1', label: 'Blue Keycard Printer 1' },
-      { id: 'orbituary-blue-2', label: 'Blue Keycard Printer 2' },
+      { id: 'orbituary-blue-1', label: 'Blue Keycard Printer 1', duration: 30 * 60 * 1000 },
+      { id: 'orbituary-blue-2', label: 'Blue Keycard Printer 2', duration: 30 * 60 * 1000 },
     ],
   },
   {
     id: 'ruin',
-    name: 'Ruin Station',
+    name: 'Ruin Station (Ghost Arena)',
     icon: Landmark,
     timers: [
-      { id: 'ruin-crypt', label: 'Green Keycard (Crypt)' },
-      { id: 'ruin-wasteland', label: 'Yellow Keycard (Wasteland)' },
-      { id: 'ruin-lastresort', label: 'Keycard (Last Resort)' },
+      { id: 'ruin-crypt', label: 'Green Keycard (Crypt)', duration: 30 * 60 * 1000 },
+      { id: 'ruin-wasteland', label: 'Yellow Keycard (Wasteland)', duration: 30 * 60 * 1000 },
+      { id: 'ruin-lastresort', label: 'Keycard (Last Resort)', duration: 30 * 60 * 1000 },
+    ],
+  },
+  {
+    id: 'supervisor',
+    name: 'Supervisor Outposts',
+    icon: Database,
+    timers: [
+      { id: 'supervisor-l4', label: 'Red Keycard (Pyro 3 L4)', duration: 30 * 60 * 1000 },
+      { id: 'supervisor-l5', label: 'Red Keycard (Pyro 3 L5)', duration: 30 * 60 * 1000 },
     ],
   },
 ]
 
+const tabs = [
+  { id: 'all', label: 'All Zones' },
+  { id: 'checkmate', label: 'Checkmate' },
+  { id: 'orbituary', label: 'Orbituary' },
+  { id: 'ruin', label: 'Ruin' },
+  { id: 'supervisor', label: 'Supervisor' },
+]
+
 export function ContestedZones() {
+  const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState('all')
+
+  const filteredZones = activeTab === 'all'
+    ? zones
+    : zones.filter(zone => zone.id === activeTab)
+
   return (
     <div className="card">
       <div className="mb-6">
@@ -44,8 +69,25 @@ export function ContestedZones() {
         <p className="text-gray-400">Track keycard printers & objectives</p>
       </div>
 
+      {/* Location Tabs */}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+              activeTab === tab.id
+                ? 'bg-accent-blue text-white shadow-lg shadow-accent-blue/30'
+                : 'bg-dark-800 text-gray-400 hover:bg-dark-700 hover:text-white'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
       <div className="space-y-8">
-        {zones.map((zone) => {
+        {filteredZones.map((zone) => {
           const Icon = zone.icon
           return (
             <div key={zone.id} className="space-y-4">
@@ -66,6 +108,7 @@ export function ContestedZones() {
                     key={timer.id}
                     id={timer.id}
                     label={timer.label}
+                    duration={timer.duration}
                   />
                 ))}
               </div>
@@ -75,8 +118,8 @@ export function ContestedZones() {
       </div>
 
       <div className="mt-6 p-4 bg-dark-800/30 rounded-lg text-sm text-gray-400">
-        <strong className="text-gray-300">Default cooldowns:</strong> Keycard printers have a 30-minute cooldown after use.
-        Start the timer when you or your team activates a printer.
+        <strong className="text-gray-300">Cooldown times:</strong> Blue Keycards (15min except Orbituary: 30min) • Red/Yellow/Green Keycards (30min) •
+        Start timers when you or your team activates a printer.
       </div>
     </div>
   )
