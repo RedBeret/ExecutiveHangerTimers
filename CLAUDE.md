@@ -25,7 +25,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    - Global sync across all game servers
 
 2. **Contested Zone Timers:**
-   - Countdown timers for keycard printers (30min default)
+   - Organized by location-based tabs (Checkmate, Orbituary, Ruin)
+   - Dashboard remains all-encompassing with tabs for specific station filtering
+   - Keycard printers: Red (30min), Blue (15min), Yellow/Green (30min)
    - Vault timer door (21min cycle: 1min open, 20min closed)
    - User-triggered timers that persist in localStorage
 
@@ -33,6 +35,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    - 7 unique compboards across 3 zones
    - Progress tracking with visual indicators
    - LocalStorage persistence
+   - Location mapping:
+     - Checkmate Station: Boards #1, #2, #3
+     - Orbituary Station: Boards #4, #7
+     - Ruin Station: Boards #5, #6
+
+4. **Location-Based Organization:**
+   - **Checkmate Station**: Red/Blue keycard timers, Boards 1-3
+   - **Orbituary Station**: Blue keycard timer (30min exception), Boards 4 & 7
+   - **Ruin Station (Ghost Arena)**: Vault timer, Yellow/Green keycards, Boards 5 & 6
+   - **Supervisor Outposts** (Pyro 3 L4/L5): Red keycard printers (30min)
 
 ### Project Structure
 
@@ -40,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 src/
 ├── components/          # React components (UI building blocks)
 │   ├── ExecutiveHangar.jsx    # Main hangar timer section
-│   ├── ContestedZones.jsx     # CZ timers section
+│   ├── ContestedZones.jsx     # CZ timers section (with location tabs)
 │   ├── CompboardChecklist.jsx # Compboard tracker
 │   ├── LEDIndicator.jsx       # LED visual components
 │   ├── PhaseBadge.jsx         # Phase status display
@@ -49,6 +61,7 @@ src/
 │   ├── CountdownDisplay.jsx   # Formatted time display
 │   ├── QuickReference.jsx     # Help/reference section
 │   └── Footer.jsx             # App footer
+│   └── LocationTabs.jsx       # Station filter tabs (future/planned)
 ├── hooks/               # Custom React hooks (logic layer)
 │   ├── useExecTimer.js        # Executive hangar timer logic
 │   ├── useCountdownTimer.js   # CZ countdown timer logic
@@ -132,6 +145,40 @@ npm run deploy
 ```js
 base: '/your-repo-name/',  // Must match GitHub repo name
 ```
+
+## Quick Update Workflow
+
+### When User Says "update"
+
+**Automated Sync & Deploy Process:**
+
+1. **Verify Timer Sync:**
+   ```bash
+   # Fetch current timer config from exec.xyxyll.com
+   curl -s https://exec.xyxyll.com/app.js | grep -A5 "INITIAL_OPEN_TIME"
+
+   # Compare with current values in src/utils/timerCalculations.js
+   # Verify INITIAL_OPEN_TIME and cycle durations match
+   ```
+
+2. **Update Code if Needed:**
+   - Update `INITIAL_OPEN_TIME` in `src/utils/timerCalculations.js` if values differ
+   - Update `OPEN_DURATION` and `CLOSE_DURATION` if cycle changed
+
+3. **Build, Commit & Deploy:**
+   ```bash
+   npm run build
+   git add .
+   git commit -m "resync"
+   git push
+   npm run deploy
+   ```
+
+4. **Verify Deployment:**
+   - Check that timer matches exec.xyxyll.com current status
+   - Confirm GitHub Pages updated successfully
+
+**Important:** Always use commit message "resync" for timer synchronization updates. Do NOT include "Claude" or other attribution in commit messages.
 
 ## Common Development Tasks
 
@@ -228,6 +275,47 @@ Before committing changes:
 - All intervals are cleaned up in `useEffect` return functions
 - No performance issues expected with <50 concurrent timers
 
+## Planned Features (In Progress)
+
+### Location-Based Tab System
+
+**Design Requirements:**
+- Keep main dashboard all-encompassing (shows all timers)
+- Add tabs for location-specific filtering: "All", "Checkmate", "Orbituary", "Ruin", "Supervisor Outposts"
+- Each tab filters timers and compboards by station
+- Tabs should be responsive and work on mobile
+- Tab state persists in localStorage
+
+**Implementation Plan:**
+1. Create `LocationTabs.jsx` component with filter state
+2. Update `ContestedZones.jsx` to accept location filter prop
+3. Add station metadata to timer configs
+4. Filter timers/compboards based on selected tab
+5. Style tabs to match existing Pyro theme
+
+**Timer Organization by Location:**
+
+**Checkmate Station:**
+- Blue Keycard Timer (15min)
+- Red Keycard Timer (30min)
+- Compboards: #1, #2, #3
+
+**Orbituary Station:**
+- Blue Keycard Timer (30min - special case)
+- Compboards: #4, #7
+
+**Ruin Station (Ghost Arena):**
+- Vault Timer (21min cycle)
+- Yellow Keycard Timer (30min)
+- Green Keycard Timer (30min)
+- Compboards: #5, #6
+
+**Supervisor Outposts (Pyro 3 L4/L5):**
+- Red Keycard Printer (30min)
+
+**Executive Hangars:**
+- Hazard Timer (15min countdown after entry)
+
 ## Future Enhancement Ideas
 
 If expanding the project:
@@ -273,5 +361,5 @@ For bugs or feature requests:
 
 ---
 
-**Last Updated:** 2025-11-03
-**Version:** 1.0.0
+**Last Updated:** 2025-11-12
+**Version:** 1.0.1
