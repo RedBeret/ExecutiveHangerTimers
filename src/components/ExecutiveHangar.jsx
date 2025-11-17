@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { RefreshCw, Rocket, Globe, Clock, ChevronDown, ChevronUp } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useExecTimer } from '../hooks/useExecTimer'
-import { PHASES } from '../utils/timerCalculations'
+import { PHASES, formatClockTime } from '../utils/timerCalculations'
 import { PhaseBadge } from './PhaseBadge'
 import { LEDGrid } from './LEDIndicator'
 
@@ -68,6 +68,20 @@ export function ExecutiveHangar() {
                   </div>
                   <div className="font-mono font-black tracking-tight leading-none text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                     <CountdownTimer timeRemaining={status.timeRemaining} phase={status.phase} />
+                  </div>
+                  {/* Clock Time Display */}
+                  <div className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg font-semibold text-gray-300">
+                    {status.phase === PHASES.GREEN ? (
+                      <>
+                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-accent-green" />
+                        <span className="text-accent-green">Open until {formatClockTime(status.nextChangeTime)}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-accent-red" />
+                        <span className="text-accent-red">Opens at {formatClockTime(status.nextChangeTime)}</span>
+                      </>
+                    )}
                   </div>
                   <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-gray-500 font-medium">
                     {t('execHangar.cycleProgress')}: {Math.round(status.cycleProgress)}%
