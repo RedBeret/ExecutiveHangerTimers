@@ -88,35 +88,16 @@ export function formatTime(milliseconds) {
   return `${minutes}:${String(seconds).padStart(2, '0')}`
 }
 
-// Format a timestamp as a clock time with date if needed
+// Format a timestamp as a clock time in user's local timezone
 export function formatClockTime(timestamp) {
   const date = new Date(timestamp)
-  const now = new Date()
 
-  // Check if it's today, tomorrow, or another day
-  const isToday = date.toDateString() === now.toDateString()
-  const tomorrow = new Date(now)
-  tomorrow.setDate(tomorrow.getDate() + 1)
-  const isTomorrow = date.toDateString() === tomorrow.toDateString()
-
-  // Format time in user's local timezone
-  const timeString = date.toLocaleTimeString([], {
-    hour: '2-digit',
+  // Format time in user's local timezone (12-hour format with AM/PM)
+  return date.toLocaleTimeString([], {
+    hour: 'numeric',
     minute: '2-digit',
     hour12: true
   })
-
-  if (isToday) {
-    return timeString
-  } else if (isTomorrow) {
-    return `${timeString} (Tomorrow)`
-  } else {
-    const dateString = date.toLocaleDateString([], {
-      month: 'short',
-      day: 'numeric'
-    })
-    return `${timeString} (${dateString})`
-  }
 }
 
 // Calculate vault door status (21-minute cycle: 1 min open, 20 min closed)
