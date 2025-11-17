@@ -63,12 +63,16 @@ export function calculateExecStatus(offsetSeconds = 0) {
     ledStates = [null, null, null, null, null]
   }
 
+  // Calculate the actual clock time when phase changes
+  const nextChangeTime = now + timeRemaining
+
   return {
     phase,
     timeRemaining,
     nextPhase,
     ledStates,
     cycleProgress: (timeInCurrentCycle / CYCLE_DURATION) * 100,
+    nextChangeTime, // Timestamp when the next phase change occurs
   }
 }
 
@@ -82,6 +86,37 @@ export function formatTime(milliseconds) {
     return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
   }
   return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+// Format a timestamp as a clock time with date if needed
+export function formatClockTime(timestamp) {
+  const date = new Date(timestamp)
+  const now = new Date()
+
+  // Check if it's today, tomorrow, or another day
+  const isToday = date.toDateString() === now.toDateString()
+  const tomorrow = new Date(now)
+  tomorrow.setDate(tomorrow.getDate() + 1)
+  const isTomorrow = date.toDateString() === tomorrow.toDateString()
+
+  // Format time in user's local timezone
+  const timeString = date.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  })
+
+  if (isToday) {
+    return timeString
+  } else if (isTomorrow) {
+    return `${timeString} (Tomorrow)`
+  } else {
+    const dateString = date.toLocaleDateString([], {
+      month: 'short',
+      day: 'numeric'
+    })
+    return `${timeString} (${dateString})`
+  }
 }
 
 // Calculate vault door status (21-minute cycle: 1 min open, 20 min closed)
