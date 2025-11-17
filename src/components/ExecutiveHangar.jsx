@@ -70,18 +70,21 @@ export function ExecutiveHangar() {
                     <CountdownTimer timeRemaining={status.timeRemaining} phase={status.phase} />
                   </div>
                   {/* Clock Time Display */}
-                  <div className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg font-semibold text-gray-300">
+                  <div className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg font-semibold text-gray-300 flex items-center justify-center lg:justify-end gap-2">
                     {status.phase === PHASES.GREEN ? (
                       <>
-                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-accent-green" />
+                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 text-accent-green" />
                         <span className="text-accent-green">Open until {formatClockTime(status.nextChangeTime)}</span>
                       </>
                     ) : (
                       <>
-                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-accent-red" />
+                        <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 text-accent-red" />
                         <span className="text-accent-red">Opens at {formatClockTime(status.nextChangeTime)}</span>
                       </>
                     )}
+                    <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-accent-blue/20 text-accent-blue border border-accent-blue/30 font-bold uppercase tracking-wide">
+                      Beta
+                    </span>
                   </div>
                   <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-gray-500 font-medium">
                     {t('execHangar.cycleProgress')}: {Math.round(status.cycleProgress)}%
