@@ -54,9 +54,8 @@ const tabs = [
   { id: 'supervisor', label: 'Supervisor' },
 ]
 
-export function ContestedZones() {
+export function ContestedZones({ activeTab = 'all' }) {
   const { t } = useTranslation()
-  const [activeTab, setActiveTab] = useState('all')
 
   const filteredZones = activeTab === 'all'
     ? zones
@@ -65,25 +64,8 @@ export function ContestedZones() {
   return (
     <div className="card">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold mb-2">Contested Zone Timers</h2>
-        <p className="text-gray-400">Track keycard printers & objectives</p>
-      </div>
-
-      {/* Location Tabs */}
-      <div className="mb-6 flex flex-wrap gap-2">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-              activeTab === tab.id
-                ? 'bg-accent-blue text-white shadow-lg shadow-accent-blue/30'
-                : 'bg-dark-800 text-gray-400 hover:bg-dark-700 hover:text-white'
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+        <h2 className="text-3xl font-bold mb-2">Keycard Printer Timers</h2>
+        <p className="text-gray-400">Track keycard printer cooldowns</p>
       </div>
 
       <div className="space-y-8">

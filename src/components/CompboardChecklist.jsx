@@ -89,16 +89,29 @@ function CompboardItem({ board, onToggle }) {
   )
 }
 
-export function CompboardChecklist() {
+export function CompboardChecklist({ filterZone = 'all' }) {
   const { boards, collectedCount, progress, toggleBoard, resetAll } = useCompboards()
+
+  // Filter boards by zone
+  const filteredBoards = filterZone === 'all'
+    ? boards
+    : boards.filter(board => board.zone === filterZone)
+
+  const filteredCollectedCount = filteredBoards.filter(b => b.collected).length
+  const filteredProgress = (filteredCollectedCount / filteredBoards.length) * 100
 
   return (
     <div className="card">
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-2xl font-bold">Compboard Collection</h3>
+          <h3 className="text-2xl font-bold">
+            Compboard Collection
+            {filterZone !== 'all' && <span className="text-sm text-gray-400 ml-2">({filteredBoards.length} boards in this zone)</span>}
+          </h3>
           <div className="text-right">
-            <div className="text-3xl font-bold text-accent-blue">{collectedCount}/7</div>
+            <div className="text-3xl font-bold text-accent-blue">
+              {filterZone === 'all' ? `${collectedCount}/7` : `${filteredCollectedCount}/${filteredBoards.length}`}
+            </div>
             <div className="text-sm text-gray-400">Collected</div>
           </div>
         </div>
@@ -106,17 +119,19 @@ export function CompboardChecklist() {
         <div className="w-full bg-dark-800 rounded-full h-3 overflow-hidden">
           <div
             className="bg-gradient-to-r from-accent-blue to-accent-green h-full transition-all duration-500 ease-out"
-            style={{ width: `${progress}%` }}
+            style={{ width: `${filterZone === 'all' ? progress : filteredProgress}%` }}
           />
         </div>
 
         <p className="text-sm text-gray-400 mt-3">
-          Collect all 7 unique compboards to unlock the Executive Hangar
+          {filterZone === 'all'
+            ? 'Collect all 7 unique compboards to unlock the Executive Hangar'
+            : 'Start timers after collecting boards to track respawn times'}
         </p>
       </div>
 
       <div className="space-y-3 mb-6">
-        {boards.map((board) => (
+        {filteredBoards.map((board) => (
           <CompboardItem
             key={board.id}
             board={board}
