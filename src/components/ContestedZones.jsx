@@ -64,8 +64,8 @@ export function ContestedZones({ activeTab = 'all' }) {
   return (
     <div className="card">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold mb-2">Keycard Printer Timers</h2>
-        <p className="text-gray-400">Track keycard printer cooldowns</p>
+        <h2 className="text-3xl font-bold mb-2">Contested Zone Timers</h2>
+        <p className="text-gray-400">Track keycard printers & objectives</p>
       </div>
 
       <div className="space-y-8">

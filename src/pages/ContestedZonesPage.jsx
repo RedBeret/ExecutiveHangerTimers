@@ -50,47 +50,49 @@ export function ContestedZonesPage() {
           ))}
         </div>
 
-        {/* Zone Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="card p-6 bg-accent-red/10 border-accent-red/30">
-            <div className="flex items-center gap-3 mb-2">
-              <Target className="w-6 h-6 text-accent-red" />
-              <h3 className="font-bold text-lg">Checkmate</h3>
+        {/* Zone Info Cards - Only show on "All Zones" view */}
+        {activeTab === 'all' && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="card p-6 bg-accent-red/10 border-accent-red/30">
+              <div className="flex items-center gap-3 mb-2">
+                <Target className="w-6 h-6 text-accent-red" />
+                <h3 className="font-bold text-lg">Checkmate</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-2">
+                4 Blue Keycard Printers • 30-minute cooldowns
+              </p>
+              <p className="text-xs text-gray-500">
+                Best for: Group farming runs
+              </p>
             </div>
-            <p className="text-sm text-gray-400 mb-2">
-              4 Blue Keycard Printers • 30-minute cooldowns
-            </p>
-            <p className="text-xs text-gray-500">
-              Best for: Group farming runs
-            </p>
-          </div>
 
-          <div className="card p-6 bg-accent-green/10 border-accent-green/30">
-            <div className="flex items-center gap-3 mb-2">
-              <Target className="w-6 h-6 text-accent-green" />
-              <h3 className="font-bold text-lg">Orbituary</h3>
+            <div className="card p-6 bg-accent-green/10 border-accent-green/30">
+              <div className="flex items-center gap-3 mb-2">
+                <Target className="w-6 h-6 text-accent-green" />
+                <h3 className="font-bold text-lg">Orbituary</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-2">
+                2 Blue Keycard Printers • 30-minute cooldowns
+              </p>
+              <p className="text-xs text-gray-500">
+                Best for: Quick runs (requires red keycard access)
+              </p>
             </div>
-            <p className="text-sm text-gray-400 mb-2">
-              2 Blue Keycard Printers • 30-minute cooldowns
-            </p>
-            <p className="text-xs text-gray-500">
-              Best for: Quick runs (requires red keycard access)
-            </p>
-          </div>
 
-          <div className="card p-6 bg-amber-500/10 border-amber-500/30">
-            <div className="flex items-center gap-3 mb-2">
-              <Zap className="w-6 h-6 text-amber-400" />
-              <h3 className="font-bold text-lg">Ruin Station</h3>
+            <div className="card p-6 bg-amber-500/10 border-amber-500/30">
+              <div className="flex items-center gap-3 mb-2">
+                <Zap className="w-6 h-6 text-amber-400" />
+                <h3 className="font-bold text-lg">Ruin Station</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-2">
+                Vault Timer • 21-min cycle (1min open, 20min closed)
+              </p>
+              <p className="text-xs text-gray-500">
+                Best for: Compboard farming with timers
+              </p>
             </div>
-            <p className="text-sm text-gray-400 mb-2">
-              Vault Timer • 21-min cycle (1min open, 20min closed)
-            </p>
-            <p className="text-xs text-gray-500">
-              Best for: Compboard farming with timers
-            </p>
           </div>
-        </div>
+        )}
 
         {/* Contested Zone Timers */}
         <section id="contested-zones">
