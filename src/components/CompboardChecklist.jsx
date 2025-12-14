@@ -1,6 +1,93 @@
 import React from 'react'
-import { Check, RotateCcw, MapPin } from 'lucide-react'
+import { Check, RotateCcw, MapPin, Clock, Play } from 'lucide-react'
 import { useCompboards } from '../hooks/useCompboards'
+import { useCountdownTimer } from '../hooks/useCountdownTimer'
+import { CountdownDisplay } from './CountdownDisplay'
+
+function CompboardItem({ board, onToggle }) {
+  const COMPBOARD_RESPAWN = 30 * 60 * 1000 // 30 minutes
+  const { status, start } = useCountdownTimer(`compboard-${board.id}`, COMPBOARD_RESPAWN)
+
+  return (
+    <div className="bg-dark-800/50 border-2 border-dark-700 rounded-lg p-4">
+      {/* Board Info and Checkbox */}
+      <button
+        onClick={() => onToggle(board.id)}
+        className={`
+          w-full rounded-lg transition-all duration-200
+          flex items-center gap-4 text-left mb-3
+          ${board.collected ? 'opacity-75' : ''}
+        `}
+      >
+        <div
+          className={`
+            w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0
+            ${board.collected
+              ? 'bg-accent-green text-white'
+              : 'bg-dark-700 text-gray-500 border-2 border-dark-600'
+            }
+          `}
+        >
+          {board.collected ? <Check className="w-5 h-5" /> : board.id}
+        </div>
+
+        <div className="flex-1">
+          <div className={`font-bold ${board.collected ? 'text-accent-green' : 'text-gray-200'}`}>
+            Board {board.id}
+          </div>
+          <div className="flex items-center gap-1 text-sm text-gray-400">
+            <MapPin className="w-3 h-3" />
+            {board.location}
+          </div>
+        </div>
+
+        {board.collected && (
+          <div className="text-accent-green text-sm font-medium">
+            ✓ Collected
+          </div>
+        )}
+      </button>
+
+      {/* Respawn Timer */}
+      <div className="border-t border-dark-700 pt-3">
+        {status.isActive ? (
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="text-sm text-gray-400 mb-1">Printer Respawn</div>
+              <CountdownDisplay
+                timeRemaining={status.timeRemaining}
+                size="small"
+                className="text-accent-red"
+              />
+              <div className="mt-1 text-xs text-gray-500">
+                Ready at <span className="text-accent-blue font-semibold">
+                  {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                  })}
+                </span>
+              </div>
+            </div>
+            <div className="text-xs text-accent-red font-medium px-3 py-1 bg-accent-red/10 rounded-lg">
+              Cooling Down
+            </div>
+          </div>
+        ) : (
+          <button
+            onClick={() => start()}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg
+              bg-accent-blue hover:bg-blue-600 text-white text-sm font-medium
+              transition-all duration-300 hover:scale-105 active:scale-95"
+          >
+            <Play className="w-4 h-4" />
+            Start 30min Timer
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
 
 export function CompboardChecklist() {
   const { boards, collectedCount, progress, toggleBoard, resetAll } = useCompboards()
@@ -28,48 +115,13 @@ export function CompboardChecklist() {
         </p>
       </div>
 
-      <div className="space-y-2 mb-6">
+      <div className="space-y-3 mb-6">
         {boards.map((board) => (
-          <button
+          <CompboardItem
             key={board.id}
-            onClick={() => toggleBoard(board.id)}
-            className={`
-              w-full p-4 rounded-lg border-2 transition-all duration-200
-              flex items-center gap-4 text-left
-              ${board.collected
-                ? 'bg-accent-green/10 border-accent-green hover:bg-accent-green/20'
-                : 'bg-dark-800/50 border-dark-700 hover:border-dark-600 hover:bg-dark-800'
-              }
-            `}
-          >
-            <div
-              className={`
-                w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0
-                ${board.collected
-                  ? 'bg-accent-green text-white'
-                  : 'bg-dark-700 text-gray-500 border-2 border-dark-600'
-                }
-              `}
-            >
-              {board.collected ? <Check className="w-5 h-5" /> : board.id}
-            </div>
-
-            <div className="flex-1">
-              <div className={`font-bold ${board.collected ? 'text-accent-green' : 'text-gray-200'}`}>
-                Board {board.id}
-              </div>
-              <div className="flex items-center gap-1 text-sm text-gray-400">
-                <MapPin className="w-3 h-3" />
-                {board.location}
-              </div>
-            </div>
-
-            {board.collected && (
-              <div className="text-accent-green text-sm font-medium">
-                ✓ Collected
-              </div>
-            )}
-          </button>
+            board={board}
+            onToggle={toggleBoard}
+          />
         ))}
       </div>
 

@@ -57,6 +57,15 @@ export function VaultTimerCard() {
             size="large"
             className={isOpen ? 'text-accent-green' : 'text-accent-red'}
           />
+          <div className="mt-2 text-sm text-gray-400">
+            {isOpen ? 'Closes' : 'Opens'} at <span className="text-accent-blue font-semibold">
+              {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+              })}
+            </span>
+          </div>
         </div>
       )}
 

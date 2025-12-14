@@ -91,6 +91,17 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
                 'text-accent-red'
               }
             />
+            {status.isActive && (
+              <div className="mt-2 text-sm text-gray-400">
+                Ready at <span className="text-accent-blue font-semibold">
+                  {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                  })}
+                </span>
+              </div>
+            )}
           </div>
           <div aria-hidden="true">
             <TimerRing
