@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ContestedZones } from '../components/ContestedZones'
 import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
 import { Swords, Target, Zap } from 'lucide-react'
 
+const tabs = [
+  { id: 'all', label: 'All Zones' },
+  { id: 'checkmate', label: 'Checkmate' },
+  { id: 'orbituary', label: 'Orbituary' },
+  { id: 'ruin', label: 'Ruin' },
+  { id: 'supervisor', label: 'Supervisor' },
+]
+
 export function ContestedZonesPage() {
+  const [activeTab, setActiveTab] = useState('all')
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="space-y-8">
@@ -21,6 +31,23 @@ export function ContestedZonesPage() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Track keycard printer cooldowns and farm contested zones efficiently
           </p>
+        </div>
+
+        {/* Location Tabs */}
+        <div className="flex flex-wrap gap-2 justify-center">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-accent-blue text-white shadow-lg shadow-accent-blue/30'
+                  : 'bg-dark-800 text-gray-400 hover:bg-dark-700 hover:text-white'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {/* Zone Info Cards */}
@@ -67,13 +94,15 @@ export function ContestedZonesPage() {
 
         {/* Contested Zone Timers */}
         <section id="contested-zones">
-          <ContestedZones />
+          <ContestedZones activeTab={activeTab} />
         </section>
 
         {/* Compboard Farming Timers */}
-        <section id="compboards">
-          <CompboardChecklist />
-        </section>
+        {(activeTab === 'all' || activeTab === 'checkmate' || activeTab === 'orbituary' || activeTab === 'ruin') && (
+          <section id="compboards">
+            <CompboardChecklist filterZone={activeTab} />
+          </section>
+        )}
 
         {/* Quick Reference */}
         <section id="quick-reference">

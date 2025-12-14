@@ -2,13 +2,13 @@ import { useState, useEffect, useCallback } from 'react'
 import { storage } from '../utils/storage'
 
 const COMPBOARD_DATA = [
-  { id: 1, location: 'Checkmate - Hangar Area' },
-  { id: 2, location: 'Checkmate - Server Room' },
-  { id: 3, location: 'Checkmate - Behind Red Door' },
-  { id: 4, location: 'Orbituary - Storage Bay' },
-  { id: 5, location: 'Ruin Station - Crypt' },
-  { id: 6, location: 'Ruin Station - Vault (Timer Door)' },
-  { id: 7, location: 'Orbituary - Behind Fuse/Blue Doors' },
+  { id: 1, location: 'Checkmate - Hangar Area', zone: 'checkmate' },
+  { id: 2, location: 'Checkmate - Server Room', zone: 'checkmate' },
+  { id: 3, location: 'Checkmate - Behind Red Door', zone: 'checkmate' },
+  { id: 4, location: 'Orbituary - Storage Bay', zone: 'orbituary' },
+  { id: 5, location: 'Ruin Station - Crypt', zone: 'ruin' },
+  { id: 6, location: 'Ruin Station - Vault (Timer Door)', zone: 'ruin' },
+  { id: 7, location: 'Orbituary - Behind Fuse/Blue Doors', zone: 'orbituary' },
 ]
 
 export function useCompboards() {
