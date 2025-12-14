@@ -20,6 +20,9 @@ export function useCompboards() {
     }))
   })
 
+  // Add a reset key to force timer remounts
+  const [resetKey, setResetKey] = useState(0)
+
   const collectedCount = boards.filter(b => b.collected).length
   const progress = (collectedCount / boards.length) * 100
 
@@ -45,6 +48,20 @@ export function useCompboards() {
   const resetAll = useCallback(() => {
     setBoards(prev => prev.map(board => ({ ...board, collected: false })))
     storage.clearAllCompboards()
+
+    // Also clear all compboard timers
+    const timers = storage.loadTimers()
+    const updatedTimers = { ...timers }
+
+    // Remove all compboard-related timers (compboard-1 through compboard-7)
+    for (let i = 1; i <= 7; i++) {
+      delete updatedTimers[`compboard-${i}`]
+    }
+
+    storage.saveTimers(updatedTimers)
+
+    // Force all timers to remount by changing the key
+    setResetKey(prev => prev + 1)
   }, [])
 
   return {
@@ -53,5 +70,6 @@ export function useCompboards() {
     progress,
     toggleBoard,
     resetAll,
+    resetKey,
   }
 }

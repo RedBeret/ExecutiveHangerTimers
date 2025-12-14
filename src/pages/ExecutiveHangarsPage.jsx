@@ -50,7 +50,7 @@ export function ExecutiveHangarsPage() {
               <h3 className="font-bold text-lg">Ship Rewards</h3>
             </div>
             <p className="text-sm text-gray-400">
-              Choose from 5 exclusive ships: F8C, Polaris, 890J, Carrack, or A2
+              Choose from 5 ships: F8C Lightning, F7A MkII, Corsair, Cutlass Black, or Syulen
             </p>
           </div>
         </div>
