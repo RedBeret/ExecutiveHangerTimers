@@ -1,5 +1,6 @@
 import React from 'react'
 import { ContestedZones } from '../components/ContestedZones'
+import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
 import { Swords, Target, Zap } from 'lucide-react'
 
@@ -43,10 +44,10 @@ export function ContestedZonesPage() {
               <h3 className="font-bold text-lg">Orbituary</h3>
             </div>
             <p className="text-sm text-gray-400 mb-2">
-              2 Red Keycard Printers • 30-minute cooldowns
+              2 Blue Keycard Printers • 30-minute cooldowns
             </p>
             <p className="text-xs text-gray-500">
-              Best for: Quick runs
+              Best for: Quick runs (requires red keycard access)
             </p>
           </div>
 
@@ -56,10 +57,10 @@ export function ContestedZonesPage() {
               <h3 className="font-bold text-lg">Ruin Station</h3>
             </div>
             <p className="text-sm text-gray-400 mb-2">
-              Vault Timer • 7-minute cooldown
+              Vault Timer • 21-min cycle (1min open, 20min closed)
             </p>
             <p className="text-xs text-gray-500">
-              Best for: Fast grinding
+              Best for: Compboard farming with timers
             </p>
           </div>
         </div>
@@ -67,6 +68,11 @@ export function ContestedZonesPage() {
         {/* Contested Zone Timers */}
         <section id="contested-zones">
           <ContestedZones />
+        </section>
+
+        {/* Compboard Farming Timers */}
+        <section id="compboards">
+          <CompboardChecklist />
         </section>
 
         {/* Quick Reference */}
@@ -85,11 +91,11 @@ export function ContestedZonesPage() {
             <div>
               <h3 className="font-bold text-lg mb-2 text-accent-blue">Solo Farming</h3>
               <ul className="space-y-2 ml-5 list-disc text-sm">
-                <li><strong>Ruin Station:</strong> Farm the 7-minute vault repeatedly</li>
-                <li><strong>Route:</strong> Vault → Objectives → Exit → Repeat</li>
-                <li><strong>Time per run:</strong> ~5-8 minutes including travel</li>
-                <li><strong>Profit:</strong> Consistent low-risk grinding</li>
-                <li>Use timers to know exactly when vault reopens</li>
+                <li><strong>Ruin Station:</strong> Farm compboards with 30-min respawn timers</li>
+                <li><strong>Route:</strong> Vault (Board 6) → Crypt (Board 5) → Repeat</li>
+                <li><strong>Vault cycle:</strong> Opens 1 min, closed 20 min (21-min total)</li>
+                <li><strong>Strategy:</strong> Start timers after collecting boards</li>
+                <li>Use "Ready at" times to plan your return trips efficiently</li>
               </ul>
             </div>
 
