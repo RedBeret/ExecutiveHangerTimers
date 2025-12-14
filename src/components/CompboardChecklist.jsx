@@ -90,7 +90,7 @@ function CompboardItem({ board, onToggle }) {
 }
 
 export function CompboardChecklist({ filterZone = 'all' }) {
-  const { boards, collectedCount, progress, toggleBoard, resetAll } = useCompboards()
+  const { boards, collectedCount, progress, toggleBoard, resetAll, resetKey } = useCompboards()
 
   // Filter boards by zone
   const filteredBoards = filterZone === 'all'
@@ -133,7 +133,7 @@ export function CompboardChecklist({ filterZone = 'all' }) {
       <div className="space-y-3 mb-6">
         {filteredBoards.map((board) => (
           <CompboardItem
-            key={board.id}
+            key={`${board.id}-${resetKey}`}
             board={board}
             onToggle={toggleBoard}
           />
