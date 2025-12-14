@@ -10,7 +10,7 @@
       // string into just a query string, and then redirects to the new url
       // with only a query string and hash fragment
       (function() {
-        var pathSegmentsToKeep = 1; // Change this if deployed to subdirectory
+        var pathSegmentsToKeep = 0; // Set to 0 for root domain deployment
         var l = window.location;
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
