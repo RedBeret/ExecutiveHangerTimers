@@ -10,10 +10,10 @@ const zones = [
     name: 'Checkmate Station',
     icon: Target,
     timers: [
-      { id: 'checkmate-blue-1', label: 'Blue Keycard Printer 1', duration: 15 * 60 * 1000 },
-      { id: 'checkmate-blue-2', label: 'Blue Keycard Printer 2', duration: 15 * 60 * 1000 },
-      { id: 'checkmate-blue-3', label: 'Blue Keycard Printer 3', duration: 15 * 60 * 1000 },
-      { id: 'checkmate-blue-4', label: 'Blue Keycard Printer 4', duration: 15 * 60 * 1000 },
+      { id: 'checkmate-blue-1', label: 'Blue Keycard Printer 1', duration: 30 * 60 * 1000 },
+      { id: 'checkmate-blue-2', label: 'Blue Keycard Printer 2', duration: 30 * 60 * 1000 },
+      { id: 'checkmate-blue-3', label: 'Blue Keycard Printer 3', duration: 30 * 60 * 1000 },
+      { id: 'checkmate-blue-4', label: 'Blue Keycard Printer 4', duration: 30 * 60 * 1000 },
     ],
   },
   {
@@ -118,8 +118,8 @@ export function ContestedZones() {
       </div>
 
       <div className="mt-6 p-4 bg-dark-800/30 rounded-lg text-sm text-gray-400">
-        <strong className="text-gray-300">Cooldown times:</strong> Blue Keycards (15min except Orbituary: 30min) • Red/Yellow/Green Keycards (30min) •
-        Start timers when you or your team activates a printer.
+        <strong className="text-gray-300">Cooldown times:</strong> All Keycard Printers (30min) •
+        Start timers when you or your team activates a printer to track when they'll be ready again.
       </div>
     </div>
   )
