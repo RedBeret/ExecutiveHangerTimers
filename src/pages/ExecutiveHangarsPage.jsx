@@ -86,7 +86,7 @@ export function ExecutiveHangarsPage() {
             <div>
               <h3 className="font-bold text-lg mb-2 text-accent-green">Execution Phase (Green)</h3>
               <ul className="space-y-2 ml-5 list-disc text-sm">
-                <li>You have 60 minutes to complete the run</li>
+                <li>You have 65 minutes to complete the run</li>
                 <li>Insert all 7 compboards in the correct sequence</li>
                 <li>Complete hangar objectives</li>
                 <li>Choose your ship reward carefully!</li>
