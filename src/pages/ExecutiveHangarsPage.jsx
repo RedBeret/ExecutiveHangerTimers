@@ -49,8 +49,11 @@ export function ExecutiveHangarsPage() {
               <TrendingUp className="w-6 h-6 text-amber-400" />
               <h3 className="font-bold text-lg">Ship Rewards</h3>
             </div>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 mb-2">
               Choose from 5 ships: F8C Lightning, F7A MkII, Corsair, Cutlass Black, or Syulen
+            </p>
+            <p className="text-xs text-amber-300">
+              ⚡ 4.5 PTU: RSI Meteor being added as reward
             </p>
           </div>
         </div>
