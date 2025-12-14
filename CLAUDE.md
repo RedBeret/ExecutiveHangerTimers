@@ -41,9 +41,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
      - Ruin Station: Boards #5, #6
 
 4. **Location-Based Organization:**
-   - **Checkmate Station**: Red/Blue keycard timers, Boards 1-3
-   - **Orbituary Station**: Blue keycard timer (30min exception), Boards 4 & 7
-   - **Ruin Station (Ghost Arena)**: Vault timer, Yellow/Green keycards, Boards 5 & 6
+   - **Checkmate Station**: Blue keycard timers (30min), Boards 1-3
+   - **Orbituary Station**: Blue keycard timers (30min), Boards 4 & 7
+   - **Ruin Station (Ghost Arena)**: Vault timer, Yellow/Green keycards (30min), Boards 5 & 6
    - **Supervisor Outposts** (Pyro 3 L4/L5): Red keycard printers (30min)
 
 ### Project Structure

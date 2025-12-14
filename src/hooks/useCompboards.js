@@ -4,11 +4,11 @@ import { storage } from '../utils/storage'
 const COMPBOARD_DATA = [
   { id: 1, location: 'Checkmate - Hangar Area' },
   { id: 2, location: 'Checkmate - Server Room' },
-  { id: 3, location: 'Orbituary - Main Terminal' },
+  { id: 3, location: 'Checkmate - Behind Red Door' },
   { id: 4, location: 'Orbituary - Storage Bay' },
   { id: 5, location: 'Ruin Station - Crypt' },
   { id: 6, location: 'Ruin Station - Vault (Timer Door)' },
-  { id: 7, location: 'Ruin Station - Wasteland' },
+  { id: 7, location: 'Orbituary - Behind Fuse/Blue Doors' },
 ]
 
 export function useCompboards() {
