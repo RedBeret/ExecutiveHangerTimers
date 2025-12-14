@@ -1,5 +1,4 @@
 import React from 'react'
-import { Coffee } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -7,15 +6,11 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span>Built by <span className="text-accent-blue font-semibold">@PatchOps</span> for the Star Citizen community</span>
-            <div className="flex items-center gap-2 text-xs">
-              <Coffee className="w-3.5 h-3.5 text-amber-400" />
-              <span>Buy me a coffee in Pyro? In-game aUEC tips appreciated!</span>
-            </div>
+            <span>Community tool for Star Citizen players</span>
           </div>
 
           <div className="flex items-center gap-6">
-            <span className="text-gray-600">v1.0.1</span>
+            <span className="text-gray-600">v1.0.2</span>
           </div>
         </div>
 

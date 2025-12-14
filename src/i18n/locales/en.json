@@ -24,9 +24,9 @@
       "howItWorksText": "All timers run in your browser using React and JavaScript. The executive hangar timer calculates the current cycle phase based on the known 185-minute cycle. Contested zone timers and your checklist are saved in your browser's local storage, so they persist even if you close the page.",
       "credits": "Credits & Sources",
       "creditsList": {
-        "algorithm": "<strong>Timer Algorithm:</strong> Based on Xyxyll's research (exec.xyxyll.com)",
-        "gameData": "<strong>Game Data:</strong> Star Citizen Wiki & community testing",
-        "inspiration": "<strong>Inspiration:</strong> ContestedZoneTimers.com, Exectimer.com",
+        "algorithm": "<strong>Timer Data:</strong> Community research & testing",
+        "gameData": "<strong>Game Data:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>Community Tools:</strong> exec.xyxyll.com, ContestedZoneTimers.com, Exectimer.com",
         "game": "<strong>Game:</strong> Star Citizen by Cloud Imperium Games"
       },
       "disclaimer": "<strong>Disclaimer:</strong> This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games. Timer accuracy depends on your system clock being properly synced. Use at your own risk."
