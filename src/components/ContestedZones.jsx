@@ -30,9 +30,9 @@ const zones = [
     name: 'Ruin Station (Ghost Arena)',
     icon: Landmark,
     timers: [
-      { id: 'ruin-crypt', label: 'Green Keycard (Crypt)', duration: 30 * 60 * 1000 },
-      { id: 'ruin-wasteland', label: 'Yellow Keycard (Wasteland)', duration: 30 * 60 * 1000 },
-      { id: 'ruin-lastresort', label: 'Keycard (Last Resort)', duration: 30 * 60 * 1000 },
+      { id: 'ruin-crypt', label: 'Green Keycard Printer (Crypt)', duration: 30 * 60 * 1000 },
+      { id: 'ruin-wasteland', label: 'Yellow Keycard Printer (Wasteland)', duration: 30 * 60 * 1000 },
+      { id: 'ruin-lastresort', label: 'Keycard Printer (Last Resort)', duration: 30 * 60 * 1000 },
     ],
   },
   {
@@ -40,8 +40,8 @@ const zones = [
     name: 'Supervisor Outposts',
     icon: Database,
     timers: [
-      { id: 'supervisor-l4', label: 'Red Keycard (Pyro 3 L4)', duration: 30 * 60 * 1000 },
-      { id: 'supervisor-l5', label: 'Red Keycard (Pyro 3 L5)', duration: 30 * 60 * 1000 },
+      { id: 'supervisor-l4', label: 'Red Keycard Printer (Pyro 3 L4)', duration: 30 * 60 * 1000 },
+      { id: 'supervisor-l5', label: 'Red Keycard Printer (Pyro 3 L5)', duration: 30 * 60 * 1000 },
     ],
   },
 ]
