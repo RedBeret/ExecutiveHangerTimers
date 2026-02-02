@@ -44,6 +44,9 @@
     "resetSync": "Sync zurücksetzen",
     "precisionTiming": "Präzisions-Timing:",
     "syncWhenSee": "Synchronisiere wenn du die Hangar-Änderung im Spiel siehst",
+    "openUntil": "Offen bis {{time}}",
+    "opensAt": "Öffnet um {{time}}",
+    "beta": "Beta",
     "syncPanel": {
       "title": "Mit In-Game Phase synchronisieren",
       "description": "Wenn du siehst, dass der Hangar die Phase in Star Citizen wechselt, klicke auf die Schaltfläche unten, um den Timer mit dem aktuellen Spielzustand zu synchronisieren.",
@@ -72,7 +75,7 @@
   },
   "contestedZones": {
     "title": "Timer für umkämpfte Zonen",
-    "subtitle": "Verfolge Ziele in Pyros umkämpften Gebieten",
+    "subtitle": "Verfolge Schlüsselkarten-Drucker & Ziele",
     "addTimer": "Timer hinzufügen",
     "noTimers": "Keine aktiven Timer. Klicke auf 'Timer hinzufügen', um mit der Verfolgung zu beginnen.",
     "selectZone": "Zone auswählen",
@@ -82,45 +85,111 @@
     "timeRemaining": "Verbleibende Zeit",
     "expired": "ABGELAUFEN",
     "deleteTimer": "Timer löschen",
+    "cooldownInfo": "Alle Schlüsselkarten-Drucker (30min) • Starte Timer, wenn du oder dein Team einen Drucker aktiviert, um zu verfolgen, wann er wieder bereit ist.",
+    "tabs": {
+      "all": "Alle Zonen"
+    },
     "zones": {
       "checkmate": "Checkmate",
       "orbituary": "Orbituary",
       "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "Blaue Schlüsselkarte Drucker {{number}}",
+      "redKeycard": "Rote Schlüsselkarte Drucker ({{location}})",
+      "greenKeycard": "Grüne Schlüsselkarte Drucker ({{location}})",
+      "yellowKeycard": "Gelbe Schlüsselkarte Drucker ({{location}})",
+      "keycard": "Schlüsselkarte Drucker ({{location}})"
     }
   },
   "compboards": {
-    "title": "Compboard-Sammel-Tracker",
+    "title": "Compboard-Sammlung",
     "subtitle": "Verfolge deinen Fortschritt beim Sammeln von Compboards in Pyro",
     "progress": "{{collected}} von {{total}} gesammelt",
+    "board": "Board {{id}}",
+    "collected": "✓ Gesammelt",
+    "collectedLabel": "Gesammelt",
+    "printerRespawn": "Drucker-Respawn",
+    "readyAt": "Bereit um",
+    "coolingDown": "Abkühlen",
+    "startTimer": "30min Timer starten",
+    "boardsInZone": "{{count}} Boards in dieser Zone",
+    "collectAll": "Sammle alle 7 einzigartigen Compboards, um den Executive Hangar freizuschalten",
+    "startTimersHint": "Starte Timer nach dem Sammeln von Boards, um Respawn-Zeiten zu verfolgen",
     "resetAll": "Alles zurücksetzen",
+    "resetAllBoards": "Alle Boards zurücksetzen",
     "confirmReset": "Bist du sicher, dass du den gesamten Fortschritt zurücksetzen möchtest?"
+  },
+  "timers": {
+    "ready": "Bereit",
+    "almostReady": "Fast bereit!",
+    "coolingDown": "Abkühlen",
+    "minCooldown": "{{minutes}} min Abklingzeit",
+    "readyAt": "Bereit um",
+    "printerWarning": "Drucker wird in unter 3 Minuten bereit sein!",
+    "startTimer": "Timer starten",
+    "start": "Starten"
+  },
+  "vault": {
+    "title": "Ruin Station Vault-Tür",
+    "description": "Öffnet für 1 min, geschlossen für 20 min (wiederholender Zyklus)",
+    "notSynced": "Nicht synchronisiert.",
+    "syncInstruction": "Klicke auf \"Tür jetzt geöffnet\", wenn du siehst, dass die Vault-Tür sich öffnet, um die Verfolgung zu starten.",
+    "closingIn": "Schließt in:",
+    "openingIn": "Öffnet in:",
+    "closesAt": "Schließt",
+    "opensAt": "Öffnet",
+    "doorOpenedNow": "Tür jetzt geöffnet"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "AKTIV",
+    "off": "AUS",
+    "statusLights": "Hangar-Statuslichter",
+    "realTimeIndicators": "Echtzeit-LED-Anzeigen",
+    "description": "Lichter werden <span class=\"text-accent-green font-semibold\">GRÜN</span> während der Hochfahrphase • Schalten ab während der Herunterfahrphase • Alle aus = Hangar geschlossen"
   },
   "quickReference": {
     "title": "Schnellreferenz",
-    "execHangar": {
-      "title": "Executive Hangar",
-      "cycle": "185-Minuten wiederkehrender Zyklus",
-      "greenPhase": "<strong>GRÜN (153min):</strong> Hangar offen, Compboards einfügen",
-      "redPhase": "<strong>ROT (29min):</strong> Hangar geschlossen, LEDs zählen runter",
-      "blackPhase": "<strong>SCHWARZ (3min):</strong> Übergang, Hangar setzt zurück"
+    "subtitle": "Wichtige Infos für Operationen in umkämpften Zonen",
+    "hangarCycle": {
+      "title": "Executive Hangar Zyklus",
+      "totalCycle": "Gesamtzyklus: 185 Minuten (3h 5min)",
+      "greenPhase": "Grüne Phase: ~65 min (OFFEN - Jetzt Boards einfügen!)",
+      "redPhase": "Rote Phase: ~120 min (Geschlossen - Boards NICHT einfügen)",
+      "synchronized": "Global über alle Server synchronisiert"
     },
-    "contestedZones": {
-      "title": "Umkämpfte Zonen",
-      "checkmate": "<strong>Checkmate:</strong> 30-40 min Ziele",
-      "orbituary": "<strong>Orbituary:</strong> 20-30 min Ziele",
-      "ruinStation": "<strong>Ruin Station:</strong> 25-35 min Ziele"
+    "keycards": {
+      "title": "Schlüsselkartentypen",
+      "red": "Rot: Von Supervisor-Stationen",
+      "blue": "Blau: 30-min Abklingzeit Drucker",
+      "greenYellow": "Grün/Gelb: Ruin Station spezifisch",
+      "cooldown": "Alle Drucker haben 30 Minuten Abklingzeit nach Gebrauch"
+    },
+    "vaultDoor": {
+      "title": "Vault-Timer-Tür",
+      "location": "Standort: Ruin Station Vault",
+      "opensFor": "Öffnet für 1 Minute",
+      "closedFor": "Geschlossen für 20 Minuten",
+      "repeats": "Wiederholt sich automatisch",
+      "sync": "Klicke auf \"Tür jetzt geöffnet\" zum Synchronisieren"
     },
     "tips": {
-      "title": "Tipps",
-      "sync": "Synchronisiere den Executive Hangar Timer, wenn du Phasenwechsel im Spiel siehst",
-      "localStorage": "Alle Daten werden lokal in deinem Browser gespeichert",
-      "offline": "Funktioniert offline nach dem ersten Laden"
+      "title": "Tipps & Strategie",
+      "systemClock": "Halte die Systemuhr automatisch synchronisiert",
+      "markBoards": "Markiere Compboards beim Sammeln",
+      "startTimers": "Starte Timer sofort beim Verwenden von Druckern",
+      "planRoutes": "Plane Routen basierend auf Timer-Verfügbarkeit",
+      "allBoards": "Alle 7 Boards erforderlich für Hangar-Zugang"
     }
   },
   "footer": {
     "madeBy": "Erstellt von",
     "forCommunity": "für die Star Citizen Community",
-    "notAffiliated": "Nicht verbunden mit Cloud Imperium Games"
+    "notAffiliated": "Nicht verbunden mit Cloud Imperium Games",
+    "communityTool": "Community-Tool für Star Citizen Spieler",
+    "disclaimer": "Dies ist ein inoffizielles Fan-Tool, nicht verbunden mit oder unterstützt von Cloud Imperium Games.",
+    "accuracy": "Timer-Genauigkeit hängt von deiner Systemuhr ab. Nutzung auf eigene Gefahr."
   },
   "common": {
     "loading": "Lädt...",

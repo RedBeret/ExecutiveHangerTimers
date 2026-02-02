@@ -1,57 +1,60 @@
 import React from 'react'
 import { BookOpen, Key, Clock, Lightbulb } from 'lucide-react'
-
-const references = [
-  {
-    icon: BookOpen,
-    title: 'Executive Hangar Cycle',
-    items: [
-      'Total Cycle: 185 minutes (3h 5min)',
-      'Green Phase: ~65 min (OPEN - Insert boards now!)',
-      'Red Phase: ~120 min (Closed - Do NOT insert boards)',
-      'Synchronized globally across all servers',
-    ],
-  },
-  {
-    icon: Key,
-    title: 'Keycard Types',
-    items: [
-      'Red: From Supervisor stations',
-      'Blue: 30-min cooldown printers',
-      'Green/Yellow: Ruin Station specific',
-      'All printers have 30-minute cooldown after use',
-    ],
-  },
-  {
-    icon: Clock,
-    title: 'Vault Timer Door',
-    items: [
-      'Location: Ruin Station vault',
-      'Opens for 1 minute',
-      'Closed for 20 minutes',
-      'Repeats automatically',
-      'Click "Door Opened Now" to sync',
-    ],
-  },
-  {
-    icon: Lightbulb,
-    title: 'Tips & Strategy',
-    items: [
-      'Keep system clock auto-synced',
-      'Mark compboards as you collect them',
-      'Start timers immediately when using printers',
-      'Plan routes around timer availability',
-      'All 7 boards required for hangar access',
-    ],
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 export function QuickReference() {
+  const { t } = useTranslation()
+
+  const references = [
+    {
+      icon: BookOpen,
+      title: t('quickReference.hangarCycle.title'),
+      items: [
+        t('quickReference.hangarCycle.totalCycle'),
+        t('quickReference.hangarCycle.greenPhase'),
+        t('quickReference.hangarCycle.redPhase'),
+        t('quickReference.hangarCycle.synchronized'),
+      ],
+    },
+    {
+      icon: Key,
+      title: t('quickReference.keycards.title'),
+      items: [
+        t('quickReference.keycards.red'),
+        t('quickReference.keycards.blue'),
+        t('quickReference.keycards.greenYellow'),
+        t('quickReference.keycards.cooldown'),
+      ],
+    },
+    {
+      icon: Clock,
+      title: t('quickReference.vaultDoor.title'),
+      items: [
+        t('quickReference.vaultDoor.location'),
+        t('quickReference.vaultDoor.opensFor'),
+        t('quickReference.vaultDoor.closedFor'),
+        t('quickReference.vaultDoor.repeats'),
+        t('quickReference.vaultDoor.sync'),
+      ],
+    },
+    {
+      icon: Lightbulb,
+      title: t('quickReference.tips.title'),
+      items: [
+        t('quickReference.tips.systemClock'),
+        t('quickReference.tips.markBoards'),
+        t('quickReference.tips.startTimers'),
+        t('quickReference.tips.planRoutes'),
+        t('quickReference.tips.allBoards'),
+      ],
+    },
+  ]
+
   return (
     <div className="card">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold mb-2">Quick Reference Guide</h2>
-        <p className="text-gray-400">Essential info for contested zone operations</p>
+        <h2 className="text-3xl font-bold mb-2">{t('quickReference.title')}</h2>
+        <p className="text-gray-400">{t('quickReference.subtitle')}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

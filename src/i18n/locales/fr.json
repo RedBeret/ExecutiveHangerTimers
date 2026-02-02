@@ -44,6 +44,9 @@
     "resetSync": "Réinitialiser la synchro",
     "precisionTiming": "Timing de précision:",
     "syncWhenSee": "Synchronisez lorsque vous voyez le hangar changer dans le jeu",
+    "openUntil": "Ouvert jusqu'à {{time}}",
+    "opensAt": "Ouvre à {{time}}",
+    "beta": "Bêta",
     "syncPanel": {
       "title": "Synchroniser avec la phase en jeu",
       "description": "Lorsque vous voyez le hangar changer de phase dans Star Citizen, cliquez sur le bouton ci-dessous pour synchroniser le minuteur avec l'état actuel du jeu.",
@@ -72,7 +75,7 @@
   },
   "contestedZones": {
     "title": "Minuteurs de Zones Contestées",
-    "subtitle": "Suivez les objectifs à travers les territoires contestés de Pyro",
+    "subtitle": "Suivez les imprimantes de cartes-clés & objectifs",
     "addTimer": "Ajouter un minuteur",
     "noTimers": "Aucun minuteur actif. Cliquez sur 'Ajouter un minuteur' pour commencer le suivi.",
     "selectZone": "Sélectionner une zone",
@@ -82,45 +85,111 @@
     "timeRemaining": "Temps restant",
     "expired": "EXPIRÉ",
     "deleteTimer": "Supprimer le minuteur",
+    "cooldownInfo": "Toutes les imprimantes de cartes-clés (30min) • Démarrez les minuteurs lorsque vous ou votre équipe activez une imprimante pour suivre quand elle sera à nouveau prête.",
+    "tabs": {
+      "all": "Toutes les zones"
+    },
     "zones": {
       "checkmate": "Checkmate",
       "orbituary": "Orbituary",
       "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "Imprimante de carte-clé bleue {{number}}",
+      "redKeycard": "Imprimante de carte-clé rouge ({{location}})",
+      "greenKeycard": "Imprimante de carte-clé verte ({{location}})",
+      "yellowKeycard": "Imprimante de carte-clé jaune ({{location}})",
+      "keycard": "Imprimante de carte-clé ({{location}})"
     }
   },
   "compboards": {
-    "title": "Suivi de la collecte de Compboards",
+    "title": "Collecte de Compboards",
     "subtitle": "Suivez votre progression dans la collecte de compboards à travers Pyro",
     "progress": "{{collected}} sur {{total}} collectés",
+    "board": "Board {{id}}",
+    "collected": "✓ Collecté",
+    "collectedLabel": "Collectés",
+    "printerRespawn": "Réapparition de l'imprimante",
+    "readyAt": "Prêt à",
+    "coolingDown": "Refroidissement",
+    "startTimer": "Démarrer minuteur 30min",
+    "boardsInZone": "{{count}} boards dans cette zone",
+    "collectAll": "Collectez les 7 compboards uniques pour déverrouiller le Hangar Exécutif",
+    "startTimersHint": "Démarrez les minuteurs après avoir collecté les boards pour suivre les temps de réapparition",
     "resetAll": "Tout réinitialiser",
+    "resetAllBoards": "Réinitialiser tous les boards",
     "confirmReset": "Êtes-vous sûr de vouloir réinitialiser toute la progression?"
+  },
+  "timers": {
+    "ready": "Prêt",
+    "almostReady": "Presque prêt!",
+    "coolingDown": "Refroidissement",
+    "minCooldown": "{{minutes}} min de recharge",
+    "readyAt": "Prêt à",
+    "printerWarning": "L'imprimante sera prête dans moins de 3 minutes!",
+    "startTimer": "Démarrer le minuteur",
+    "start": "Démarrer"
+  },
+  "vault": {
+    "title": "Porte du coffre-fort de Ruin Station",
+    "description": "Ouvre pendant 1 min, fermée pendant 20 min (cycle répétitif)",
+    "notSynced": "Non synchronisé.",
+    "syncInstruction": "Cliquez sur \"Porte ouverte maintenant\" lorsque vous voyez la porte du coffre-fort s'ouvrir pour commencer le suivi.",
+    "closingIn": "Ferme dans:",
+    "openingIn": "Ouvre dans:",
+    "closesAt": "Ferme",
+    "opensAt": "Ouvre",
+    "doorOpenedNow": "Porte ouverte maintenant"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "ACTIF",
+    "off": "ÉTEINT",
+    "statusLights": "Lumières d'état du hangar",
+    "realTimeIndicators": "Indicateurs LED en temps réel",
+    "description": "Les lumières deviennent <span class=\"text-accent-green font-semibold\">VERTES</span> pendant la phase de mise sous tension • S'éteignent pendant l'arrêt • Toutes éteintes = hangar fermé"
   },
   "quickReference": {
     "title": "Guide de référence rapide",
-    "execHangar": {
-      "title": "Hangar Exécutif",
-      "cycle": "Cycle répétitif de 185 minutes",
-      "greenPhase": "<strong>VERT (153min):</strong> Hangar ouvert, insérer des compboards",
-      "redPhase": "<strong>ROUGE (29min):</strong> Hangar fermé, LEDs en compte à rebours",
-      "blackPhase": "<strong>NOIR (3min):</strong> Transition, hangar réinitialise"
+    "subtitle": "Informations essentielles pour les opérations en zones contestées",
+    "hangarCycle": {
+      "title": "Cycle du Hangar Exécutif",
+      "totalCycle": "Cycle total: 185 minutes (3h 5min)",
+      "greenPhase": "Phase verte: ~65 min (OUVERT - Insérer les boards maintenant!)",
+      "redPhase": "Phase rouge: ~120 min (Fermé - NE PAS insérer de boards)",
+      "synchronized": "Synchronisé globalement sur tous les serveurs"
     },
-    "contestedZones": {
-      "title": "Zones Contestées",
-      "checkmate": "<strong>Checkmate:</strong> Objectifs de 30-40 min",
-      "orbituary": "<strong>Orbituary:</strong> Objectifs de 20-30 min",
-      "ruinStation": "<strong>Ruin Station:</strong> Objectifs de 25-35 min"
+    "keycards": {
+      "title": "Types de cartes-clés",
+      "red": "Rouge: Des stations Supervisor",
+      "blue": "Bleue: Imprimantes avec 30 min de recharge",
+      "greenYellow": "Verte/Jaune: Spécifiques à Ruin Station",
+      "cooldown": "Toutes les imprimantes ont 30 minutes de recharge après utilisation"
+    },
+    "vaultDoor": {
+      "title": "Porte du coffre-fort minutée",
+      "location": "Emplacement: Coffre-fort de Ruin Station",
+      "opensFor": "Ouvre pendant 1 minute",
+      "closedFor": "Fermée pendant 20 minutes",
+      "repeats": "Se répète automatiquement",
+      "sync": "Cliquez sur \"Porte ouverte maintenant\" pour synchroniser"
     },
     "tips": {
-      "title": "Conseils",
-      "sync": "Synchronisez le minuteur du hangar exécutif lorsque vous voyez les changements de phase en jeu",
-      "localStorage": "Toutes les données sont enregistrées localement dans votre navigateur",
-      "offline": "Fonctionne hors ligne après le premier chargement"
+      "title": "Conseils & Stratégie",
+      "systemClock": "Gardez l'horloge système auto-synchronisée",
+      "markBoards": "Marquez les compboards au fur et à mesure que vous les collectez",
+      "startTimers": "Démarrez les minuteurs immédiatement lors de l'utilisation des imprimantes",
+      "planRoutes": "Planifiez les itinéraires en fonction de la disponibilité des minuteurs",
+      "allBoards": "Les 7 boards sont requis pour accéder au hangar"
     }
   },
   "footer": {
     "madeBy": "Créé par",
     "forCommunity": "pour la communauté Star Citizen",
-    "notAffiliated": "Non affilié à Cloud Imperium Games"
+    "notAffiliated": "Non affilié à Cloud Imperium Games",
+    "communityTool": "Outil communautaire pour les joueurs de Star Citizen",
+    "disclaimer": "Ceci est un outil non officiel créé par des fans, non affilié ou approuvé par Cloud Imperium Games.",
+    "accuracy": "La précision du minuteur dépend de votre horloge système. Utilisation à vos propres risques."
   },
   "common": {
     "loading": "Chargement...",

@@ -4,58 +4,58 @@ import { useTranslation } from 'react-i18next'
 import { TimerCard } from './TimerCard'
 import { VaultTimerCard } from './VaultTimerCard'
 
-const zones = [
-  {
-    id: 'checkmate',
-    name: 'Checkmate Station',
-    icon: Target,
-    timers: [
-      { id: 'checkmate-blue-1', label: 'Blue Keycard Printer 1', duration: 30 * 60 * 1000 },
-      { id: 'checkmate-blue-2', label: 'Blue Keycard Printer 2', duration: 30 * 60 * 1000 },
-      { id: 'checkmate-blue-3', label: 'Blue Keycard Printer 3', duration: 30 * 60 * 1000 },
-      { id: 'checkmate-blue-4', label: 'Blue Keycard Printer 4', duration: 30 * 60 * 1000 },
-    ],
-  },
-  {
-    id: 'orbituary',
-    name: 'Orbituary Station',
-    icon: Zap,
-    timers: [
-      { id: 'orbituary-blue-1', label: 'Blue Keycard Printer 1', duration: 30 * 60 * 1000 },
-      { id: 'orbituary-blue-2', label: 'Blue Keycard Printer 2', duration: 30 * 60 * 1000 },
-    ],
-  },
-  {
-    id: 'ruin',
-    name: 'Ruin Station (Ghost Arena)',
-    icon: Landmark,
-    timers: [
-      { id: 'ruin-crypt', label: 'Green Keycard Printer (Crypt)', duration: 30 * 60 * 1000 },
-      { id: 'ruin-wasteland', label: 'Yellow Keycard Printer (Wasteland)', duration: 30 * 60 * 1000 },
-      { id: 'ruin-lastresort', label: 'Keycard Printer (Last Resort)', duration: 30 * 60 * 1000 },
-    ],
-  },
-  {
-    id: 'supervisor',
-    name: 'Supervisor Outposts',
-    icon: Database,
-    timers: [
-      { id: 'supervisor-l4', label: 'Red Keycard Printer (Pyro 3 L4)', duration: 30 * 60 * 1000 },
-      { id: 'supervisor-l5', label: 'Red Keycard Printer (Pyro 3 L5)', duration: 30 * 60 * 1000 },
-    ],
-  },
-]
-
-const tabs = [
-  { id: 'all', label: 'All Zones' },
-  { id: 'checkmate', label: 'Checkmate' },
-  { id: 'orbituary', label: 'Orbituary' },
-  { id: 'ruin', label: 'Ruin' },
-  { id: 'supervisor', label: 'Supervisor' },
-]
-
 export function ContestedZones({ activeTab = 'all' }) {
   const { t } = useTranslation()
+
+  const zones = [
+    {
+      id: 'checkmate',
+      name: 'Checkmate Station',
+      icon: Target,
+      timers: [
+        { id: 'checkmate-blue-1', label: t('contestedZones.timers.blueKeycard', { number: 1 }), duration: 30 * 60 * 1000 },
+        { id: 'checkmate-blue-2', label: t('contestedZones.timers.blueKeycard', { number: 2 }), duration: 30 * 60 * 1000 },
+        { id: 'checkmate-blue-3', label: t('contestedZones.timers.blueKeycard', { number: 3 }), duration: 30 * 60 * 1000 },
+        { id: 'checkmate-blue-4', label: t('contestedZones.timers.blueKeycard', { number: 4 }), duration: 30 * 60 * 1000 },
+      ],
+    },
+    {
+      id: 'orbituary',
+      name: 'Orbituary Station',
+      icon: Zap,
+      timers: [
+        { id: 'orbituary-blue-1', label: t('contestedZones.timers.blueKeycard', { number: 1 }), duration: 30 * 60 * 1000 },
+        { id: 'orbituary-blue-2', label: t('contestedZones.timers.blueKeycard', { number: 2 }), duration: 30 * 60 * 1000 },
+      ],
+    },
+    {
+      id: 'ruin',
+      name: 'Ruin Station (Ghost Arena)',
+      icon: Landmark,
+      timers: [
+        { id: 'ruin-crypt', label: t('contestedZones.timers.greenKeycard', { location: 'Crypt' }), duration: 30 * 60 * 1000 },
+        { id: 'ruin-wasteland', label: t('contestedZones.timers.yellowKeycard', { location: 'Wasteland' }), duration: 30 * 60 * 1000 },
+        { id: 'ruin-lastresort', label: t('contestedZones.timers.keycard', { location: 'Last Resort' }), duration: 30 * 60 * 1000 },
+      ],
+    },
+    {
+      id: 'supervisor',
+      name: 'Supervisor Outposts',
+      icon: Database,
+      timers: [
+        { id: 'supervisor-l4', label: t('contestedZones.timers.redKeycard', { location: 'Pyro 3 L4' }), duration: 30 * 60 * 1000 },
+        { id: 'supervisor-l5', label: t('contestedZones.timers.redKeycard', { location: 'Pyro 3 L5' }), duration: 30 * 60 * 1000 },
+      ],
+    },
+  ]
+
+  const tabs = [
+    { id: 'all', label: t('contestedZones.tabs.all') },
+    { id: 'checkmate', label: 'Checkmate' },
+    { id: 'orbituary', label: 'Orbituary' },
+    { id: 'ruin', label: 'Ruin' },
+    { id: 'supervisor', label: 'Supervisor' },
+  ]
 
   const filteredZones = activeTab === 'all'
     ? zones
@@ -64,8 +64,8 @@ export function ContestedZones({ activeTab = 'all' }) {
   return (
     <div className="card">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold mb-2">Contested Zone Timers</h2>
-        <p className="text-gray-400">Track keycard printers & objectives</p>
+        <h2 className="text-3xl font-bold mb-2">{t('contestedZones.title')}</h2>
+        <p className="text-gray-400">{t('contestedZones.subtitle')}</p>
       </div>
 
       <div className="space-y-8">
@@ -100,8 +100,7 @@ export function ContestedZones({ activeTab = 'all' }) {
       </div>
 
       <div className="mt-6 p-4 bg-dark-800/30 rounded-lg text-sm text-gray-400">
-        <strong className="text-gray-300">Cooldown times:</strong> All Keycard Printers (30min) •
-        Start timers when you or your team activates a printer to track when they'll be ready again.
+        {t('contestedZones.cooldownInfo')}
       </div>
     </div>
   )

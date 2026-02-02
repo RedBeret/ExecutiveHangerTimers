@@ -1,11 +1,13 @@
 import React from 'react'
 import { Play, RotateCcw, Clock, AlertTriangle } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { CountdownDisplay } from './CountdownDisplay'
 import { TimerRing } from './CircularProgress'
 import { useCountdownTimer } from '../hooks/useCountdownTimer'
 import { useAnnouncer } from '../hooks/useAnnouncer'
 
 export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
+  const { t } = useTranslation()
   const { status, start, reset } = useCountdownTimer(id, duration)
 
   // Accessibility: Announce timer updates to screen readers
@@ -19,19 +21,19 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
   let borderColor = 'border-dark-700'
   let bgGradient = ''
   let statusBadgeClass = 'bg-accent-green/20 text-accent-green'
-  let statusText = 'Ready'
+  let statusText = t('timers.ready')
 
   if (status.isActive) {
     if (isWarning) {
       borderColor = 'border-amber-500/50'
       bgGradient = 'bg-gradient-radial-yellow'
       statusBadgeClass = 'bg-amber-500/30 text-amber-300 animate-pulse'
-      statusText = 'Almost Ready!'
+      statusText = t('timers.almostReady')
     } else {
       borderColor = 'border-accent-red/30'
       bgGradient = 'bg-gradient-radial-red'
       statusBadgeClass = 'bg-accent-red/20 text-accent-red'
-      statusText = 'Cooling Down'
+      statusText = t('timers.coolingDown')
     }
   }
 
@@ -57,7 +59,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             <div className="flex items-center gap-2">
               <Clock className="w-3 h-3 text-gray-500" aria-hidden="true" />
               <span className="text-xs text-gray-500">
-                {duration / 1000 / 60} min cooldown
+                {t('timers.minCooldown', { minutes: duration / 1000 / 60 })}
               </span>
             </div>
           </div>
@@ -93,7 +95,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             />
             {status.isActive && (
               <div className="mt-2 text-sm text-gray-400">
-                Ready at <span className="text-accent-blue font-semibold">
+                {t('timers.readyAt')} <span className="text-accent-blue font-semibold">
                   {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
                     hour: 'numeric',
                     minute: '2-digit',
@@ -122,7 +124,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
           >
             <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0" aria-hidden="true" />
             <span className="text-xs text-amber-200 font-medium">
-              Printer will be ready in under 3 minutes!
+              {t('timers.printerWarning')}
             </span>
           </div>
         )}
@@ -145,8 +147,8 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             `}
           >
             <Play className="w-5 h-5" aria-hidden="true" />
-            <span className="hidden sm:inline">Start Timer</span>
-            <span className="sm:hidden">Start</span>
+            <span className="hidden sm:inline">{t('timers.startTimer')}</span>
+            <span className="sm:hidden">{t('timers.start')}</span>
           </button>
           {status.isActive && (
             <button

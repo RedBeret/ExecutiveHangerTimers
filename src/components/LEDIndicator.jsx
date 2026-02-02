@@ -1,6 +1,8 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function LEDIndicator({ isOn, number, size = 'md', responsive = false }) {
+  const { t } = useTranslation()
   const sizeClasses = {
     sm: 'w-10 h-10',
     md: 'w-16 h-16',
@@ -41,10 +43,10 @@ export function LEDIndicator({ isOn, number, size = 'md', responsive = false }) 
 
       <div className="flex flex-col items-center gap-1">
         <span className={`text-xs sm:text-sm font-mono font-bold ${isOn ? 'text-accent-green' : 'text-gray-600'}`}>
-          LED {number}
+          {t('led.label', { number })}
         </span>
         <span className={`text-[10px] sm:text-xs font-medium ${isOn ? 'text-green-400' : 'text-gray-700'}`}>
-          {isOn ? 'ACTIVE' : 'OFF'}
+          {isOn ? t('led.active') : t('led.off')}
         </span>
       </div>
     </div>
@@ -52,6 +54,8 @@ export function LEDIndicator({ isOn, number, size = 'md', responsive = false }) 
 }
 
 export function LEDGrid({ ledStates }) {
+  const { t } = useTranslation()
+
   return (
     <div className="relative">
       {/* Background glow effect */}
@@ -59,8 +63,8 @@ export function LEDGrid({ ledStates }) {
 
       <div className="relative p-4 sm:p-6 md:p-8 bg-dark-900/80 backdrop-blur-md rounded-xl border-2 border-dark-700/50">
         <div className="text-center mb-4 sm:mb-6">
-          <h3 className="text-base sm:text-lg font-bold text-gray-300 mb-1">Hangar Status Lights</h3>
-          <p className="text-xs sm:text-sm text-gray-500">Real-time LED indicators</p>
+          <h3 className="text-base sm:text-lg font-bold text-gray-300 mb-1">{t('led.statusLights')}</h3>
+          <p className="text-xs sm:text-sm text-gray-500">{t('led.realTimeIndicators')}</p>
         </div>
 
         <div className="flex justify-center items-start gap-2 sm:gap-4 md:gap-6">
@@ -70,10 +74,7 @@ export function LEDGrid({ ledStates }) {
         </div>
 
         <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-dark-700/50 text-center">
-          <p className="text-[10px] sm:text-xs text-gray-500">
-            Lights turn <span className="text-accent-green font-semibold">GREEN</span> during power-up phase •
-            Turn off during power-down • All off = hangar closed
-          </p>
+          <p className="text-[10px] sm:text-xs text-gray-500" dangerouslySetInnerHTML={{ __html: t('led.description') }} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // Timer calculation utilities for Executive Hangar and other timers
 
 // Executive Hangar Constants (exact values from exec.xyxyll.com)
-// Updated: Feb 01, 2026 for SC Patch 4.4.0-LIVE
+// Updated: Feb 01, 2026 for SC Patch 4.6-LIVE
 const OPEN_DURATION = 3900415 // 65.007 minutes - GREEN/ONLINE phase
 const CLOSE_DURATION = 7200767 // 120.013 minutes - RED/OFFLINE phase
 const CYCLE_DURATION = OPEN_DURATION + CLOSE_DURATION // 11101182 ms = 185.020 minutes
