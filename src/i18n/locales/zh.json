@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "dashboard": "仪表盘",
+    "executiveHangars": "行政机库",
+    "contestedZones": "争议区域",
+    "hangarTracker": "Star Citizen 机库跟踪器"
+  },
+  "home": {
+    "title": "Pyro 计时器仪表盘",
+    "subtitle": "一览所有 Star Citizen 计时器",
+    "about": {
+      "title": "关于此工具",
+      "description": "<strong>Pyro Timer</strong> 是一个全面的粉丝制作工具,用于 Star Citizen 在 Pyro 星系的争议区域行动。在一个地方跟踪行政机库周期、钥匙卡打印机冷却时间和 Compboard 收集。",
+      "features": "功能特性",
+      "featuresList": {
+        "precision": "高精度行政机库计时器(±1秒准确度)",
+        "czTimers": "所有争议区域目标计时器(Checkmate、Orbituary、Ruin Station)",
+        "compboards": "带进度可视化的 Compboard 收集跟踪器",
+        "localStorage": "本地存储 - 您的数据永不离开设备",
+        "offline": "首次加载后可离线工作",
+        "noLogin": "无需登录或账户"
+      },
+      "howItWorks": "工作原理",
+      "howItWorksText": "所有计时器使用 React 和 JavaScript 在浏览器中运行。行政机库计时器基于已知的185分钟周期计算当前周期阶段。争议区域计时器和您的检查清单保存在浏览器的本地存储中,因此即使关闭页面也会保留。",
+      "credits": "致谢与来源",
+      "creditsList": {
+        "algorithm": "<strong>计时器数据:</strong> 社区研究与测试",
+        "gameData": "<strong>游戏数据:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>社区工具:</strong> exec.xyxyll.com",
+        "game": "<strong>游戏:</strong> Cloud Imperium Games 的 Star Citizen"
+      },
+      "disclaimer": "<strong>免责声明:</strong> 这是一个非官方的粉丝制作工具,未与 Cloud Imperium Games 关联或获得认可。计时器准确性取决于系统时钟是否正确同步。使用风险自负。"
+    }
+  },
+  "execHangar": {
+    "title": "行政机库状态",
+    "subtitle": "PYAM-EXHANG 全球周期 • 所有服务器同步",
+    "loading": "正在加载机库状态...",
+    "timeUntil": "距离",
+    "opening": "开放",
+    "closing": "关闭",
+    "cycleProgress": "周期进度",
+    "syncTimer": "同步计时器",
+    "resetSync": "重置同步",
+    "precisionTiming": "精确计时:",
+    "syncWhenSee": "当您看到游戏中机库变化时同步",
+    "openUntil": "开放至 {{time}}",
+    "opensAt": "在 {{time}} 开放",
+    "beta": "测试版",
+    "syncPanel": {
+      "title": "与游戏内阶段同步",
+      "description": "当您在 Star Citizen 中看到机库改变阶段时,点击下面的按钮将计时器与当前游戏状态同步。",
+      "green": "绿色",
+      "greenOpened": "机库刚刚开放",
+      "greenDesc": "(可插入面板)",
+      "red": "红色",
+      "redClosed": "机库刚刚关闭",
+      "redDesc": "(LED倒计时中)",
+      "black": "黑色",
+      "blackReset": "机库重置中",
+      "blackDesc": "(过渡阶段)",
+      "tip": "<strong>提示:</strong> 为获得最佳准确度,请在看到阶段变化的瞬间同步。计时器将在浏览器会话之间记住您的同步。"
+    },
+    "syncActive": "手动同步已激活:",
+    "offsetApplied": "已应用 {{offset}} 秒偏移"
+  },
+  "phases": {
+    "green": "绿色阶段",
+    "greenDesc": "机库开放 - 插入 Compboards",
+    "red": "红色阶段",
+    "redDesc": "机库关闭 - 等待中",
+    "black": "黑色阶段",
+    "blackDesc": "过渡 - 重置",
+    "nextPhase": "下一个: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "争议区域计时器",
+    "subtitle": "跟踪钥匙卡打印机和目标",
+    "addTimer": "添加计时器",
+    "noTimers": "没有活动计时器。点击'添加计时器'开始跟踪。",
+    "selectZone": "选择区域",
+    "selectObjective": "选择目标",
+    "startTimer": "启动计时器",
+    "cancel": "取消",
+    "timeRemaining": "剩余时间",
+    "expired": "已过期",
+    "deleteTimer": "删除计时器",
+    "cooldownInfo": "所有钥匙卡打印机(30分钟) • 当您或您的团队激活打印机时启动计时器,以跟踪它们何时再次准备就绪。",
+    "tabs": {
+      "all": "所有区域"
+    },
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "蓝色钥匙卡打印机 {{number}}",
+      "redKeycard": "红色钥匙卡打印机({{location}})",
+      "greenKeycard": "绿色钥匙卡打印机({{location}})",
+      "yellowKeycard": "黄色钥匙卡打印机({{location}})",
+      "keycard": "钥匙卡打印机({{location}})"
+    }
+  },
+  "compboards": {
+    "title": "Compboard 收集",
+    "subtitle": "跟踪您在 Pyro 收集 Compboards 的进度",
+    "progress": "已收集 {{collected}}/{{total}}",
+    "board": "面板 {{id}}",
+    "collected": "✓ 已收集",
+    "collectedLabel": "已收集",
+    "printerRespawn": "打印机重生",
+    "readyAt": "准备时间",
+    "coolingDown": "冷却中",
+    "startTimer": "启动30分钟计时器",
+    "boardsInZone": "此区域有 {{count}} 个面板",
+    "collectAll": "收集所有7个独特的 Compboards 以解锁行政机库",
+    "startTimersHint": "收集面板后启动计时器以跟踪重生时间",
+    "resetAll": "全部重置",
+    "resetAllBoards": "重置所有面板",
+    "confirmReset": "您确定要重置所有进度吗?"
+  },
+  "timers": {
+    "ready": "就绪",
+    "almostReady": "即将就绪!",
+    "coolingDown": "冷却中",
+    "minCooldown": "{{minutes}}分钟冷却",
+    "readyAt": "准备时间",
+    "printerWarning": "打印机将在3分钟内准备就绪!",
+    "startTimer": "启动计时器",
+    "start": "启动"
+  },
+  "vault": {
+    "title": "Ruin Station 保险库门",
+    "description": "开放1分钟,关闭20分钟(重复周期)",
+    "notSynced": "未同步。",
+    "syncInstruction": "当您看到保险库门打开时点击\"门已开启\"开始跟踪。",
+    "closingIn": "关闭倒计时:",
+    "openingIn": "开放倒计时:",
+    "closesAt": "关闭",
+    "opensAt": "开放",
+    "doorOpenedNow": "门已开启"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "活动",
+    "off": "关闭",
+    "statusLights": "机库状态灯",
+    "realTimeIndicators": "实时LED指示器",
+    "description": "灯在通电阶段变为<span class=\"text-accent-green font-semibold\">绿色</span> • 断电时关闭 • 全部关闭 = 机库关闭"
+  },
+  "quickReference": {
+    "title": "快速参考指南",
+    "subtitle": "争议区域行动的必备信息",
+    "hangarCycle": {
+      "title": "行政机库周期",
+      "totalCycle": "总周期: 185分钟(3小时5分钟)",
+      "greenPhase": "绿色阶段: 约65分钟(开放 - 现在插入面板!)",
+      "redPhase": "红色阶段: 约120分钟(关闭 - 请勿插入面板)",
+      "synchronized": "在所有服务器上全球同步"
+    },
+    "keycards": {
+      "title": "钥匙卡类型",
+      "red": "红色: 来自监督站",
+      "blue": "蓝色: 30分钟冷却打印机",
+      "greenYellow": "绿色/黄色: Ruin Station 专用",
+      "cooldown": "所有打印机使用后有30分钟冷却时间"
+    },
+    "vaultDoor": {
+      "title": "保险库计时器门",
+      "location": "位置: Ruin Station 保险库",
+      "opensFor": "开放1分钟",
+      "closedFor": "关闭20分钟",
+      "repeats": "自动重复",
+      "sync": "点击\"门已开启\"进行同步"
+    },
+    "tips": {
+      "title": "提示与策略",
+      "systemClock": "保持系统时钟自动同步",
+      "markBoards": "在收集 Compboards 时进行标记",
+      "startTimers": "使用打印机时立即启动计时器",
+      "planRoutes": "根据计时器可用性规划路线",
+      "allBoards": "需要所有7个面板才能访问机库"
+    }
+  },
+  "footer": {
+    "madeBy": "制作者",
+    "forCommunity": "为 Star Citizen 社区制作",
+    "notAffiliated": "未与 Cloud Imperium Games 关联",
+    "communityTool": "Star Citizen 玩家的社区工具",
+    "disclaimer": "这是一个非官方的粉丝制作工具,未与 Cloud Imperium Games 关联或获得认可。",
+    "accuracy": "计时器准确性取决于您的系统时钟。使用风险自负。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "reset": "重置",
+    "confirm": "确认"
+  }
+}
