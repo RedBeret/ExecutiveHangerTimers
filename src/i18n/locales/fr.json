@@ -255,7 +255,8 @@
       "description": "C'est un outil de minuteurs, pas un guide pas à pas. Il vous aide à suivre les temps de recharge des imprimantes, les cycles de porte du coffre, le calendrier du Hangar Exécutif et la progression de collecte des compboards.",
       "localStorage": "Tous les minuteurs sont locaux à votre appareil et navigateur — rien n'est envoyé à un serveur. Si vous effacez vos données de navigation, vos minuteurs sont réinitialisés.",
       "goToDashboard": "Aller au tableau de bord"
-    }
+    },
+    "backToTop": "Retour en haut"
   },
   "footer": {
     "madeBy": "Créé par",

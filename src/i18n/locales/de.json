@@ -255,7 +255,8 @@
       "description": "Dies ist ein Timer-Tool, kein Walkthrough. Es hilft dir, Schlüsselkarten-Drucker-Abklingzeiten, Vault-Tür-Zyklen, den Executive Hangar Zeitplan und den Compboard-Sammelfortschritt zu verfolgen.",
       "localStorage": "Alle Timer sind lokal auf deinem Gerät und Browser — nichts wird an einen Server gesendet. Wenn du deine Browserdaten löschst, werden deine Timer zurückgesetzt.",
       "goToDashboard": "Zum Dashboard"
-    }
+    },
+    "backToTop": "Nach oben"
   },
   "footer": {
     "madeBy": "Erstellt von",
