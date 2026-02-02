@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function Footer() {
@@ -13,6 +14,9 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
+            <Link to="/guide" className="text-gray-500 hover:text-accent-blue transition-colors">
+              Start Here
+            </Link>
             <span className="text-gray-600">v1.0.2</span>
           </div>
         </div>

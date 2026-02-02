@@ -5,6 +5,7 @@ import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
 import { ExecutiveHangarsPage } from './pages/ExecutiveHangarsPage'
 import { ContestedZonesPage } from './pages/ContestedZonesPage'
+import { GuidePage } from './pages/GuidePage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/executive-hangars" element={<ExecutiveHangarsPage />} />
             <Route path="/contested-zones" element={<ContestedZonesPage />} />
+            <Route path="/guide" element={<GuidePage />} />
           </Routes>
         </main>
 
