@@ -183,13 +183,88 @@
       "allBoards": "Alle 7 Boards erforderlich für Hangar-Zugang"
     }
   },
+  "guide": {
+    "hero": {
+      "title": "Erste Schritte: Pyro Umkämpfte Zonen",
+      "subtitle": "Alles, was du wissen musst, bevor du eine umkämpfte Zone in Star Citizens Pyro-System betrittst.",
+      "showBasics": "Ich bin neu, zeig mir die Grundlagen",
+      "goToTimers": "Ich kenne den Ablauf, bring mich zu den Timern"
+    },
+    "why": {
+      "title": "Warum sollte man das machen?",
+      "paragraph1": "Der Zugang zum Executive Hangar erfordert das Sammeln von 7 Compboards, die über drei Stationen in umkämpften Zonen verteilt sind. Es ist die Endgame-PvP-Schleife in Pyro.",
+      "paragraph2": "Drinnen findest du einzigartige Beute, hochwertige Belohnungen und einige der intensivsten PvP-Begegnungen im Spiel. Die Executive Hangars selbst laufen auf einem globalen Timer — sobald du die Compboards hast, musst du immer noch den richtigen Zeitpunkt für den Eintritt abpassen."
+    },
+    "whatAreCZ": {
+      "title": "Was sind umkämpfte Zonen?",
+      "description": "Umkämpfte Zonen sind Freischuss-PvPvE-Gebiete — es gibt keinen sicheren Modus darin. Drei Stationen beherbergen sie: Checkmate, Orbituary und Ruin Station (Ghost Arena).",
+      "warning": "Wenn du eine umkämpfte Zone betrittst, rechne mit PvP. Du wirst auf andere Spieler treffen, und viele von ihnen sind feindlich.",
+      "pveNote": "Hinweis: PvE-orientierte Missions-Hubs wie Levski und QV Service Stations gibt es in Pyro, aber Reisen zwischen Standorten ist immer noch riskant — Pyro ist gesetzloser Raum."
+    },
+    "zones": {
+      "title": "Die Zonen",
+      "checkmate": {
+        "name": "Checkmate Station",
+        "item1": "Blaue Schlüsselkarten-Drucker (15min)",
+        "item2": "Rote Schlüsselkarten-Drucker (30min)",
+        "item3": "Compboards #1, #2, #3",
+        "item4": "Moderates Layout — gute Einstiegszone"
+      },
+      "orbituary": {
+        "name": "Orbituary Station",
+        "item1": "Blaue Schlüsselkarten-Drucker (30min)",
+        "item2": "Compboards #4 & #7",
+        "item3": "Enge Korridore — pass an Ecken auf",
+        "item4": "Weniger Boards, aber trotzdem essentiell"
+      },
+      "ruin": {
+        "name": "Ruin Station",
+        "subtitle": "Ghost Arena",
+        "item1": "Vault-Tür (21min Zyklus: 1min offen, 20min geschlossen)",
+        "item2": "Gelbe & Grüne Schlüsselkarten-Drucker (30min)",
+        "item3": "Compboards #5 & #6",
+        "item4": "Komplexestes Layout — nimm einen Freund mit oder sei vorsichtig"
+      },
+      "supervisor": {
+        "name": "Supervisor-Außenposten",
+        "subtitle": "Pyro 3 L4/L5",
+        "item1": "Rote Schlüsselkarten-Drucker (30min)",
+        "item2": "Außerhalb der CZ-Stationen gelegen",
+        "item3": "Geringeres Risiko als vollständige umkämpfte Zonen",
+        "item4": "Gut um rote Schlüsselkarten zu holen, bevor man reingeht"
+      }
+    },
+    "quickstart": {
+      "title": "Schnellstart-Checkliste",
+      "soloNote": "Standardmäßig solo — diese Schritte funktionieren allein oder in einer Gruppe.",
+      "step1": "Ausrüsten: Loadout, Medizin, Munition. Bring nicht dein Bestes — bring das, was du dir leisten kannst zu verlieren.",
+      "step2": "Setze einen lokalen Respawn an einer nahegelegenen Station, bevor du eintrittst.",
+      "step3": "Wähle eine Zone und geh rein. Checkmate ist für Anfänger am zugänglichsten.",
+      "step4": "Benutze Drucker & sammle Boards. Starte Timer auf dieser Seite, wenn du einen Drucker aktivierst.",
+      "step5": "Extrahieren. Behandle das Verlassen als den gefährlichsten Teil — verweile nicht an Ausgängen."
+    },
+    "pvp": {
+      "title": "PvP & Sicherheit",
+      "description": "Umkämpfte Zonen sind Freischuss-PvPvE. Es gibt keinen Crimestat darin und keine Einsatzregeln.",
+      "tip1": "plane deinen Anflug. Flieg nicht direkt rein — erkunde das Gebiet und Parkmöglichkeiten.",
+      "tip2": "Versicherungsmentalität. Wenn du es dir nicht leisten kannst es zu verlieren, bring es nicht mit.",
+      "tip3": "Auch PvE-Hubs bergen Risiken bei An- und Abflug — Pyro hat keine Strafverfolgung."
+    },
+    "site": {
+      "title": "Was diese Seite macht",
+      "description": "Dies ist ein Timer-Tool, kein Walkthrough. Es hilft dir, Schlüsselkarten-Drucker-Abklingzeiten, Vault-Tür-Zyklen, den Executive Hangar Zeitplan und den Compboard-Sammelfortschritt zu verfolgen.",
+      "localStorage": "Alle Timer sind lokal auf deinem Gerät und Browser — nichts wird an einen Server gesendet. Wenn du deine Browserdaten löschst, werden deine Timer zurückgesetzt.",
+      "goToDashboard": "Zum Dashboard"
+    }
+  },
   "footer": {
     "madeBy": "Erstellt von",
     "forCommunity": "für die Star Citizen Community",
     "notAffiliated": "Nicht verbunden mit Cloud Imperium Games",
     "communityTool": "Community-Tool für Star Citizen Spieler",
     "disclaimer": "Dies ist ein inoffizielles Fan-Tool, nicht verbunden mit oder unterstützt von Cloud Imperium Games.",
-    "accuracy": "Timer-Genauigkeit hängt von deiner Systemuhr ab. Nutzung auf eigene Gefahr."
+    "accuracy": "Timer-Genauigkeit hängt von deiner Systemuhr ab. Nutzung auf eigene Gefahr.",
+    "startHere": "Erste Schritte"
   },
   "common": {
     "loading": "Lädt...",

@@ -183,13 +183,88 @@
       "allBoards": "需要所有7个面板才能访问机库"
     }
   },
+  "guide": {
+    "hero": {
+      "title": "从这里开始:Pyro争议区域",
+      "subtitle": "进入Star Citizen的Pyro系统争议区域之前,你需要了解的一切。",
+      "showBasics": "我是新手,给我看基础",
+      "goToTimers": "我了解流程,带我去计时器"
+    },
+    "why": {
+      "title": "为什么要做这个?",
+      "paragraph1": "行政机库的访问需要收集分布在三个争议区域站点的7个Compboard。这是Pyro的终局PvP循环。",
+      "paragraph2": "在里面你会发现独特的战利品、高价值奖励和游戏中最激烈的PvP遭遇。行政机库本身在全球计时器上运行——即使你拥有了Compboard,你仍然需要把握入场时机。"
+    },
+    "whatAreCZ": {
+      "title": "什么是争议区域?",
+      "description": "争议区域是自由开火的PvPvE区域——内部没有安全模式。三个站点承载它们:Checkmate、Orbituary和Ruin Station(Ghost Arena)。",
+      "warning": "如果你进入争议区域,请假设PvP。你会遇到其他玩家,他们中许多是敌对的。",
+      "pveNote": "注意:像Levski和QV服务站这样的PvE任务中心存在于Pyro,但在地点之间的旅行仍然有风险——Pyro是无法之地。"
+    },
+    "zones": {
+      "title": "各区域",
+      "checkmate": {
+        "name": "Checkmate站",
+        "item1": "蓝色钥匙卡打印机(15分钟)",
+        "item2": "红色钥匙卡打印机(30分钟)",
+        "item3": "Compboard #1、#2、#3",
+        "item4": "中等布局——良好的入门区域"
+      },
+      "orbituary": {
+        "name": "Orbituary站",
+        "item1": "蓝色钥匙卡打印机(30分钟)",
+        "item2": "Compboard #4和#7",
+        "item3": "狭窄走廊——注意拐角",
+        "item4": "面板较少但仍然必不可少"
+      },
+      "ruin": {
+        "name": "Ruin Station",
+        "subtitle": "Ghost Arena",
+        "item1": "保险库门(21分钟循环:1分钟开放,20分钟关闭)",
+        "item2": "黄色和绿色钥匙卡打印机(30分钟)",
+        "item3": "Compboard #5和#6",
+        "item4": "最复杂的布局——带个朋友或小心行事"
+      },
+      "supervisor": {
+        "name": "监督前哨站",
+        "subtitle": "Pyro 3 L4/L5",
+        "item1": "红色钥匙卡打印机(30分钟)",
+        "item2": "位于CZ站点外部",
+        "item3": "比完整争议区域风险更低",
+        "item4": "适合在进入前获取红色钥匙卡"
+      }
+    },
+    "quickstart": {
+      "title": "快速入门清单",
+      "soloNote": "默认单人——这些步骤单人或团队都适用。",
+      "step1": "装备好:武器、医药、弹药。不要带最好的——带你能承受失去的。",
+      "step2": "进入前在附近的站点设置本地重生点。",
+      "step3": "选择一个区域进入。Checkmate对新手最友好。",
+      "step4": "使用打印机并收集面板。激活打印机时在本站启动计时器。",
+      "step5": "撤离。把离开当作最危险的部分——不要在出口逗留。"
+    },
+    "pvp": {
+      "title": "PvP与安全",
+      "description": "争议区域是自由开火的PvPvE。内部没有犯罪值,也没有交战规则。",
+      "tip1": "规划你的接近。不要直接飞入——先侦察区域和停靠选项。",
+      "tip2": "保险心态。如果你承受不起失去它,就不要带它。",
+      "tip3": "即使PvE中心在接近和离开时也有风险——Pyro没有执法机构。"
+    },
+    "site": {
+      "title": "本站功能",
+      "description": "这是一个计时器工具,不是攻略。它帮助你追踪钥匙卡打印机冷却时间、保险库门循环、行政机库时间表和Compboard收集进度。",
+      "localStorage": "所有计时器都是本地存储在你的设备和浏览器中——不会向服务器发送任何数据。如果你清除浏览器数据,计时器将被重置。",
+      "goToDashboard": "前往仪表盘"
+    }
+  },
   "footer": {
     "madeBy": "制作者",
     "forCommunity": "为 Star Citizen 社区制作",
     "notAffiliated": "未与 Cloud Imperium Games 关联",
     "communityTool": "Star Citizen 玩家的社区工具",
     "disclaimer": "这是一个非官方的粉丝制作工具,未与 Cloud Imperium Games 关联或获得认可。",
-    "accuracy": "计时器准确性取决于您的系统时钟。使用风险自负。"
+    "accuracy": "计时器准确性取决于您的系统时钟。使用风险自负。",
+    "startHere": "入门指南"
   },
   "common": {
     "loading": "加载中...",

@@ -183,13 +183,88 @@
       "allBoards": "Tutte e 7 le schede sono necessarie per l'accesso all'hangar"
     }
   },
+  "guide": {
+    "hero": {
+      "title": "Inizia qui: Zone Contese di Pyro",
+      "subtitle": "Tutto ciò che devi sapere prima di entrare in una Zona Contesa nel sistema Pyro di Star Citizen.",
+      "showBasics": "Sono nuovo, mostrami le basi",
+      "goToTimers": "Conosco il ciclo, portami ai timer"
+    },
+    "why": {
+      "title": "Perché farlo?",
+      "paragraph1": "L'accesso all'Hangar Esecutivo richiede la raccolta di 7 compboards distribuiti in tre stazioni di Zone Contese. È il loop PvP endgame di Pyro.",
+      "paragraph2": "All'interno troverai bottino unico, ricompense di alto valore e alcuni degli scontri PvP più intensi del gioco. Gli Hangar Esecutivi funzionano con un timer globale — una volta ottenuti i compboards, devi ancora trovare il momento giusto per entrare."
+    },
+    "whatAreCZ": {
+      "title": "Cosa sono le Zone Contese?",
+      "description": "Le Zone Contese sono aree PvPvE a fuoco libero — non c'è modalità sicura all'interno. Tre stazioni le ospitano: Checkmate, Orbituary e Ruin Station (Ghost Arena).",
+      "warning": "Se entri in una Zona Contesa, assumi PvP. Incontrerai altri giocatori, e molti di loro sono ostili.",
+      "pveNote": "Nota: Hub di missioni PvE come Levski e le Stazioni di Servizio QV esistono a Pyro, ma viaggiare tra le località è ancora rischioso — Pyro è spazio senza legge."
+    },
+    "zones": {
+      "title": "Le Zone",
+      "checkmate": {
+        "name": "Stazione Checkmate",
+        "item1": "Stampanti carta chiave blu (15min)",
+        "item2": "Stampanti carta chiave rossa (30min)",
+        "item3": "Compboards #1, #2, #3",
+        "item4": "Layout moderato — buona zona di partenza"
+      },
+      "orbituary": {
+        "name": "Stazione Orbituary",
+        "item1": "Stampanti carta chiave blu (30min)",
+        "item2": "Compboards #4 e #7",
+        "item3": "Corridoi stretti — attenzione agli angoli",
+        "item4": "Meno schede ma comunque essenziali"
+      },
+      "ruin": {
+        "name": "Ruin Station",
+        "subtitle": "Ghost Arena",
+        "item1": "Porta del caveau (ciclo 21min: 1min aperta, 20min chiusa)",
+        "item2": "Stampanti carta chiave gialla e verde (30min)",
+        "item3": "Compboards #5 e #6",
+        "item4": "Layout più complesso — porta un amico o fai attenzione"
+      },
+      "supervisor": {
+        "name": "Avamposti Supervisor",
+        "subtitle": "Pyro 3 L4/L5",
+        "item1": "Stampanti carta chiave rossa (30min)",
+        "item2": "Situati fuori dalle stazioni CZ",
+        "item3": "Rischio inferiore rispetto alle Zone Contese complete",
+        "item4": "Buono per prendere carte rosse prima di entrare"
+      }
+    },
+    "quickstart": {
+      "title": "Lista di controllo rapida",
+      "soloNote": "Solo di default — questi passaggi funzionano da soli o in gruppo.",
+      "step1": "Equipaggiati: Loadout, medicinali, munizioni. Non portare il meglio — porta quello che puoi permetterti di perdere.",
+      "step2": "Imposta un respawn locale in una stazione vicina prima di entrare.",
+      "step3": "Scegli una zona ed entra. Checkmate è la più accessibile per i principianti.",
+      "step4": "Usa le stampanti e raccogli le schede. Avvia i timer su questo sito quando attivi una stampante.",
+      "step5": "Estrazione. Considera l'uscita come la parte più pericolosa — non indugiare alle uscite."
+    },
+    "pvp": {
+      "title": "PvP e Sicurezza",
+      "description": "Le Zone Contese sono PvPvE a fuoco libero. Non c'è crimestat all'interno, e nessuna regola di ingaggio.",
+      "tip1": "Pianifica il tuo avvicinamento. Non volare dritto — esplora l'area e le opzioni di parcheggio.",
+      "tip2": "Mentalità assicurativa. Se non puoi permetterti di perderlo, non portarlo.",
+      "tip3": "Anche gli hub PvE comportano rischi in avvicinamento e partenza — Pyro non ha forze dell'ordine."
+    },
+    "site": {
+      "title": "Cosa fa questo sito",
+      "description": "Questo è uno strumento di timer, non una guida passo passo. Ti aiuta a tracciare i tempi di raffreddamento delle stampanti, i cicli della porta del caveau, il programma dell'Hangar Esecutivo e il progresso della raccolta dei compboards.",
+      "localStorage": "Tutti i timer sono locali al tuo dispositivo e browser — nulla viene inviato a un server. Se cancelli i dati del browser, i tuoi timer vengono ripristinati.",
+      "goToDashboard": "Vai al pannello"
+    }
+  },
   "footer": {
     "madeBy": "Realizzato da",
     "forCommunity": "per la comunità di Star Citizen",
     "notAffiliated": "Non affiliato con Cloud Imperium Games",
     "communityTool": "Strumento comunitario per i giocatori di Star Citizen",
     "disclaimer": "Questo è uno strumento non ufficiale creato dai fan, non affiliato o approvato da Cloud Imperium Games.",
-    "accuracy": "L'accuratezza del timer dipende dall'orologio del sistema. Usa a tuo rischio."
+    "accuracy": "L'accuratezza del timer dipende dall'orologio del sistema. Usa a tuo rischio.",
+    "startHere": "Inizia qui"
   },
   "common": {
     "loading": "Caricamento...",

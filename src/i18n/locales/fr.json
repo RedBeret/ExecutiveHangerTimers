@@ -183,13 +183,88 @@
       "allBoards": "Les 7 boards sont requis pour accéder au hangar"
     }
   },
+  "guide": {
+    "hero": {
+      "title": "Commencer ici : Zones Contestées de Pyro",
+      "subtitle": "Tout ce que vous devez savoir avant d'entrer dans une Zone Contestée du système Pyro de Star Citizen.",
+      "showBasics": "Je suis nouveau, montrez-moi les bases",
+      "goToTimers": "Je connais la boucle, emmenez-moi aux minuteurs"
+    },
+    "why": {
+      "title": "Pourquoi faire ça ?",
+      "paragraph1": "L'accès au Hangar Exécutif nécessite de collecter 7 compboards répartis dans trois stations de Zones Contestées. C'est la boucle PvP endgame de Pyro.",
+      "paragraph2": "À l'intérieur, vous trouverez du butin unique, des récompenses de grande valeur et certains des affrontements PvP les plus intenses du jeu. Les Hangars Exécutifs fonctionnent sur un minuteur global — une fois que vous avez les compboards, il faut encore choisir le bon moment pour entrer."
+    },
+    "whatAreCZ": {
+      "title": "Que sont les Zones Contestées ?",
+      "description": "Les Zones Contestées sont des zones PvPvE en tir libre — il n'y a pas de mode sécurisé à l'intérieur. Trois stations les abritent : Checkmate, Orbituary et Ruin Station (Ghost Arena).",
+      "warning": "Si vous entrez dans une Zone Contestée, prévoyez du PvP. Vous rencontrerez d'autres joueurs, et beaucoup d'entre eux sont hostiles.",
+      "pveNote": "Note : Des hubs de missions PvE comme Levski et les stations QV Service existent dans Pyro, mais voyager entre les emplacements reste risqué — Pyro est un espace sans loi."
+    },
+    "zones": {
+      "title": "Les Zones",
+      "checkmate": {
+        "name": "Station Checkmate",
+        "item1": "Imprimantes de carte-clé bleue (15min)",
+        "item2": "Imprimantes de carte-clé rouge (30min)",
+        "item3": "Compboards #1, #2, #3",
+        "item4": "Disposition modérée — bonne zone pour débuter"
+      },
+      "orbituary": {
+        "name": "Station Orbituary",
+        "item1": "Imprimantes de carte-clé bleue (30min)",
+        "item2": "Compboards #4 & #7",
+        "item3": "Couloirs étroits — surveillez les coins",
+        "item4": "Moins de boards mais toujours essentiels"
+      },
+      "ruin": {
+        "name": "Ruin Station",
+        "subtitle": "Ghost Arena",
+        "item1": "Porte du coffre (cycle 21min : 1min ouvert, 20min fermé)",
+        "item2": "Imprimantes de carte-clé jaune et verte (30min)",
+        "item3": "Compboards #5 & #6",
+        "item4": "Disposition la plus complexe — amenez un ami ou soyez prudent"
+      },
+      "supervisor": {
+        "name": "Avant-postes Supervisor",
+        "subtitle": "Pyro 3 L4/L5",
+        "item1": "Imprimantes de carte-clé rouge (30min)",
+        "item2": "Situés en dehors des stations CZ",
+        "item3": "Risque plus faible que les Zones Contestées complètes",
+        "item4": "Bon pour récupérer des cartes-clés rouges avant d'entrer"
+      }
+    },
+    "quickstart": {
+      "title": "Liste de contrôle rapide",
+      "soloNote": "Solo par défaut — ces étapes fonctionnent seul ou en groupe.",
+      "step1": "Équipez-vous : Loadout, soins, munitions. N'apportez pas votre meilleur — apportez ce que vous pouvez vous permettre de perdre.",
+      "step2": "Définissez un respawn local dans une station proche avant d'entrer.",
+      "step3": "Choisissez une zone et entrez. Checkmate est la plus accessible pour les débutants.",
+      "step4": "Utilisez les imprimantes et collectez les boards. Démarrez les minuteurs sur ce site quand vous activez une imprimante.",
+      "step5": "Extraction. Considérez le départ comme la partie la plus dangereuse — ne traînez pas aux sorties."
+    },
+    "pvp": {
+      "title": "PvP & Sécurité",
+      "description": "Les Zones Contestées sont du PvPvE en tir libre. Il n'y a pas de crimestat à l'intérieur, ni de règles d'engagement.",
+      "tip1": "Planifiez votre approche. Ne foncez pas directement — repérez la zone et les options de stationnement.",
+      "tip2": "Mentalité d'assurance. Si vous ne pouvez pas vous permettre de le perdre, ne l'apportez pas.",
+      "tip3": "Même les hubs PvE comportent des risques à l'approche et au départ — Pyro n'a pas de forces de l'ordre."
+    },
+    "site": {
+      "title": "Ce que fait ce site",
+      "description": "C'est un outil de minuteurs, pas un guide pas à pas. Il vous aide à suivre les temps de recharge des imprimantes, les cycles de porte du coffre, le calendrier du Hangar Exécutif et la progression de collecte des compboards.",
+      "localStorage": "Tous les minuteurs sont locaux à votre appareil et navigateur — rien n'est envoyé à un serveur. Si vous effacez vos données de navigation, vos minuteurs sont réinitialisés.",
+      "goToDashboard": "Aller au tableau de bord"
+    }
+  },
   "footer": {
     "madeBy": "Créé par",
     "forCommunity": "pour la communauté Star Citizen",
     "notAffiliated": "Non affilié à Cloud Imperium Games",
     "communityTool": "Outil communautaire pour les joueurs de Star Citizen",
     "disclaimer": "Ceci est un outil non officiel créé par des fans, non affilié ou approuvé par Cloud Imperium Games.",
-    "accuracy": "La précision du minuteur dépend de votre horloge système. Utilisation à vos propres risques."
+    "accuracy": "La précision du minuteur dépend de votre horloge système. Utilisation à vos propres risques.",
+    "startHere": "Commencer ici"
   },
   "common": {
     "loading": "Chargement...",

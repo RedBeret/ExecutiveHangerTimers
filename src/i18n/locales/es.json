@@ -183,13 +183,88 @@
       "allBoards": "Se requieren los 7 tableros para acceder al hangar"
     }
   },
+  "guide": {
+    "hero": {
+      "title": "Empieza aquí: Zonas Disputadas de Pyro",
+      "subtitle": "Todo lo que necesitas saber antes de entrar en una Zona Disputada del sistema Pyro de Star Citizen.",
+      "showBasics": "Soy nuevo, muéstrame lo básico",
+      "goToTimers": "Conozco el ciclo, llévame a los temporizadores"
+    },
+    "why": {
+      "title": "¿Por qué hacer esto?",
+      "paragraph1": "El acceso al Hangar Ejecutivo requiere recolectar 7 compboards distribuidos en tres estaciones de Zonas Disputadas. Es el bucle PvP endgame en Pyro.",
+      "paragraph2": "Dentro encontrarás botín único, recompensas de alto valor y algunos de los encuentros PvP más intensos del juego. Los Hangares Ejecutivos funcionan con un temporizador global — una vez que tengas los compboards, aún necesitas cronometrar tu entrada."
+    },
+    "whatAreCZ": {
+      "title": "¿Qué son las Zonas Disputadas?",
+      "description": "Las Zonas Disputadas son áreas PvPvE de fuego libre — no hay modo seguro en su interior. Tres estaciones las albergan: Checkmate, Orbituary y Ruin Station (Ghost Arena).",
+      "warning": "Si entras en una Zona Disputada, asume PvP. Te encontrarás con otros jugadores, y muchos de ellos son hostiles.",
+      "pveNote": "Nota: Existen centros de misiones PvE como Levski y las Estaciones de Servicio QV en Pyro, pero viajar entre ubicaciones sigue siendo arriesgado — Pyro es espacio sin ley."
+    },
+    "zones": {
+      "title": "Las Zonas",
+      "checkmate": {
+        "name": "Estación Checkmate",
+        "item1": "Impresoras de tarjeta azul (15min)",
+        "item2": "Impresoras de tarjeta roja (30min)",
+        "item3": "Compboards #1, #2, #3",
+        "item4": "Diseño moderado — buena zona de inicio"
+      },
+      "orbituary": {
+        "name": "Estación Orbituary",
+        "item1": "Impresoras de tarjeta azul (30min)",
+        "item2": "Compboards #4 y #7",
+        "item3": "Pasillos estrechos — vigila las esquinas",
+        "item4": "Menos tableros pero igualmente esenciales"
+      },
+      "ruin": {
+        "name": "Ruin Station",
+        "subtitle": "Ghost Arena",
+        "item1": "Puerta de bóveda (ciclo 21min: 1min abierta, 20min cerrada)",
+        "item2": "Impresoras de tarjeta amarilla y verde (30min)",
+        "item3": "Compboards #5 y #6",
+        "item4": "Diseño más complejo — lleva a un amigo o ten cuidado"
+      },
+      "supervisor": {
+        "name": "Puestos Supervisor",
+        "subtitle": "Pyro 3 L4/L5",
+        "item1": "Impresoras de tarjeta roja (30min)",
+        "item2": "Ubicados fuera de las estaciones CZ",
+        "item3": "Menor riesgo que las Zonas Disputadas completas",
+        "item4": "Buenos para conseguir tarjetas rojas antes de entrar"
+      }
+    },
+    "quickstart": {
+      "title": "Lista de inicio rápido",
+      "soloNote": "Solo por defecto — estos pasos funcionan solo o en grupo.",
+      "step1": "Equípate: Loadout, medicinas, munición. No lleves lo mejor — lleva lo que puedas permitirte perder.",
+      "step2": "Establece un respawn local en una estación cercana antes de entrar.",
+      "step3": "Elige una zona y entra. Checkmate es la más accesible para principiantes.",
+      "step4": "Usa impresoras y recoge tableros. Inicia temporizadores en este sitio cuando actives una impresora.",
+      "step5": "Extracción. Trata la salida como la parte más peligrosa — no te quedes en las salidas."
+    },
+    "pvp": {
+      "title": "PvP y Seguridad",
+      "description": "Las Zonas Disputadas son PvPvE de fuego libre. No hay crimestat dentro, ni reglas de enfrentamiento.",
+      "tip1": "Planifica tu aproximación. No vueles directamente — explora la zona y las opciones de estacionamiento.",
+      "tip2": "Mentalidad de seguro. Si no puedes permitirte perderlo, no lo lleves.",
+      "tip3": "Incluso los centros PvE conllevan riesgo en la aproximación y la partida — Pyro no tiene fuerzas del orden."
+    },
+    "site": {
+      "title": "Qué hace este sitio",
+      "description": "Esto es una herramienta de temporizadores, no una guía paso a paso. Te ayuda a rastrear los tiempos de recarga de impresoras, los ciclos de la puerta de bóveda, el horario del Hangar Ejecutivo y el progreso de recolección de compboards.",
+      "localStorage": "Todos los temporizadores son locales a tu dispositivo y navegador — nada se envía a un servidor. Si borras los datos del navegador, tus temporizadores se reinician.",
+      "goToDashboard": "Ir al panel"
+    }
+  },
   "footer": {
     "madeBy": "Hecho por",
     "forCommunity": "para la comunidad de Star Citizen",
     "notAffiliated": "No afiliado con Cloud Imperium Games",
     "communityTool": "Herramienta comunitaria para jugadores de Star Citizen",
     "disclaimer": "Esta es una herramienta no oficial creada por fans, no está afiliada ni respaldada por Cloud Imperium Games.",
-    "accuracy": "La precisión del temporizador depende del reloj de tu sistema. Úsala bajo tu propio riesgo."
+    "accuracy": "La precisión del temporizador depende del reloj de tu sistema. Úsala bajo tu propio riesgo.",
+    "startHere": "Empieza aquí"
   },
   "common": {
     "loading": "Cargando...",
