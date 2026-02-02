@@ -1,9 +1,11 @@
 import React from 'react'
 import { DoorOpen, RotateCcw, AlertCircle } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { CountdownDisplay } from './CountdownDisplay'
 import { useVaultTimer } from '../hooks/useVaultTimer'
 
 export function VaultTimerCard() {
+  const { t } = useTranslation()
   const { status, sync, reset, isSynced } = useVaultTimer()
 
   const isOpen = status.status === 'OPEN'
@@ -20,10 +22,10 @@ export function VaultTimerCard() {
         <div>
           <h4 className="text-lg font-bold text-gray-100 flex items-center gap-2">
             <DoorOpen className="w-5 h-5" />
-            Ruin Station Vault Door
+            {t('vault.title')}
           </h4>
           <p className="text-sm text-gray-400 mt-1">
-            Opens for 1 min, closed for 20 min (repeating cycle)
+            {t('vault.description')}
           </p>
         </div>
         <div
@@ -42,7 +44,7 @@ export function VaultTimerCard() {
         <div className="mb-4 p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg flex items-start gap-2">
           <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
           <div className="text-sm text-amber-200">
-            <strong>Not synced.</strong> Click "Door Opened Now" when you see the vault door open to start tracking.
+            <strong>{t('vault.notSynced')}</strong> {t('vault.syncInstruction')}
           </div>
         </div>
       )}
@@ -50,7 +52,7 @@ export function VaultTimerCard() {
       {isSynced && (
         <div className="mb-4">
           <div className="text-sm text-gray-400 mb-2">
-            {isOpen ? 'Closing in:' : 'Opening in:'}
+            {isOpen ? t('vault.closingIn') : t('vault.openingIn')}
           </div>
           <CountdownDisplay
             timeRemaining={status.timeRemaining}
@@ -58,7 +60,7 @@ export function VaultTimerCard() {
             className={isOpen ? 'text-accent-green' : 'text-accent-red'}
           />
           <div className="mt-2 text-sm text-gray-400">
-            {isOpen ? 'Closes' : 'Opens'} at <span className="text-accent-blue font-semibold">
+            {isOpen ? t('vault.closesAt') : t('vault.opensAt')} <span className="text-accent-blue font-semibold">
               {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
                 hour: 'numeric',
                 minute: '2-digit',
@@ -75,7 +77,7 @@ export function VaultTimerCard() {
           className="flex-1 btn btn-success flex items-center justify-center gap-2"
         >
           <DoorOpen className="w-4 h-4" />
-          Door Opened Now
+          {t('vault.doorOpenedNow')}
         </button>
         {isSynced && (
           <button

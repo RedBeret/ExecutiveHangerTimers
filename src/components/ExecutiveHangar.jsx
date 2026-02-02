@@ -74,16 +74,16 @@ export function ExecutiveHangar() {
                     {status.phase === PHASES.GREEN ? (
                       <>
                         <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 text-accent-green" />
-                        <span className="text-accent-green">Open until {formatClockTime(status.nextChangeTime)}</span>
+                        <span className="text-accent-green">{t('execHangar.openUntil', { time: formatClockTime(status.nextChangeTime) })}</span>
                       </>
                     ) : (
                       <>
                         <Clock className="inline-block w-4 h-4 sm:w-5 sm:h-5 text-accent-red" />
-                        <span className="text-accent-red">Opens at {formatClockTime(status.nextChangeTime)}</span>
+                        <span className="text-accent-red">{t('execHangar.opensAt', { time: formatClockTime(status.nextChangeTime) })}</span>
                       </>
                     )}
                     <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-accent-blue/20 text-accent-blue border border-accent-blue/30 font-bold uppercase tracking-wide">
-                      Beta
+                      {t('execHangar.beta')}
                     </span>
                   </div>
                   <div className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-gray-500 font-medium">

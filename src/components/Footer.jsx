@@ -1,12 +1,15 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="mt-16 border-t border-dark-700">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span>Community tool for Star Citizen players</span>
+            <span>{t('footer.communityTool')}</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -16,10 +19,10 @@ export function Footer() {
 
         <div className="mt-4 text-center text-xs text-gray-600">
           <p>
-            This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games.
+            {t('footer.disclaimer')}
           </p>
           <p className="mt-1">
-            Timer accuracy depends on your system clock. Use at your own risk.
+            {t('footer.accuracy')}
           </p>
         </div>
       </div>

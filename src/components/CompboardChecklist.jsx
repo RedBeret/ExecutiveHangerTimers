@@ -1,10 +1,11 @@
 import React from 'react'
 import { Check, RotateCcw, MapPin, Clock, Play } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { useCompboards } from '../hooks/useCompboards'
 import { useCountdownTimer } from '../hooks/useCountdownTimer'
 import { CountdownDisplay } from './CountdownDisplay'
 
-function CompboardItem({ board, onToggle }) {
+function CompboardItem({ board, onToggle, t }) {
   const COMPBOARD_RESPAWN = 30 * 60 * 1000 // 30 minutes
   const { status, start } = useCountdownTimer(`compboard-${board.id}`, COMPBOARD_RESPAWN)
 
@@ -33,7 +34,7 @@ function CompboardItem({ board, onToggle }) {
 
         <div className="flex-1">
           <div className={`font-bold ${board.collected ? 'text-accent-green' : 'text-gray-200'}`}>
-            Board {board.id}
+            {t('compboards.board', { id: board.id })}
           </div>
           <div className="flex items-center gap-1 text-sm text-gray-400">
             <MapPin className="w-3 h-3" />
@@ -43,7 +44,7 @@ function CompboardItem({ board, onToggle }) {
 
         {board.collected && (
           <div className="text-accent-green text-sm font-medium">
-            ✓ Collected
+            {t('compboards.collected')}
           </div>
         )}
       </button>
@@ -53,14 +54,14 @@ function CompboardItem({ board, onToggle }) {
         {status.isActive ? (
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-sm text-gray-400 mb-1">Printer Respawn</div>
+              <div className="text-sm text-gray-400 mb-1">{t('compboards.printerRespawn')}</div>
               <CountdownDisplay
                 timeRemaining={status.timeRemaining}
                 size="small"
                 className="text-accent-red"
               />
               <div className="mt-1 text-xs text-gray-500">
-                Ready at <span className="text-accent-blue font-semibold">
+                {t('compboards.readyAt')} <span className="text-accent-blue font-semibold">
                   {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
                     hour: 'numeric',
                     minute: '2-digit',
@@ -70,7 +71,7 @@ function CompboardItem({ board, onToggle }) {
               </div>
             </div>
             <div className="text-xs text-accent-red font-medium px-3 py-1 bg-accent-red/10 rounded-lg">
-              Cooling Down
+              {t('compboards.coolingDown')}
             </div>
           </div>
         ) : (
@@ -81,7 +82,7 @@ function CompboardItem({ board, onToggle }) {
               transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <Play className="w-4 h-4" />
-            Start 30min Timer
+            {t('compboards.startTimer')}
           </button>
         )}
       </div>
@@ -90,6 +91,7 @@ function CompboardItem({ board, onToggle }) {
 }
 
 export function CompboardChecklist({ filterZone = 'all' }) {
+  const { t } = useTranslation()
   const { boards, collectedCount, progress, toggleBoard, resetAll, resetKey } = useCompboards()
 
   // Filter boards by zone
@@ -105,14 +107,14 @@ export function CompboardChecklist({ filterZone = 'all' }) {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-2xl font-bold">
-            Compboard Collection
-            {filterZone !== 'all' && <span className="text-sm text-gray-400 ml-2">({filteredBoards.length} boards in this zone)</span>}
+            {t('compboards.title')}
+            {filterZone !== 'all' && <span className="text-sm text-gray-400 ml-2">({t('compboards.boardsInZone', { count: filteredBoards.length })})</span>}
           </h3>
           <div className="text-right">
             <div className="text-3xl font-bold text-accent-blue">
               {filterZone === 'all' ? `${collectedCount}/7` : `${filteredCollectedCount}/${filteredBoards.length}`}
             </div>
-            <div className="text-sm text-gray-400">Collected</div>
+            <div className="text-sm text-gray-400">{t('compboards.collectedLabel')}</div>
           </div>
         </div>
 
@@ -125,8 +127,8 @@ export function CompboardChecklist({ filterZone = 'all' }) {
 
         <p className="text-sm text-gray-400 mt-3">
           {filterZone === 'all'
-            ? 'Collect all 7 unique compboards to unlock the Executive Hangar'
-            : 'Start timers after collecting boards to track respawn times'}
+            ? t('compboards.collectAll')
+            : t('compboards.startTimersHint')}
         </p>
       </div>
 
@@ -136,6 +138,7 @@ export function CompboardChecklist({ filterZone = 'all' }) {
             key={`${board.id}-${resetKey}`}
             board={board}
             onToggle={toggleBoard}
+            t={t}
           />
         ))}
       </div>
@@ -145,7 +148,7 @@ export function CompboardChecklist({ filterZone = 'all' }) {
         className="btn btn-secondary w-full flex items-center justify-center gap-2"
       >
         <RotateCcw className="w-4 h-4" />
-        Reset All Boards
+        {t('compboards.resetAllBoards')}
       </button>
     </div>
   )

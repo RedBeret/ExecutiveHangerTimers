@@ -44,6 +44,9 @@
     "resetSync": "Reset Sync",
     "precisionTiming": "Precision Timing:",
     "syncWhenSee": "Sync when you see the hangar change in-game",
+    "openUntil": "Open until {{time}}",
+    "opensAt": "Opens at {{time}}",
+    "beta": "Beta",
     "syncPanel": {
       "title": "Sync to In-Game Phase",
       "description": "When you see the hangar change phases in Star Citizen, click the button below to sync the timer to the current game state.",
@@ -72,7 +75,7 @@
   },
   "contestedZones": {
     "title": "Contested Zone Timers",
-    "subtitle": "Track objectives across Pyro's contested territories",
+    "subtitle": "Track keycard printers & objectives",
     "addTimer": "Add Timer",
     "noTimers": "No active timers. Click 'Add Timer' to start tracking.",
     "selectZone": "Select Zone",
@@ -82,45 +85,111 @@
     "timeRemaining": "Time Remaining",
     "expired": "EXPIRED",
     "deleteTimer": "Delete timer",
+    "cooldownInfo": "All Keycard Printers (30min) • Start timers when you or your team activates a printer to track when they'll be ready again.",
+    "tabs": {
+      "all": "All Zones"
+    },
     "zones": {
       "checkmate": "Checkmate",
       "orbituary": "Orbituary",
       "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "Blue Keycard Printer {{number}}",
+      "redKeycard": "Red Keycard Printer ({{location}})",
+      "greenKeycard": "Green Keycard Printer ({{location}})",
+      "yellowKeycard": "Yellow Keycard Printer ({{location}})",
+      "keycard": "Keycard Printer ({{location}})"
     }
   },
   "compboards": {
-    "title": "Compboard Collection Tracker",
+    "title": "Compboard Collection",
     "subtitle": "Track your progress collecting compboards across Pyro",
     "progress": "{{collected}} of {{total}} Collected",
+    "board": "Board {{id}}",
+    "collected": "✓ Collected",
+    "collectedLabel": "Collected",
+    "printerRespawn": "Printer Respawn",
+    "readyAt": "Ready at",
+    "coolingDown": "Cooling Down",
+    "startTimer": "Start 30min Timer",
+    "boardsInZone": "{{count}} boards in this zone",
+    "collectAll": "Collect all 7 unique compboards to unlock the Executive Hangar",
+    "startTimersHint": "Start timers after collecting boards to track respawn times",
     "resetAll": "Reset All",
+    "resetAllBoards": "Reset All Boards",
     "confirmReset": "Are you sure you want to reset all progress?"
+  },
+  "timers": {
+    "ready": "Ready",
+    "almostReady": "Almost Ready!",
+    "coolingDown": "Cooling Down",
+    "minCooldown": "{{minutes}} min cooldown",
+    "readyAt": "Ready at",
+    "printerWarning": "Printer will be ready in under 3 minutes!",
+    "startTimer": "Start Timer",
+    "start": "Start"
+  },
+  "vault": {
+    "title": "Ruin Station Vault Door",
+    "description": "Opens for 1 min, closed for 20 min (repeating cycle)",
+    "notSynced": "Not synced.",
+    "syncInstruction": "Click \"Door Opened Now\" when you see the vault door open to start tracking.",
+    "closingIn": "Closing in:",
+    "openingIn": "Opening in:",
+    "closesAt": "Closes",
+    "opensAt": "Opens",
+    "doorOpenedNow": "Door Opened Now"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "ACTIVE",
+    "off": "OFF",
+    "statusLights": "Hangar Status Lights",
+    "realTimeIndicators": "Real-time LED indicators",
+    "description": "Lights turn <span class=\"text-accent-green font-semibold\">GREEN</span> during power-up phase • Turn off during power-down • All off = hangar closed"
   },
   "quickReference": {
     "title": "Quick Reference Guide",
-    "execHangar": {
-      "title": "Executive Hangar",
-      "cycle": "185-minute repeating cycle",
-      "greenPhase": "<strong>GREEN (153min):</strong> Hangar open, insert compboards",
-      "redPhase": "<strong>RED (29min):</strong> Hangar closed, LEDs count down",
-      "blackPhase": "<strong>BLACK (3min):</strong> Transition, hangar resets"
+    "subtitle": "Essential info for contested zone operations",
+    "hangarCycle": {
+      "title": "Executive Hangar Cycle",
+      "totalCycle": "Total Cycle: 185 minutes (3h 5min)",
+      "greenPhase": "Green Phase: ~65 min (OPEN - Insert boards now!)",
+      "redPhase": "Red Phase: ~120 min (Closed - Do NOT insert boards)",
+      "synchronized": "Synchronized globally across all servers"
     },
-    "contestedZones": {
-      "title": "Contested Zones",
-      "checkmate": "<strong>Checkmate:</strong> 30-40 min objectives",
-      "orbituary": "<strong>Orbituary:</strong> 20-30 min objectives",
-      "ruinStation": "<strong>Ruin Station:</strong> 25-35 min objectives"
+    "keycards": {
+      "title": "Keycard Types",
+      "red": "Red: From Supervisor stations",
+      "blue": "Blue: 30-min cooldown printers",
+      "greenYellow": "Green/Yellow: Ruin Station specific",
+      "cooldown": "All printers have 30-minute cooldown after use"
+    },
+    "vaultDoor": {
+      "title": "Vault Timer Door",
+      "location": "Location: Ruin Station vault",
+      "opensFor": "Opens for 1 minute",
+      "closedFor": "Closed for 20 minutes",
+      "repeats": "Repeats automatically",
+      "sync": "Click \"Door Opened Now\" to sync"
     },
     "tips": {
-      "title": "Tips",
-      "sync": "Sync the executive hangar timer when you see phase changes in-game",
-      "localStorage": "All data is saved locally in your browser",
-      "offline": "Works offline after the first load"
+      "title": "Tips & Strategy",
+      "systemClock": "Keep system clock auto-synced",
+      "markBoards": "Mark compboards as you collect them",
+      "startTimers": "Start timers immediately when using printers",
+      "planRoutes": "Plan routes around timer availability",
+      "allBoards": "All 7 boards required for hangar access"
     }
   },
   "footer": {
     "madeBy": "Made by",
     "forCommunity": "for the Star Citizen community",
-    "notAffiliated": "Not affiliated with Cloud Imperium Games"
+    "notAffiliated": "Not affiliated with Cloud Imperium Games",
+    "communityTool": "Community tool for Star Citizen players",
+    "disclaimer": "This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games.",
+    "accuracy": "Timer accuracy depends on your system clock. Use at your own risk."
   },
   "common": {
     "loading": "Loading...",
