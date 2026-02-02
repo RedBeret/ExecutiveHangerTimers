@@ -5,6 +5,12 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import en from './locales/en.json'
 import de from './locales/de.json'
 import fr from './locales/fr.json'
+import es from './locales/es.json'
+import pt from './locales/pt.json'
+import it from './locales/it.json'
+import ja from './locales/ja.json'
+import ko from './locales/ko.json'
+import zh from './locales/zh.json'
 
 i18n
   .use(LanguageDetector) // Detect user language
@@ -14,6 +20,12 @@ i18n
       en: { translation: en },
       de: { translation: de },
       fr: { translation: fr },
+      es: { translation: es },
+      pt: { translation: pt },
+      it: { translation: it },
+      ja: { translation: ja },
+      ko: { translation: ko },
+      zh: { translation: zh },
     },
     fallbackLng: 'en', // Fallback language
     interpolation: {

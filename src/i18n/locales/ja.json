@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "executiveHangars": "エグゼクティブハンガー",
+    "contestedZones": "係争地域",
+    "hangarTracker": "Star Citizenハンガートラッカー"
+  },
+  "home": {
+    "title": "Pyroタイマーダッシュボード",
+    "subtitle": "Star Citizenのタイマーを一目で確認",
+    "about": {
+      "title": "このツールについて",
+      "description": "<strong>Pyro Timer</strong>は、Pyroシステムにおける Star Citizenの係争地域作戦のための包括的なファン製ツールです。エグゼクティブハンガーのサイクル、キーカードプリンターのクールダウン、Compboardの収集をすべて1か所で追跡できます。",
+      "features": "機能",
+      "featuresList": {
+        "precision": "高精度エグゼクティブハンガータイマー(±1秒の精度)",
+        "czTimers": "すべての係争地域目標タイマー(Checkmate、Orbituary、Ruin Station)",
+        "compboards": "進行状況の可視化を備えたCompboard収集トラッカー",
+        "localStorage": "ローカルストレージ - データはデバイスから外部に送信されません",
+        "offline": "初回読み込み後はオフラインで動作",
+        "noLogin": "ログインやアカウント不要"
+      },
+      "howItWorks": "仕組み",
+      "howItWorksText": "すべてのタイマーは、ReactとJavaScriptを使用してブラウザ内で実行されます。エグゼクティブハンガータイマーは、既知の185分サイクルに基づいて現在のサイクルフェーズを計算します。係争地域タイマーとチェックリストはブラウザのローカルストレージに保存されるため、ページを閉じても保持されます。",
+      "credits": "クレジットとソース",
+      "creditsList": {
+        "algorithm": "<strong>タイマーデータ:</strong> コミュニティの研究とテスト",
+        "gameData": "<strong>ゲームデータ:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>コミュニティツール:</strong> exec.xyxyll.com",
+        "game": "<strong>ゲーム:</strong> Cloud Imperium GamesによるStar Citizen"
+      },
+      "disclaimer": "<strong>免責事項:</strong> これは非公式のファン製ツールであり、Cloud Imperium Gamesとは提携または承認されていません。タイマーの精度は、システムクロックが適切に同期されているかどうかに依存します。自己責任でご使用ください。"
+    }
+  },
+  "execHangar": {
+    "title": "エグゼクティブハンガーの状態",
+    "subtitle": "PYAM-EXHANGグローバルサイクル • 全サーバーで同期",
+    "loading": "ハンガーの状態を読み込み中...",
+    "timeUntil": "まで",
+    "opening": "開放",
+    "closing": "閉鎖",
+    "cycleProgress": "サイクル進行状況",
+    "syncTimer": "タイマーを同期",
+    "resetSync": "同期をリセット",
+    "precisionTiming": "精密タイミング:",
+    "syncWhenSee": "ゲーム内でハンガーが変化したときに同期",
+    "openUntil": "{{time}}まで開放",
+    "opensAt": "{{time}}に開放",
+    "beta": "ベータ",
+    "syncPanel": {
+      "title": "ゲーム内フェーズと同期",
+      "description": "Star Citizenでハンガーがフェーズ変化するのを見たら、下のボタンをクリックして現在のゲーム状態とタイマーを同期してください。",
+      "green": "緑",
+      "greenOpened": "ハンガーが開放",
+      "greenDesc": "(ボードを挿入可能)",
+      "red": "赤",
+      "redClosed": "ハンガーが閉鎖",
+      "redDesc": "(LEDがカウントダウン中)",
+      "black": "黒",
+      "blackReset": "ハンガーがリセット中",
+      "blackDesc": "(移行フェーズ)",
+      "tip": "<strong>ヒント:</strong> 最高の精度を得るには、フェーズ変化を見た瞬間に同期してください。タイマーはブラウザセッション間で同期を記憶します。"
+    },
+    "syncActive": "手動同期が有効:",
+    "offsetApplied": "{{offset}}秒のオフセットが適用されました"
+  },
+  "phases": {
+    "green": "緑フェーズ",
+    "greenDesc": "ハンガー開放中 - Compboardを挿入",
+    "red": "赤フェーズ",
+    "redDesc": "ハンガー閉鎖中 - 待機",
+    "black": "黒フェーズ",
+    "blackDesc": "移行中 - リセット",
+    "nextPhase": "次: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "係争地域タイマー",
+    "subtitle": "キーカードプリンターと目標を追跡",
+    "addTimer": "タイマーを追加",
+    "noTimers": "アクティブなタイマーはありません。「タイマーを追加」をクリックして追跡を開始してください。",
+    "selectZone": "ゾーンを選択",
+    "selectObjective": "目標を選択",
+    "startTimer": "タイマーを開始",
+    "cancel": "キャンセル",
+    "timeRemaining": "残り時間",
+    "expired": "期限切れ",
+    "deleteTimer": "タイマーを削除",
+    "cooldownInfo": "すべてのキーカードプリンター(30分) • あなたまたはチームがプリンターを起動したときにタイマーを開始して、次に使用可能になる時間を追跡します。",
+    "tabs": {
+      "all": "すべてのゾーン"
+    },
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "ブルーキーカードプリンター{{number}}",
+      "redKeycard": "レッドキーカードプリンター({{location}})",
+      "greenKeycard": "グリーンキーカードプリンター({{location}})",
+      "yellowKeycard": "イエローキーカードプリンター({{location}})",
+      "keycard": "キーカードプリンター({{location}})"
+    }
+  },
+  "compboards": {
+    "title": "Compboard収集",
+    "subtitle": "Pyro全域でのCompboard収集の進捗を追跡",
+    "progress": "{{total}}個中{{collected}}個を収集",
+    "board": "ボード{{id}}",
+    "collected": "✓ 収集済み",
+    "collectedLabel": "収集済み",
+    "printerRespawn": "プリンター再出現",
+    "readyAt": "準備完了時刻",
+    "coolingDown": "クールダウン中",
+    "startTimer": "30分タイマーを開始",
+    "boardsInZone": "このゾーンに{{count}}個のボード",
+    "collectAll": "エグゼクティブハンガーをアンロックするには、7個のユニークなCompboardをすべて収集してください",
+    "startTimersHint": "ボードを収集した後にタイマーを開始して、再出現時間を追跡します",
+    "resetAll": "すべてリセット",
+    "resetAllBoards": "すべてのボードをリセット",
+    "confirmReset": "すべての進捗をリセットしてもよろしいですか?"
+  },
+  "timers": {
+    "ready": "準備完了",
+    "almostReady": "もうすぐ準備完了!",
+    "coolingDown": "クールダウン中",
+    "minCooldown": "{{minutes}}分のクールダウン",
+    "readyAt": "準備完了時刻",
+    "printerWarning": "プリンターは3分以内に準備が整います!",
+    "startTimer": "タイマーを開始",
+    "start": "開始"
+  },
+  "vault": {
+    "title": "Ruin Station金庫ドア",
+    "description": "1分間開放、20分間閉鎖(繰り返しサイクル)",
+    "notSynced": "同期されていません。",
+    "syncInstruction": "金庫のドアが開くのを見たら「ドアが開いた」をクリックして追跡を開始してください。",
+    "closingIn": "閉鎖まで:",
+    "openingIn": "開放まで:",
+    "closesAt": "閉鎖",
+    "opensAt": "開放",
+    "doorOpenedNow": "ドアが開いた"
+  },
+  "led": {
+    "label": "LED{{number}}",
+    "active": "点灯",
+    "off": "消灯",
+    "statusLights": "ハンガーステータスライト",
+    "realTimeIndicators": "リアルタイムLEDインジケーター",
+    "description": "パワーアップフェーズ中はライトが<span class=\"text-accent-green font-semibold\">緑</span>になります • パワーダウン中は消灯 • すべて消灯 = ハンガー閉鎖中"
+  },
+  "quickReference": {
+    "title": "クイックリファレンスガイド",
+    "subtitle": "係争地域作戦の必須情報",
+    "hangarCycle": {
+      "title": "エグゼクティブハンガーサイクル",
+      "totalCycle": "総サイクル: 185分(3時間5分)",
+      "greenPhase": "緑フェーズ: 約65分(開放中 - 今すぐボードを挿入!)",
+      "redPhase": "赤フェーズ: 約120分(閉鎖中 - ボードを挿入しないでください)",
+      "synchronized": "すべてのサーバーでグローバルに同期"
+    },
+    "keycards": {
+      "title": "キーカードの種類",
+      "red": "赤: スーパーバイザーステーションから",
+      "blue": "青: 30分クールダウンプリンター",
+      "greenYellow": "緑/黄: Ruin Station専用",
+      "cooldown": "すべてのプリンターは使用後30分のクールダウンがあります"
+    },
+    "vaultDoor": {
+      "title": "金庫タイマードア",
+      "location": "場所: Ruin Stationの金庫",
+      "opensFor": "1分間開放",
+      "closedFor": "20分間閉鎖",
+      "repeats": "自動的に繰り返し",
+      "sync": "「ドアが開いた」をクリックして同期"
+    },
+    "tips": {
+      "title": "ヒントと戦略",
+      "systemClock": "システムクロックを自動同期に設定",
+      "markBoards": "収集したCompboardをマーク",
+      "startTimers": "プリンター使用時にすぐタイマーを開始",
+      "planRoutes": "タイマーの可用性に基づいてルートを計画",
+      "allBoards": "ハンガーアクセスには全7個のボードが必要"
+    }
+  },
+  "footer": {
+    "madeBy": "製作者",
+    "forCommunity": "Star Citizenコミュニティのために",
+    "notAffiliated": "Cloud Imperium Gamesとは無関係",
+    "communityTool": "Star Citizenプレイヤーのためのコミュニティツール",
+    "disclaimer": "これは非公式のファン製ツールであり、Cloud Imperium Gamesとは提携または承認されていません。",
+    "accuracy": "タイマーの精度はシステムクロックに依存します。自己責任でご使用ください。"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "reset": "リセット",
+    "confirm": "確認"
+  }
+}

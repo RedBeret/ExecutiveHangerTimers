@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "dashboard": "Painel",
+    "executiveHangars": "Hangares Executivos",
+    "contestedZones": "Zonas Contestadas",
+    "hangarTracker": "Rastreador de Hangar do Star Citizen"
+  },
+  "home": {
+    "title": "Painel de Temporizadores de Pyro",
+    "subtitle": "Todos os seus temporizadores de Star Citizen em um só lugar",
+    "about": {
+      "title": "Sobre Esta Ferramenta",
+      "description": "<strong>Pyro Timer</strong> é uma ferramenta abrangente feita por fãs para operações de zonas contestadas de Star Citizen no sistema Pyro. Rastreie ciclos de hangares executivos, tempos de recarga de impressoras de cartões e coleta de Compboards, tudo em um só lugar.",
+      "features": "Recursos",
+      "featuresList": {
+        "precision": "Temporizador de hangar executivo de alta precisão (precisão de ±1 segundo)",
+        "czTimers": "Todos os temporizadores de objetivos de zonas contestadas (Checkmate, Orbituary, Ruin Station)",
+        "compboards": "Rastreador de coleta de Compboards com visualização de progresso",
+        "localStorage": "Armazenamento local - seus dados nunca saem do seu dispositivo",
+        "offline": "Funciona offline após o primeiro carregamento",
+        "noLogin": "Não requer login ou conta"
+      },
+      "howItWorks": "Como Funciona",
+      "howItWorksText": "Todos os temporizadores são executados no seu navegador usando React e JavaScript. O temporizador do hangar executivo calcula a fase atual do ciclo com base no ciclo conhecido de 185 minutos. Os temporizadores de zonas contestadas e sua lista de verificação são salvos no armazenamento local do seu navegador, então persistem mesmo se você fechar a página.",
+      "credits": "Créditos e Fontes",
+      "creditsList": {
+        "algorithm": "<strong>Dados do Temporizador:</strong> Pesquisa e testes da comunidade",
+        "gameData": "<strong>Dados do Jogo:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>Ferramentas da Comunidade:</strong> exec.xyxyll.com",
+        "game": "<strong>Jogo:</strong> Star Citizen por Cloud Imperium Games"
+      },
+      "disclaimer": "<strong>Aviso Legal:</strong> Esta é uma ferramenta não oficial feita por fãs, não afiliada ou endossada pela Cloud Imperium Games. A precisão do temporizador depende de que o relógio do seu sistema esteja sincronizado corretamente. Use por sua própria conta e risco."
+    }
+  },
+  "execHangar": {
+    "title": "Status do Hangar Executivo",
+    "subtitle": "Ciclo Global PYAM-EXHANG • Sincronizado em Todos os Servidores",
+    "loading": "Carregando status do hangar...",
+    "timeUntil": "Tempo Até",
+    "opening": "Abertura",
+    "closing": "Fechamento",
+    "cycleProgress": "Progresso do Ciclo",
+    "syncTimer": "Sincronizar Temporizador",
+    "resetSync": "Redefinir Sincronização",
+    "precisionTiming": "Temporização de Precisão:",
+    "syncWhenSee": "Sincronize quando você ver a mudança do hangar no jogo",
+    "openUntil": "Aberto até {{time}}",
+    "opensAt": "Abre às {{time}}",
+    "beta": "Beta",
+    "syncPanel": {
+      "title": "Sincronizar com Fase do Jogo",
+      "description": "Quando você ver o hangar mudar de fase em Star Citizen, clique no botão abaixo para sincronizar o temporizador com o estado atual do jogo.",
+      "green": "VERDE",
+      "greenOpened": "Hangar Recém Aberto",
+      "greenDesc": "(Pode inserir placas)",
+      "red": "VERMELHO",
+      "redClosed": "Hangar Recém Fechado",
+      "redDesc": "(LEDs em contagem regressiva)",
+      "black": "PRETO",
+      "blackReset": "Hangar Reiniciando",
+      "blackDesc": "(Fase de transição)",
+      "tip": "<strong>Dica:</strong> Para melhor precisão, sincronize no momento em que você ver a mudança de fase. O temporizador lembrará sua sincronização entre sessões do navegador."
+    },
+    "syncActive": "Sincronização Manual Ativa:",
+    "offsetApplied": "Deslocamento de {{offset}} segundos aplicado"
+  },
+  "phases": {
+    "green": "FASE VERDE",
+    "greenDesc": "Hangar Aberto - Inserir Compboards",
+    "red": "FASE VERMELHA",
+    "redDesc": "Hangar Fechado - Aguardando",
+    "black": "FASE PRETA",
+    "blackDesc": "Transição - Reinício",
+    "nextPhase": "Próximo: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "Temporizadores de Zonas Contestadas",
+    "subtitle": "Rastreie impressoras de cartões e objetivos",
+    "addTimer": "Adicionar Temporizador",
+    "noTimers": "Nenhum temporizador ativo. Clique em 'Adicionar Temporizador' para começar a rastrear.",
+    "selectZone": "Selecionar Zona",
+    "selectObjective": "Selecionar Objetivo",
+    "startTimer": "Iniciar Temporizador",
+    "cancel": "Cancelar",
+    "timeRemaining": "Tempo Restante",
+    "expired": "EXPIRADO",
+    "deleteTimer": "Excluir temporizador",
+    "cooldownInfo": "Todas as Impressoras de Cartões (30min) • Inicie temporizadores quando você ou sua equipe ativar uma impressora para rastrear quando estarão prontas novamente.",
+    "tabs": {
+      "all": "Todas as Zonas"
+    },
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "Impressora de Cartão Azul {{number}}",
+      "redKeycard": "Impressora de Cartão Vermelho ({{location}})",
+      "greenKeycard": "Impressora de Cartão Verde ({{location}})",
+      "yellowKeycard": "Impressora de Cartão Amarelo ({{location}})",
+      "keycard": "Impressora de Cartão ({{location}})"
+    }
+  },
+  "compboards": {
+    "title": "Coleta de Compboards",
+    "subtitle": "Rastreie seu progresso coletando Compboards em Pyro",
+    "progress": "{{collected}} de {{total}} Coletados",
+    "board": "Placa {{id}}",
+    "collected": "✓ Coletado",
+    "collectedLabel": "Coletado",
+    "printerRespawn": "Reaparecimento de Impressora",
+    "readyAt": "Pronto às",
+    "coolingDown": "Resfriando",
+    "startTimer": "Iniciar Temporizador de 30min",
+    "boardsInZone": "{{count}} placas nesta zona",
+    "collectAll": "Colete todos os 7 Compboards únicos para desbloquear o Hangar Executivo",
+    "startTimersHint": "Inicie temporizadores após coletar placas para rastrear tempos de reaparecimento",
+    "resetAll": "Redefinir Tudo",
+    "resetAllBoards": "Redefinir Todas as Placas",
+    "confirmReset": "Tem certeza de que deseja redefinir todo o progresso?"
+  },
+  "timers": {
+    "ready": "Pronto",
+    "almostReady": "Quase Pronto!",
+    "coolingDown": "Resfriando",
+    "minCooldown": "Resfriamento de {{minutes}} min",
+    "readyAt": "Pronto às",
+    "printerWarning": "A impressora estará pronta em menos de 3 minutos!",
+    "startTimer": "Iniciar Temporizador",
+    "start": "Iniciar"
+  },
+  "vault": {
+    "title": "Porta do Cofre da Ruin Station",
+    "description": "Abre por 1 min, fechada por 20 min (ciclo repetido)",
+    "notSynced": "Não sincronizado.",
+    "syncInstruction": "Clique em \"Porta Aberta Agora\" quando você ver a porta do cofre abrir para começar o rastreamento.",
+    "closingIn": "Fechando em:",
+    "openingIn": "Abrindo em:",
+    "closesAt": "Fecha",
+    "opensAt": "Abre",
+    "doorOpenedNow": "Porta Aberta Agora"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "ATIVO",
+    "off": "DESLIGADO",
+    "statusLights": "Luzes de Status do Hangar",
+    "realTimeIndicators": "Indicadores LED em tempo real",
+    "description": "As luzes ficam <span class=\"text-accent-green font-semibold\">VERDES</span> durante a fase de ligação • Desligam durante o desligamento • Todas desligadas = hangar fechado"
+  },
+  "quickReference": {
+    "title": "Guia de Referência Rápida",
+    "subtitle": "Informações essenciais para operações em zonas contestadas",
+    "hangarCycle": {
+      "title": "Ciclo do Hangar Executivo",
+      "totalCycle": "Ciclo Total: 185 minutos (3h 5min)",
+      "greenPhase": "Fase Verde: ~65 min (ABERTO - Insira placas agora!)",
+      "redPhase": "Fase Vermelha: ~120 min (Fechado - NÃO insira placas)",
+      "synchronized": "Sincronizado globalmente em todos os servidores"
+    },
+    "keycards": {
+      "title": "Tipos de Cartões",
+      "red": "Vermelho: De estações Supervisor",
+      "blue": "Azul: Impressoras com resfriamento de 30 min",
+      "greenYellow": "Verde/Amarelo: Específicos da Ruin Station",
+      "cooldown": "Todas as impressoras têm resfriamento de 30 minutos após o uso"
+    },
+    "vaultDoor": {
+      "title": "Porta com Temporizador do Cofre",
+      "location": "Localização: Cofre da Ruin Station",
+      "opensFor": "Abre por 1 minuto",
+      "closedFor": "Fechada por 20 minutos",
+      "repeats": "Repete automaticamente",
+      "sync": "Clique em \"Porta Aberta Agora\" para sincronizar"
+    },
+    "tips": {
+      "title": "Dicas e Estratégia",
+      "systemClock": "Mantenha o relógio do sistema sincronizado automaticamente",
+      "markBoards": "Marque os Compboards conforme você os coleta",
+      "startTimers": "Inicie temporizadores imediatamente ao usar impressoras",
+      "planRoutes": "Planeje rotas com base na disponibilidade de temporizadores",
+      "allBoards": "Todas as 7 placas são necessárias para acesso ao hangar"
+    }
+  },
+  "footer": {
+    "madeBy": "Feito por",
+    "forCommunity": "para a comunidade de Star Citizen",
+    "notAffiliated": "Não afiliado com Cloud Imperium Games",
+    "communityTool": "Ferramenta comunitária para jogadores de Star Citizen",
+    "disclaimer": "Esta é uma ferramenta não oficial feita por fãs, não afiliada ou endossada pela Cloud Imperium Games.",
+    "accuracy": "A precisão do temporizador depende do relógio do seu sistema. Use por sua própria conta e risco."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "reset": "Redefinir",
+    "confirm": "Confirmar"
+  }
+}

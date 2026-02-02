@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "dashboard": "대시보드",
+    "executiveHangars": "이그제큐티브 격납고",
+    "contestedZones": "분쟁 지역",
+    "hangarTracker": "Star Citizen 격납고 추적기"
+  },
+  "home": {
+    "title": "Pyro 타이머 대시보드",
+    "subtitle": "Star Citizen 타이머를 한눈에 확인",
+    "about": {
+      "title": "이 도구에 대하여",
+      "description": "<strong>Pyro Timer</strong>는 Pyro 시스템의 Star Citizen 분쟁 지역 작전을 위한 종합 팬 제작 도구입니다. 이그제큐티브 격납고 사이클, 키카드 프린터 쿨다운, Compboard 수집을 한 곳에서 추적하세요.",
+      "features": "기능",
+      "featuresList": {
+        "precision": "고정밀 이그제큐티브 격납고 타이머(±1초 정확도)",
+        "czTimers": "모든 분쟁 지역 목표 타이머(Checkmate, Orbituary, Ruin Station)",
+        "compboards": "진행 상황 시각화를 포함한 Compboard 수집 추적기",
+        "localStorage": "로컬 저장소 - 데이터가 기기를 벗어나지 않습니다",
+        "offline": "첫 로드 후 오프라인에서 작동",
+        "noLogin": "로그인이나 계정 불필요"
+      },
+      "howItWorks": "작동 방식",
+      "howItWorksText": "모든 타이머는 React와 JavaScript를 사용하여 브라우저에서 실행됩니다. 이그제큐티브 격납고 타이머는 알려진 185분 사이클을 기반으로 현재 사이클 단계를 계산합니다. 분쟁 지역 타이머와 체크리스트는 브라우저의 로컬 저장소에 저장되므로 페이지를 닫아도 유지됩니다.",
+      "credits": "크레딧 및 출처",
+      "creditsList": {
+        "algorithm": "<strong>타이머 데이터:</strong> 커뮤니티 연구 및 테스트",
+        "gameData": "<strong>게임 데이터:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>커뮤니티 도구:</strong> exec.xyxyll.com",
+        "game": "<strong>게임:</strong> Cloud Imperium Games의 Star Citizen"
+      },
+      "disclaimer": "<strong>면책 조항:</strong> 이것은 비공식 팬 제작 도구이며 Cloud Imperium Games와 제휴하거나 승인되지 않았습니다. 타이머 정확도는 시스템 시계가 올바르게 동기화되어 있는지에 따라 달라집니다. 자신의 책임하에 사용하십시오."
+    }
+  },
+  "execHangar": {
+    "title": "이그제큐티브 격납고 상태",
+    "subtitle": "PYAM-EXHANG 글로벌 사이클 • 모든 서버에서 동기화",
+    "loading": "격납고 상태 로딩 중...",
+    "timeUntil": "까지 시간",
+    "opening": "개방",
+    "closing": "폐쇄",
+    "cycleProgress": "사이클 진행률",
+    "syncTimer": "타이머 동기화",
+    "resetSync": "동기화 재설정",
+    "precisionTiming": "정밀 타이밍:",
+    "syncWhenSee": "게임 내에서 격납고 변경을 볼 때 동기화",
+    "openUntil": "{{time}}까지 개방",
+    "opensAt": "{{time}}에 개방",
+    "beta": "베타",
+    "syncPanel": {
+      "title": "게임 내 단계와 동기화",
+      "description": "Star Citizen에서 격납고가 단계를 변경하는 것을 보면 아래 버튼을 클릭하여 타이머를 현재 게임 상태와 동기화하세요.",
+      "green": "녹색",
+      "greenOpened": "격납고가 막 개방됨",
+      "greenDesc": "(보드 삽입 가능)",
+      "red": "빨강",
+      "redClosed": "격납고가 막 폐쇄됨",
+      "redDesc": "(LED 카운트다운 중)",
+      "black": "검정",
+      "blackReset": "격납고 재설정 중",
+      "blackDesc": "(전환 단계)",
+      "tip": "<strong>팁:</strong> 최상의 정확도를 위해 단계 변경을 보는 순간 동기화하세요. 타이머는 브라우저 세션 간에 동기화를 기억합니다."
+    },
+    "syncActive": "수동 동기화 활성:",
+    "offsetApplied": "{{offset}}초 오프셋 적용됨"
+  },
+  "phases": {
+    "green": "녹색 단계",
+    "greenDesc": "격납고 개방 - Compboard 삽입",
+    "red": "빨강 단계",
+    "redDesc": "격납고 폐쇄 - 대기 중",
+    "black": "검정 단계",
+    "blackDesc": "전환 - 재설정",
+    "nextPhase": "다음: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "분쟁 지역 타이머",
+    "subtitle": "키카드 프린터 및 목표 추적",
+    "addTimer": "타이머 추가",
+    "noTimers": "활성 타이머가 없습니다. '타이머 추가'를 클릭하여 추적을 시작하세요.",
+    "selectZone": "지역 선택",
+    "selectObjective": "목표 선택",
+    "startTimer": "타이머 시작",
+    "cancel": "취소",
+    "timeRemaining": "남은 시간",
+    "expired": "만료됨",
+    "deleteTimer": "타이머 삭제",
+    "cooldownInfo": "모든 키카드 프린터(30분) • 당신이나 팀이 프린터를 활성화할 때 타이머를 시작하여 다시 준비될 때를 추적하세요.",
+    "tabs": {
+      "all": "모든 지역"
+    },
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "블루 키카드 프린터 {{number}}",
+      "redKeycard": "레드 키카드 프린터({{location}})",
+      "greenKeycard": "그린 키카드 프린터({{location}})",
+      "yellowKeycard": "옐로우 키카드 프린터({{location}})",
+      "keycard": "키카드 프린터({{location}})"
+    }
+  },
+  "compboards": {
+    "title": "Compboard 수집",
+    "subtitle": "Pyro 전역에서 Compboard 수집 진행 상황 추적",
+    "progress": "{{total}}개 중 {{collected}}개 수집",
+    "board": "보드 {{id}}",
+    "collected": "✓ 수집됨",
+    "collectedLabel": "수집됨",
+    "printerRespawn": "프린터 리스폰",
+    "readyAt": "준비 시각",
+    "coolingDown": "쿨다운 중",
+    "startTimer": "30분 타이머 시작",
+    "boardsInZone": "이 지역에 {{count}}개의 보드",
+    "collectAll": "이그제큐티브 격납고를 잠금 해제하려면 7개의 고유한 Compboard를 모두 수집하세요",
+    "startTimersHint": "보드 수집 후 타이머를 시작하여 리스폰 시간을 추적하세요",
+    "resetAll": "모두 재설정",
+    "resetAllBoards": "모든 보드 재설정",
+    "confirmReset": "모든 진행 상황을 재설정하시겠습니까?"
+  },
+  "timers": {
+    "ready": "준비됨",
+    "almostReady": "거의 준비됨!",
+    "coolingDown": "쿨다운 중",
+    "minCooldown": "{{minutes}}분 쿨다운",
+    "readyAt": "준비 시각",
+    "printerWarning": "프린터가 3분 이내에 준비됩니다!",
+    "startTimer": "타이머 시작",
+    "start": "시작"
+  },
+  "vault": {
+    "title": "Ruin Station 금고 문",
+    "description": "1분 동안 개방, 20분 동안 폐쇄(반복 사이클)",
+    "notSynced": "동기화되지 않음.",
+    "syncInstruction": "금고 문이 열리는 것을 보면 \"문 열림\"을 클릭하여 추적을 시작하세요.",
+    "closingIn": "폐쇄까지:",
+    "openingIn": "개방까지:",
+    "closesAt": "폐쇄",
+    "opensAt": "개방",
+    "doorOpenedNow": "문 열림"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "활성",
+    "off": "꺼짐",
+    "statusLights": "격납고 상태등",
+    "realTimeIndicators": "실시간 LED 표시기",
+    "description": "전원 공급 단계 중에 조명이 <span class=\"text-accent-green font-semibold\">녹색</span>으로 변합니다 • 전원 차단 중에 꺼짐 • 모두 꺼짐 = 격납고 폐쇄"
+  },
+  "quickReference": {
+    "title": "빠른 참조 가이드",
+    "subtitle": "분쟁 지역 작전에 필수적인 정보",
+    "hangarCycle": {
+      "title": "이그제큐티브 격납고 사이클",
+      "totalCycle": "전체 사이클: 185분(3시간 5분)",
+      "greenPhase": "녹색 단계: 약 65분(개방 - 지금 보드 삽입!)",
+      "redPhase": "빨강 단계: 약 120분(폐쇄 - 보드 삽입 금지)",
+      "synchronized": "모든 서버에서 전역 동기화"
+    },
+    "keycards": {
+      "title": "키카드 유형",
+      "red": "빨강: 슈퍼바이저 스테이션에서",
+      "blue": "파랑: 30분 쿨다운 프린터",
+      "greenYellow": "녹색/노랑: Ruin Station 전용",
+      "cooldown": "모든 프린터는 사용 후 30분 쿨다운이 있습니다"
+    },
+    "vaultDoor": {
+      "title": "금고 타이머 문",
+      "location": "위치: Ruin Station 금고",
+      "opensFor": "1분 동안 개방",
+      "closedFor": "20분 동안 폐쇄",
+      "repeats": "자동 반복",
+      "sync": "\"문 열림\"을 클릭하여 동기화"
+    },
+    "tips": {
+      "title": "팁 및 전략",
+      "systemClock": "시스템 시계를 자동 동기화로 유지",
+      "markBoards": "Compboard를 수집하면서 표시",
+      "startTimers": "프린터 사용 시 즉시 타이머 시작",
+      "planRoutes": "타이머 가용성을 기반으로 경로 계획",
+      "allBoards": "격납고 액세스를 위해 모든 7개 보드 필요"
+    }
+  },
+  "footer": {
+    "madeBy": "제작자",
+    "forCommunity": "Star Citizen 커뮤니티를 위해",
+    "notAffiliated": "Cloud Imperium Games와 제휴 없음",
+    "communityTool": "Star Citizen 플레이어를 위한 커뮤니티 도구",
+    "disclaimer": "이것은 비공식 팬 제작 도구이며 Cloud Imperium Games와 제휴하거나 승인되지 않았습니다.",
+    "accuracy": "타이머 정확도는 시스템 시계에 따라 달라집니다. 자신의 책임하에 사용하십시오."
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "reset": "재설정",
+    "confirm": "확인"
+  }
+}

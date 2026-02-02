@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "dashboard": "Pannello",
+    "executiveHangars": "Hangar Esecutivi",
+    "contestedZones": "Zone Contese",
+    "hangarTracker": "Tracker Hangar di Star Citizen"
+  },
+  "home": {
+    "title": "Pannello Timer di Pyro",
+    "subtitle": "Tutti i tuoi timer di Star Citizen a colpo d'occhio",
+    "about": {
+      "title": "Informazioni su Questo Strumento",
+      "description": "<strong>Pyro Timer</strong> è uno strumento completo creato dai fan per le operazioni nelle zone contese di Star Citizen nel sistema Pyro. Traccia i cicli degli hangar esecutivi, i tempi di ricarica delle stampanti di carte chiave e la raccolta di Compboards in un unico posto.",
+      "features": "Caratteristiche",
+      "featuresList": {
+        "precision": "Timer hangar esecutivo ad alta precisione (precisione ±1 secondo)",
+        "czTimers": "Tutti i timer degli obiettivi delle zone contese (Checkmate, Orbituary, Ruin Station)",
+        "compboards": "Tracker raccolta Compboards con visualizzazione progresso",
+        "localStorage": "Archiviazione locale - i tuoi dati non lasciano mai il tuo dispositivo",
+        "offline": "Funziona offline dopo il primo caricamento",
+        "noLogin": "Non richiede login o account"
+      },
+      "howItWorks": "Come Funziona",
+      "howItWorksText": "Tutti i timer vengono eseguiti nel tuo browser utilizzando React e JavaScript. Il timer dell'hangar esecutivo calcola la fase del ciclo corrente in base al ciclo noto di 185 minuti. I timer delle zone contese e la tua checklist vengono salvati nell'archiviazione locale del tuo browser, quindi persistono anche se chiudi la pagina.",
+      "credits": "Crediti e Fonti",
+      "creditsList": {
+        "algorithm": "<strong>Dati Timer:</strong> Ricerca e test della comunità",
+        "gameData": "<strong>Dati Gioco:</strong> Star Citizen Wiki",
+        "inspiration": "<strong>Strumenti della Comunità:</strong> exec.xyxyll.com",
+        "game": "<strong>Gioco:</strong> Star Citizen di Cloud Imperium Games"
+      },
+      "disclaimer": "<strong>Disclaimer:</strong> Questo è uno strumento non ufficiale creato dai fan, non affiliato o approvato da Cloud Imperium Games. L'accuratezza del timer dipende dalla sincronizzazione corretta dell'orologio del sistema. Usa a tuo rischio."
+    }
+  },
+  "execHangar": {
+    "title": "Stato Hangar Esecutivo",
+    "subtitle": "Ciclo Globale PYAM-EXHANG • Sincronizzato su Tutti i Server",
+    "loading": "Caricamento stato hangar...",
+    "timeUntil": "Tempo Fino a",
+    "opening": "Apertura",
+    "closing": "Chiusura",
+    "cycleProgress": "Progresso Ciclo",
+    "syncTimer": "Sincronizza Timer",
+    "resetSync": "Ripristina Sincronizzazione",
+    "precisionTiming": "Temporizzazione di Precisione:",
+    "syncWhenSee": "Sincronizza quando vedi il cambio dell'hangar nel gioco",
+    "openUntil": "Aperto fino a {{time}}",
+    "opensAt": "Apre alle {{time}}",
+    "beta": "Beta",
+    "syncPanel": {
+      "title": "Sincronizza con Fase di Gioco",
+      "description": "Quando vedi l'hangar cambiare fase in Star Citizen, fai clic sul pulsante qui sotto per sincronizzare il timer con lo stato corrente del gioco.",
+      "green": "VERDE",
+      "greenOpened": "Hangar Appena Aperto",
+      "greenDesc": "(Puoi inserire schede)",
+      "red": "ROSSO",
+      "redClosed": "Hangar Appena Chiuso",
+      "redDesc": "(LED in conto alla rovescia)",
+      "black": "NERO",
+      "blackReset": "Hangar in Ripristino",
+      "blackDesc": "(Fase di transizione)",
+      "tip": "<strong>Suggerimento:</strong> Per la migliore precisione, sincronizza nel momento in cui vedi il cambio di fase. Il timer ricorderà la tua sincronizzazione tra le sessioni del browser."
+    },
+    "syncActive": "Sincronizzazione Manuale Attiva:",
+    "offsetApplied": "Offset di {{offset}} secondi applicato"
+  },
+  "phases": {
+    "green": "FASE VERDE",
+    "greenDesc": "Hangar Aperto - Inserisci Compboards",
+    "red": "FASE ROSSA",
+    "redDesc": "Hangar Chiuso - In Attesa",
+    "black": "FASE NERA",
+    "blackDesc": "Transizione - Ripristino",
+    "nextPhase": "Prossimo: {{phase}}"
+  },
+  "contestedZones": {
+    "title": "Timer Zone Contese",
+    "subtitle": "Traccia stampanti carte chiave e obiettivi",
+    "addTimer": "Aggiungi Timer",
+    "noTimers": "Nessun timer attivo. Fai clic su 'Aggiungi Timer' per iniziare a tracciare.",
+    "selectZone": "Seleziona Zona",
+    "selectObjective": "Seleziona Obiettivo",
+    "startTimer": "Avvia Timer",
+    "cancel": "Annulla",
+    "timeRemaining": "Tempo Rimanente",
+    "expired": "SCADUTO",
+    "deleteTimer": "Elimina timer",
+    "cooldownInfo": "Tutte le Stampanti Carte Chiave (30min) • Avvia i timer quando tu o il tuo team attivate una stampante per tracciare quando saranno pronte di nuovo.",
+    "tabs": {
+      "all": "Tutte le Zone"
+    },
+    "zones": {
+      "checkmate": "Checkmate",
+      "orbituary": "Orbituary",
+      "ruinStation": "Ruin Station"
+    },
+    "timers": {
+      "blueKeycard": "Stampante Carta Blu {{number}}",
+      "redKeycard": "Stampante Carta Rossa ({{location}})",
+      "greenKeycard": "Stampante Carta Verde ({{location}})",
+      "yellowKeycard": "Stampante Carta Gialla ({{location}})",
+      "keycard": "Stampante Carta ({{location}})"
+    }
+  },
+  "compboards": {
+    "title": "Raccolta Compboards",
+    "subtitle": "Traccia i tuoi progressi nella raccolta di Compboards in Pyro",
+    "progress": "{{collected}} di {{total}} Raccolti",
+    "board": "Scheda {{id}}",
+    "collected": "✓ Raccolto",
+    "collectedLabel": "Raccolto",
+    "printerRespawn": "Riapparizione Stampante",
+    "readyAt": "Pronto alle",
+    "coolingDown": "In Raffreddamento",
+    "startTimer": "Avvia Timer 30min",
+    "boardsInZone": "{{count}} schede in questa zona",
+    "collectAll": "Raccogli tutti e 7 i Compboards unici per sbloccare l'Hangar Esecutivo",
+    "startTimersHint": "Avvia i timer dopo aver raccolto le schede per tracciare i tempi di riapparizione",
+    "resetAll": "Ripristina Tutto",
+    "resetAllBoards": "Ripristina Tutte le Schede",
+    "confirmReset": "Sei sicuro di voler ripristinare tutti i progressi?"
+  },
+  "timers": {
+    "ready": "Pronto",
+    "almostReady": "Quasi Pronto!",
+    "coolingDown": "In Raffreddamento",
+    "minCooldown": "Raffreddamento di {{minutes}} min",
+    "readyAt": "Pronto alle",
+    "printerWarning": "La stampante sarà pronta tra meno di 3 minuti!",
+    "startTimer": "Avvia Timer",
+    "start": "Avvia"
+  },
+  "vault": {
+    "title": "Porta Caveau Ruin Station",
+    "description": "Apre per 1 min, chiusa per 20 min (ciclo ripetuto)",
+    "notSynced": "Non sincronizzato.",
+    "syncInstruction": "Fai clic su \"Porta Aperta Ora\" quando vedi la porta del caveau aprirsi per iniziare il tracciamento.",
+    "closingIn": "Chiude tra:",
+    "openingIn": "Apre tra:",
+    "closesAt": "Chiude",
+    "opensAt": "Apre",
+    "doorOpenedNow": "Porta Aperta Ora"
+  },
+  "led": {
+    "label": "LED {{number}}",
+    "active": "ATTIVO",
+    "off": "SPENTO",
+    "statusLights": "Luci di Stato Hangar",
+    "realTimeIndicators": "Indicatori LED in tempo reale",
+    "description": "Le luci diventano <span class=\"text-accent-green font-semibold\">VERDI</span> durante la fase di accensione • Si spengono durante lo spegnimento • Tutte spente = hangar chiuso"
+  },
+  "quickReference": {
+    "title": "Guida di Riferimento Rapido",
+    "subtitle": "Informazioni essenziali per le operazioni nelle zone contese",
+    "hangarCycle": {
+      "title": "Ciclo Hangar Esecutivo",
+      "totalCycle": "Ciclo Totale: 185 minuti (3h 5min)",
+      "greenPhase": "Fase Verde: ~65 min (APERTO - Inserisci schede ora!)",
+      "redPhase": "Fase Rossa: ~120 min (Chiuso - NON inserire schede)",
+      "synchronized": "Sincronizzato globalmente su tutti i server"
+    },
+    "keycards": {
+      "title": "Tipi di Carte Chiave",
+      "red": "Rossa: Da stazioni Supervisor",
+      "blue": "Blu: Stampanti con raffreddamento di 30 min",
+      "greenYellow": "Verde/Gialla: Specifiche di Ruin Station",
+      "cooldown": "Tutte le stampanti hanno un raffreddamento di 30 minuti dopo l'uso"
+    },
+    "vaultDoor": {
+      "title": "Porta con Timer del Caveau",
+      "location": "Posizione: Caveau di Ruin Station",
+      "opensFor": "Apre per 1 minuto",
+      "closedFor": "Chiusa per 20 minuti",
+      "repeats": "Si ripete automaticamente",
+      "sync": "Fai clic su \"Porta Aperta Ora\" per sincronizzare"
+    },
+    "tips": {
+      "title": "Suggerimenti e Strategia",
+      "systemClock": "Mantieni l'orologio di sistema sincronizzato automaticamente",
+      "markBoards": "Segna i Compboards man mano che li raccogli",
+      "startTimers": "Avvia i timer immediatamente quando usi le stampanti",
+      "planRoutes": "Pianifica i percorsi in base alla disponibilità dei timer",
+      "allBoards": "Tutte e 7 le schede sono necessarie per l'accesso all'hangar"
+    }
+  },
+  "footer": {
+    "madeBy": "Realizzato da",
+    "forCommunity": "per la comunità di Star Citizen",
+    "notAffiliated": "Non affiliato con Cloud Imperium Games",
+    "communityTool": "Strumento comunitario per i giocatori di Star Citizen",
+    "disclaimer": "Questo è uno strumento non ufficiale creato dai fan, non affiliato o approvato da Cloud Imperium Games.",
+    "accuracy": "L'accuratezza del timer dipende dall'orologio del sistema. Usa a tuo rischio."
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "reset": "Ripristina",
+    "confirm": "Conferma"
+  }
+}
