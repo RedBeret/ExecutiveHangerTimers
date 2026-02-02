@@ -15,7 +15,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6">
             <Link to="/guide" className="text-gray-500 hover:text-accent-blue transition-colors">
-              Start Here
+              {t('footer.startHere')}
             </Link>
             <span className="text-gray-600">v1.0.2</span>
           </div>
