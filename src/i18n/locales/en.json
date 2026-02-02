@@ -255,7 +255,8 @@
       "description": "This is a timer tool, not a walkthrough. It helps you track keycard printer cooldowns, vault door cycles, the Executive Hangar schedule, and compboard collection progress.",
       "localStorage": "All timers are local to your device and browser — nothing is sent to a server. If you clear your browser data, your timers reset.",
       "goToDashboard": "Go to Dashboard"
-    }
+    },
+    "backToTop": "Back to top"
   },
   "footer": {
     "madeBy": "Made by",

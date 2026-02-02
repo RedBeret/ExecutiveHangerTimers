@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   Crosshair, Shield, MapPin, CheckSquare, Swords, Timer,
-  ChevronDown, ArrowRight, AlertTriangle, Target, Package,
-  Lock, Key, BookOpen
+  ChevronDown, ChevronUp, ArrowRight, AlertTriangle, Target, Package,
+  Key
 } from 'lucide-react'
 
 function ZoneCard({ title, subtitle, color, borderColor, items, icon: Icon }) {
@@ -78,7 +78,7 @@ export function GuidePage() {
         </div>
 
         {/* 1. Why Do This? */}
-        <section id="why-section" className="space-y-4">
+        <section id="why-section" className="space-y-4 scroll-mt-24">
           <div className="flex items-center gap-3">
             <Target className="w-6 h-6 text-accent-blue" />
             <h2 className="text-2xl font-bold text-white">{t('guide.why.title')}</h2>
@@ -244,6 +244,17 @@ export function GuidePage() {
             </div>
           </div>
         </section>
+
+        {/* Back to top */}
+        <div className="text-center pt-4">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            <ChevronUp className="w-4 h-4" />
+            {t('guide.backToTop')}
+          </button>
+        </div>
 
       </div>
     </div>

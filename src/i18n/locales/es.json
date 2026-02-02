@@ -255,7 +255,8 @@
       "description": "Esto es una herramienta de temporizadores, no una guía paso a paso. Te ayuda a rastrear los tiempos de recarga de impresoras, los ciclos de la puerta de bóveda, el horario del Hangar Ejecutivo y el progreso de recolección de compboards.",
       "localStorage": "Todos los temporizadores son locales a tu dispositivo y navegador — nada se envía a un servidor. Si borras los datos del navegador, tus temporizadores se reinician.",
       "goToDashboard": "Ir al panel"
-    }
+    },
+    "backToTop": "Volver arriba"
   },
   "footer": {
     "madeBy": "Hecho por",

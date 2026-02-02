@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
@@ -7,10 +7,19 @@ import { ExecutiveHangarsPage } from './pages/ExecutiveHangarsPage'
 import { ContestedZonesPage } from './pages/ContestedZonesPage'
 import { GuidePage } from './pages/GuidePage'
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-dark-950 flex flex-col">
+        <ScrollToTop />
         {/* Navigation */}
         <Navigation />
 

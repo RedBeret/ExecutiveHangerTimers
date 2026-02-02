@@ -255,7 +255,8 @@
       "description": "Questo è uno strumento di timer, non una guida passo passo. Ti aiuta a tracciare i tempi di raffreddamento delle stampanti, i cicli della porta del caveau, il programma dell'Hangar Esecutivo e il progresso della raccolta dei compboards.",
       "localStorage": "Tutti i timer sono locali al tuo dispositivo e browser — nulla viene inviato a un server. Se cancelli i dati del browser, i tuoi timer vengono ripristinati.",
       "goToDashboard": "Vai al pannello"
-    }
+    },
+    "backToTop": "Torna su"
   },
   "footer": {
     "madeBy": "Realizzato da",
