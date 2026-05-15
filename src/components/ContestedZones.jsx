@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Target, Zap, Landmark, Database } from 'lucide-react'
+import React from 'react'
+import { Target, Zap, Landmark, Database, Gem } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { TimerCard } from './TimerCard'
 import { VaultTimerCard } from './VaultTimerCard'
@@ -47,14 +47,26 @@ export function ContestedZones({ activeTab = 'all' }) {
         { id: 'supervisor-l5', label: t('contestedZones.timers.redKeycard', { location: 'Pyro 3 L5' }), duration: 30 * 60 * 1000 },
       ],
     },
-  ]
-
-  const tabs = [
-    { id: 'all', label: t('contestedZones.tabs.all') },
-    { id: 'checkmate', label: 'Checkmate' },
-    { id: 'orbituary', label: 'Orbituary' },
-    { id: 'ruin', label: 'Ruin' },
-    { id: 'supervisor', label: 'Supervisor' },
+    {
+      id: 'align-mine',
+      name: 'Align & Mine',
+      icon: Gem,
+      timers: [
+        {
+          id: 'align-mine-carinite-hole',
+          label: 'Carinite Mine Hole',
+          duration: 2 * 60 * 60 * 1000,
+          durationLabel: '2 hour collapse window',
+          readyLabel: 'Not Started',
+          activeLabel: 'Hole Open',
+          warningLabel: 'Implosion Imminent',
+          readyAtLabel: 'Implodes at',
+          warningMessage: 'Mine hole implosion in under 3 minutes!',
+          startLabel: 'Hole Opened',
+          startShortLabel: 'Opened',
+        },
+      ],
+    },
   ]
 
   const filteredZones = activeTab === 'all'
@@ -91,6 +103,14 @@ export function ContestedZones({ activeTab = 'all' }) {
                     id={timer.id}
                     label={timer.label}
                     duration={timer.duration}
+                    durationLabel={timer.durationLabel}
+                    readyLabel={timer.readyLabel}
+                    activeLabel={timer.activeLabel}
+                    warningLabel={timer.warningLabel}
+                    readyAtLabel={timer.readyAtLabel}
+                    warningMessage={timer.warningMessage}
+                    startLabel={timer.startLabel}
+                    startShortLabel={timer.startShortLabel}
                   />
                 ))}
               </div>
@@ -100,7 +120,7 @@ export function ContestedZones({ activeTab = 'all' }) {
       </div>
 
       <div className="mt-6 p-4 bg-dark-800/30 rounded-lg text-sm text-gray-400">
-        {t('contestedZones.cooldownInfo')}
+        {t('contestedZones.cooldownInfo')} Align & Mine hole timers are manual and start when the cave opens.
       </div>
     </div>
   )
