@@ -1,9 +1,9 @@
 {
-  "name": "pyro-timer",
+  "name": "cz-timer",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Star Citizen Executive Hangar and Contested Zone Timer Tracker",
+  "description": "Star Citizen CZ Timer for Pyro Contested Zones, Executive Hangars, keycard cooldowns, compboards, vault doors, and Carinite cave runs.",
   "author": "redberet",
   "engines": {
     "node": "^20.19.0 || >=22.12.0",
