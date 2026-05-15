@@ -25,7 +25,7 @@ export function Navigation() {
             </div>
             <div className="min-w-0">
               <h1 className="text-xl font-bold bg-gradient-to-r from-accent-blue to-accent-green bg-clip-text text-transparent">
-                Pyro Timer
+                CZ Timer
               </h1>
               <p className="hidden text-xs text-gray-500 sm:block">{t('nav.hangarTracker')}</p>
             </div>

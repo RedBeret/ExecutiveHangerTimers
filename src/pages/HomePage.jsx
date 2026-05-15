@@ -4,6 +4,7 @@ import { ExecutiveHangar } from '../components/ExecutiveHangar'
 import { ContestedZones } from '../components/ContestedZones'
 import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
+import { PatchNotice } from '../components/PatchNotice'
 
 export function HomePage() {
   const { t } = useTranslation()
@@ -22,6 +23,8 @@ export function HomePage() {
             {t('home.subtitle')}
           </p>
         </div>
+
+        <PatchNotice />
 
         {/* Executive Hangar */}
         <section id="exec-hangar">

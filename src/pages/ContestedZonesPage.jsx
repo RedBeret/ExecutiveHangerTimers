@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ContestedZones } from '../components/ContestedZones'
 import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
+import { PatchNotice } from '../components/PatchNotice'
 import { Swords, Target, Zap, Gem } from 'lucide-react'
 
 const tabs = [
@@ -30,9 +31,11 @@ export function ContestedZonesPage() {
             </h1>
           </div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Track keycard printer cooldowns and farm contested zones efficiently
+            Track Star Citizen Pyro keycard printers, vault doors, compboards, and Align & Mine cave timers
           </p>
         </div>
+
+        <PatchNotice />
 
         {/* Location Tabs */}
         <div className="flex flex-wrap gap-2 justify-center">
@@ -102,7 +105,7 @@ export function ContestedZonesPage() {
                 Mine hole implosion timer • 2-hour collapse window
               </p>
               <p className="text-xs text-gray-500">
-                Best for: Carinite mining runs
+                Best for: Pyro Carinite mining runs
               </p>
             </div>
           </div>
