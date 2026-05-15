@@ -3,25 +3,25 @@
     "dashboard": "Dashboard",
     "executiveHangars": "Executive Hangars",
     "contestedZones": "Contested Zones",
-    "hangarTracker": "Star Citizen Hangar Tracker"
+    "hangarTracker": "Contested Zone Tracker"
   },
   "home": {
-    "title": "Pyro Timer Dashboard",
-    "subtitle": "All your Star Citizen timers at a glance",
+    "title": "Contested Zone Timer",
+    "subtitle": "Star Citizen Pyro timers for Executive Hangars, Contested Zones, compboards, keycards, vault doors, and Carinite cave runs",
     "about": {
       "title": "About This Tool",
-      "description": "<strong>Pyro Timer</strong> is a comprehensive fan-made tool for Star Citizen's contested zone operations in the Pyro system. Track executive hangar cycles, keycard printer cooldowns, and compboard collection all in one place.",
+      "description": "<strong>CZ Timer</strong> is a fan-made Star Citizen Contested Zone timer for Pyro runs. Track Executive Hangar cycles, keycard printer cooldowns, compboards, vault doors, and Align & Mine Carinite cave timing in one place.",
       "features": "Features",
       "featuresList": {
-        "precision": "High-precision executive hangar timer (±1 second accuracy)",
-        "czTimers": "All contested zone objective timers (Checkmate, Orbituary, Ruin Station)",
-        "compboards": "Compboard collection tracker with progress visualization",
+        "precision": "Executive Hangar timer for the PYAM-EXHANG global cycle",
+        "czTimers": "Contested Zone timers for Checkmate, Orbituary, Ruin Station, Supervisor Outposts, and Align & Mine",
+        "compboards": "Pyro compboard collection tracker with progress visualization",
         "localStorage": "Local storage - your data never leaves your device",
         "offline": "Works offline after first load",
         "noLogin": "No login or account required"
       },
       "howItWorks": "How It Works",
-      "howItWorksText": "All timers run in your browser using React and JavaScript. The executive hangar timer calculates the current cycle phase based on the known 185-minute cycle. Contested zone timers and your checklist are saved in your browser's local storage, so they persist even if you close the page.",
+      "howItWorksText": "All timers run in your browser using React and JavaScript. The Executive Hangar timer calculates the current cycle phase from the known 185-minute cycle. For Alpha 4.8 Contested Zone runs, use the manual timers when your team activates printers, opens vault doors, or starts Align & Mine Carinite cave timing. Your timers and checklist are saved in local storage, so they persist even if you close the page.",
       "credits": "Credits & Sources",
       "creditsList": {
         "algorithm": "<strong>Timer Data:</strong> Community research & testing",
@@ -75,7 +75,7 @@
   },
   "contestedZones": {
     "title": "Contested Zone Timers",
-    "subtitle": "Track keycard printers & objectives",
+    "subtitle": "Track Star Citizen Pyro keycard printers, vault doors, compboards, and cave timers",
     "addTimer": "Add Timer",
     "noTimers": "No active timers. Click 'Add Timer' to start tracking.",
     "selectZone": "Select Zone",
@@ -85,7 +85,7 @@
     "timeRemaining": "Time Remaining",
     "expired": "EXPIRED",
     "deleteTimer": "Delete timer",
-    "cooldownInfo": "All Keycard Printers (30min) • Start timers when you or your team activates a printer to track when they'll be ready again.",
+    "cooldownInfo": "All Keycard Printers (30min) • Alpha 4.8 lists in-game printer timers as unreliable, so start manual timers when your team activates a printer.",
     "tabs": {
       "all": "All Zones"
     },
@@ -151,7 +151,7 @@
   },
   "quickReference": {
     "title": "Quick Reference Guide",
-    "subtitle": "Essential info for contested zone operations",
+    "subtitle": "Essential Pyro Contested Zone timing info",
     "hangarCycle": {
       "title": "Executive Hangar Cycle",
       "totalCycle": "Total Cycle: 185 minutes (3h 5min)",
@@ -185,8 +185,8 @@
   },
   "guide": {
     "hero": {
-      "title": "Start Here: Pyro Contested Zones",
-      "subtitle": "Everything you need to know before stepping into a Contested Zone in Star Citizen's Pyro system.",
+      "title": "Start Here: Star Citizen Pyro Contested Zones",
+      "subtitle": "Use CZ Timer to plan Contested Zone runs, keycard printer cooldowns, compboards, vault doors, Executive Hangars, and Carinite cave timing in Pyro.",
       "showBasics": "I'm new, show me the basics",
       "goToTimers": "I know the loop, take me to timers"
     },
@@ -252,7 +252,7 @@
     },
     "site": {
       "title": "What This Site Does",
-      "description": "This is a timer tool, not a walkthrough. It helps you track keycard printer cooldowns, vault door cycles, the Executive Hangar schedule, and compboard collection progress.",
+      "description": "This is a Star Citizen Contested Zone timer tool, not a walkthrough. It helps you track keycard printer cooldowns, vault door cycles, the Executive Hangar schedule, Align & Mine Carinite cave openings, and compboard collection progress. Alpha 4.8 changed enough CZ behavior that manual timers are worth keeping open during Pyro runs.",
       "localStorage": "All timers are local to your device and browser — nothing is sent to a server. If you clear your browser data, your timers reset.",
       "goToDashboard": "Go to Dashboard"
     },
@@ -262,9 +262,9 @@
     "madeBy": "Made by",
     "forCommunity": "for the Star Citizen community",
     "notAffiliated": "Not affiliated with Cloud Imperium Games",
-    "communityTool": "Community tool for Star Citizen players",
+    "communityTool": "Community timer tool for Star Citizen Pyro and Contested Zone players",
     "disclaimer": "This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games.",
-    "accuracy": "Timer accuracy depends on your system clock. Use at your own risk.",
+    "accuracy": "Timer accuracy depends on your system clock and current Star Citizen patch behavior. Use at your own risk.",
     "startHere": "Start Here"
   },
   "common": {

@@ -1,6 +1,6 @@
-# 🚀 Pyro Timer - Star Citizen CZ Tracker
+# 🚀 CZ Timer - Star Citizen Contested Zone Timer
 
-A comprehensive web application for tracking Star Citizen's Executive Hangar cycles and Contested Zone objectives in the Pyro system.
+A comprehensive web application for tracking Star Citizen's Pyro Contested Zone timers, Executive Hangar cycles, keycard printer cooldowns, vault doors, compboards, and Align & Mine Carinite cave runs.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -21,6 +21,7 @@ A comprehensive web application for tracking Star Citizen's Executive Hangar cyc
   - Orbituary Station (2 Blue printers)
   - Ruin Station (3 keycard printers + Vault door)
 - **Vault timer door** with 1min open / 20min closed cycle
+- **Align & Mine Carinite cave timer** for the 2-hour mine hole collapse window
 - **Persistent timers** that survive page reloads
 
 ### 📋 Compboard Tracker
@@ -38,7 +39,7 @@ A comprehensive web application for tracking Star Citizen's Executive Hangar cyc
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ and npm
+- Node.js 20.19+ or 22.12+ and npm 10+
 
 ### Installation
 
@@ -165,7 +166,7 @@ ExecutiveHangerTimers/
 
 ### Built With
 - **React 18.3** - UI framework
-- **Vite 5** - Build tool and dev server
+- **Vite 7** - Build tool and dev server
 - **Tailwind CSS 3.4** - Utility-first CSS
 - **Lucide React** - Icon library
 - **LocalStorage API** - Data persistence
