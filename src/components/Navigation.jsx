@@ -17,22 +17,22 @@ export function Navigation() {
   return (
     <nav className="bg-dark-900/80 backdrop-blur-md border-b-2 border-dark-700 sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex flex-col items-center justify-between gap-3 py-4 lg:flex-row">
           {/* Logo/Brand */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-green flex items-center justify-center">
+          <Link to="/" className="flex min-w-0 items-center gap-3 group">
+            <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-gradient-to-br from-accent-blue to-accent-green flex items-center justify-center">
               <Rocket className="w-6 h-6 text-white" />
             </div>
-            <div>
+            <div className="min-w-0">
               <h1 className="text-xl font-bold bg-gradient-to-r from-accent-blue to-accent-green bg-clip-text text-transparent">
                 Pyro Timer
               </h1>
-              <p className="text-xs text-gray-500">{t('nav.hangarTracker')}</p>
+              <p className="hidden text-xs text-gray-500 sm:block">{t('nav.hangarTracker')}</p>
             </div>
           </Link>
 
           {/* Navigation Tabs and Language Switcher */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             {navItems.map(({ path, label, icon: Icon }) => {
               const isActive = location.pathname === path
               return (
@@ -40,7 +40,7 @@ export function Navigation() {
                   key={path}
                   to={path}
                   className={`
-                    flex items-center gap-2 px-6 py-3 rounded-lg font-medium
+                    flex items-center gap-2 px-3 py-3 sm:px-6 rounded-lg font-medium
                     transition-all duration-300 min-h-[48px]
                     hover:scale-105 active:scale-95
                     ${isActive

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ContestedZones } from '../components/ContestedZones'
 import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
-import { Swords, Target, Zap } from 'lucide-react'
+import { Swords, Target, Zap, Gem } from 'lucide-react'
 
 const tabs = [
   { id: 'all', label: 'All Zones' },
@@ -10,6 +10,7 @@ const tabs = [
   { id: 'orbituary', label: 'Orbituary' },
   { id: 'ruin', label: 'Ruin' },
   { id: 'supervisor', label: 'Supervisor' },
+  { id: 'align-mine', label: 'Align & Mine' },
 ]
 
 export function ContestedZonesPage() {
@@ -52,7 +53,7 @@ export function ContestedZonesPage() {
 
         {/* Zone Info Cards - Only show on "All Zones" view */}
         {activeTab === 'all' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="card p-6 bg-accent-red/10 border-accent-red/30">
               <div className="flex items-center gap-3 mb-2">
                 <Target className="w-6 h-6 text-accent-red" />
@@ -89,6 +90,19 @@ export function ContestedZonesPage() {
               </p>
               <p className="text-xs text-gray-500">
                 Best for: Compboard farming with timers
+              </p>
+            </div>
+
+            <div className="card p-6 bg-accent-blue/10 border-accent-blue/30">
+              <div className="flex items-center gap-3 mb-2">
+                <Gem className="w-6 h-6 text-accent-blue" />
+                <h3 className="font-bold text-lg">Align & Mine</h3>
+              </div>
+              <p className="text-sm text-gray-400 mb-2">
+                Mine hole implosion timer • 2-hour collapse window
+              </p>
+              <p className="text-xs text-gray-500">
+                Best for: Carinite mining runs
               </p>
             </div>
           </div>
@@ -172,7 +186,7 @@ export function ContestedZonesPage() {
             <div className="flex items-start gap-3">
               <div className="w-6 h-6 rounded-full bg-accent-green text-dark-950 flex items-center justify-center font-bold flex-shrink-0">1</div>
               <div>
-                <strong className="text-white">Start the timer</strong> when you activate a printer or vault
+                <strong className="text-white">Start the timer</strong> when you activate a printer, vault, or mine hole
               </div>
             </div>
             <div className="flex items-start gap-3">

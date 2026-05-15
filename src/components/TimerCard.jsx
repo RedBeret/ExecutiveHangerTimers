@@ -6,7 +6,19 @@ import { TimerRing } from './CircularProgress'
 import { useCountdownTimer } from '../hooks/useCountdownTimer'
 import { useAnnouncer } from '../hooks/useAnnouncer'
 
-export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
+export function TimerCard({
+  id,
+  label,
+  duration = 30 * 60 * 1000,
+  durationLabel,
+  readyLabel,
+  activeLabel,
+  warningLabel,
+  readyAtLabel,
+  warningMessage,
+  startLabel,
+  startShortLabel,
+}) {
   const { t } = useTranslation()
   const { status, start, reset } = useCountdownTimer(id, duration)
 
@@ -21,19 +33,19 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
   let borderColor = 'border-dark-700'
   let bgGradient = ''
   let statusBadgeClass = 'bg-accent-green/20 text-accent-green'
-  let statusText = t('timers.ready')
+  let statusText = readyLabel || t('timers.ready')
 
   if (status.isActive) {
     if (isWarning) {
       borderColor = 'border-amber-500/50'
       bgGradient = 'bg-gradient-radial-yellow'
       statusBadgeClass = 'bg-amber-500/30 text-amber-300 animate-pulse'
-      statusText = t('timers.almostReady')
+      statusText = warningLabel || t('timers.almostReady')
     } else {
       borderColor = 'border-accent-red/30'
       bgGradient = 'bg-gradient-radial-red'
       statusBadgeClass = 'bg-accent-red/20 text-accent-red'
-      statusText = t('timers.coolingDown')
+      statusText = activeLabel || t('timers.coolingDown')
     }
   }
 
@@ -59,7 +71,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             <div className="flex items-center gap-2">
               <Clock className="w-3 h-3 text-gray-500" aria-hidden="true" />
               <span className="text-xs text-gray-500">
-                {t('timers.minCooldown', { minutes: duration / 1000 / 60 })}
+                {durationLabel || t('timers.minCooldown', { minutes: duration / 1000 / 60 })}
               </span>
             </div>
           </div>
@@ -79,7 +91,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
 
         {/* Timer Display with Progress Ring */}
         <div
-          className="flex items-center justify-between gap-4 mb-4"
+          className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4 mb-4"
           role="timer"
           aria-label={`${label} countdown`}
         >
@@ -95,7 +107,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             />
             {status.isActive && (
               <div className="mt-2 text-sm text-gray-400">
-                {t('timers.readyAt')} <span className="text-accent-blue font-semibold">
+                {readyAtLabel || t('timers.readyAt')} <span className="text-accent-blue font-semibold">
                   {new Date(Date.now() + status.timeRemaining).toLocaleTimeString([], {
                     hour: 'numeric',
                     minute: '2-digit',
@@ -105,12 +117,12 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
               </div>
             )}
           </div>
-          <div aria-hidden="true">
+          <div className="self-center xl:self-auto" aria-hidden="true">
             <TimerRing
               timeRemaining={status.isActive ? status.timeRemaining : duration}
               totalTime={duration}
               status={status.isActive ? 'active' : 'ready'}
-              size={90}
+              size={78}
             />
           </div>
         </div>
@@ -124,7 +136,7 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
           >
             <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0" aria-hidden="true" />
             <span className="text-xs text-amber-200 font-medium">
-              {t('timers.printerWarning')}
+              {warningMessage || t('timers.printerWarning')}
             </span>
           </div>
         )}
@@ -147,8 +159,8 @@ export function TimerCard({ id, label, duration = 30 * 60 * 1000 }) {
             `}
           >
             <Play className="w-5 h-5" aria-hidden="true" />
-            <span className="hidden sm:inline">{t('timers.startTimer')}</span>
-            <span className="sm:hidden">{t('timers.start')}</span>
+            <span className="hidden sm:inline">{startLabel || t('timers.startTimer')}</span>
+            <span className="sm:hidden">{startShortLabel || t('timers.start')}</span>
           </button>
           {status.isActive && (
             <button
