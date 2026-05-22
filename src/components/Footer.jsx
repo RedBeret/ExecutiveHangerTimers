@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Heart } from 'lucide-react'
+import { Gift } from 'lucide-react'
 import { SupportModal } from './SupportModal'
 
 export function Footer() {
@@ -25,7 +25,7 @@ export function Footer() {
               onClick={() => setSupportOpen(true)}
               className="flex items-center gap-1.5 text-gray-500 hover:text-accent-green transition-colors"
             >
-              <Heart size={13} />
+              <Gift size={13} />
               <span>{t('footer.support')}</span>
             </button>
             <span className="text-gray-600">v1.0.2</span>

@@ -266,22 +266,22 @@
     "disclaimer": "This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games.",
     "accuracy": "Timer accuracy depends on your system clock and current Star Citizen patch behavior. Use at your own risk.",
     "startHere": "Start Here",
-    "support": "Support"
+    "support": "Got spares?"
   },
   "support": {
-    "title": "Support / Send a Gift",
-    "intro": "Built and maintained by a fellow citizen. Gifts are never expected, but warmly appreciated — fly safe o7",
-    "pledgeTitle": "RSI Pledge Gifts",
-    "pledgeDescription": "Ships, game packages, or other pledge store items can be gifted through your RSI account. Use the email below as the recipient address — RSI sends a claim link that's accepted into the right account.",
-    "pledgeNote": "Sender requirements: RSI account 30+ days old, Two-Step Authentication enabled, paid with cash (not Store Credit), and pledge value under $1,000 USD.",
-    "ingameTitle": "In-Game Gifts",
-    "ingameDescription": "Send aUEC via the in-game mo.Trader app, or hand off items, gear, or ships in person. Use the handle below to coordinate in-game.",
+    "title": "Got Spare Ships or Gear?",
+    "intro": "Not asking for donations — this tool is free and always will be. But if you've got an extra ship sitting in your hangar, gear you're cycling out, or aUEC you'd rather not let rot, I'll happily put it to use. Fellow citizen, glad to fly with stuff someone else passed along.",
+    "pledgeTitle": "Spare Pledges (Ships & Packages)",
+    "pledgeDescription": "Pledge ships and game packages can be gifted through RSI. Send the gift to the email below — RSI emails a claim link that gets accepted into the right account.",
+    "pledgeNote": "RSI requirements on the sender side: account 30+ days old, Two-Step Auth enabled, paid with cash (not Store Credit), pledge value under $1,000 USD.",
+    "ingameTitle": "In-Game Gear & aUEC",
+    "ingameDescription": "Drop aUEC via the mo.Trader app, or hand off gear/ships in person. Use the handle below to find me in-game.",
     "emailLabel": "Gift email",
     "handleLabel": "RSI handle",
     "copy": "Copy",
     "copied": "Copied",
     "close": "Close",
-    "thanks": "Thank you, citizen."
+    "thanks": "Fly safe, citizen o7"
   },
   "common": {
     "loading": "Loading...",
