@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Heart } from 'lucide-react'
+import { SupportModal } from './SupportModal'
 
 export function Footer() {
   const { t } = useTranslation()
+  const [supportOpen, setSupportOpen] = useState(false)
 
   return (
     <footer className="mt-16 border-t border-dark-700">
@@ -17,6 +20,14 @@ export function Footer() {
             <Link to="/guide" className="text-gray-500 hover:text-accent-blue transition-colors">
               {t('footer.startHere')}
             </Link>
+            <button
+              type="button"
+              onClick={() => setSupportOpen(true)}
+              className="flex items-center gap-1.5 text-gray-500 hover:text-accent-green transition-colors"
+            >
+              <Heart size={13} />
+              <span>{t('footer.support')}</span>
+            </button>
             <span className="text-gray-600">v1.0.2</span>
           </div>
         </div>
@@ -30,6 +41,8 @@ export function Footer() {
           </p>
         </div>
       </div>
+
+      <SupportModal open={supportOpen} onClose={() => setSupportOpen(false)} />
     </footer>
   )
 }

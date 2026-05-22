@@ -265,7 +265,23 @@
     "communityTool": "Community timer tool for Star Citizen Pyro and Contested Zone players",
     "disclaimer": "This is an unofficial fan-made tool, not affiliated with or endorsed by Cloud Imperium Games.",
     "accuracy": "Timer accuracy depends on your system clock and current Star Citizen patch behavior. Use at your own risk.",
-    "startHere": "Start Here"
+    "startHere": "Start Here",
+    "support": "Support"
+  },
+  "support": {
+    "title": "Support / Send a Gift",
+    "intro": "Built and maintained by a fellow citizen. Gifts are never expected, but warmly appreciated — fly safe o7",
+    "pledgeTitle": "RSI Pledge Gifts",
+    "pledgeDescription": "Ships, game packages, or other pledge store items can be gifted through your RSI account. Use the email below as the recipient address — RSI sends a claim link that's accepted into the right account.",
+    "pledgeNote": "Sender requirements: RSI account 30+ days old, Two-Step Authentication enabled, paid with cash (not Store Credit), and pledge value under $1,000 USD.",
+    "ingameTitle": "In-Game Gifts",
+    "ingameDescription": "Send aUEC via the in-game mo.Trader app, or hand off items, gear, or ships in person. Use the handle below to coordinate in-game.",
+    "emailLabel": "Gift email",
+    "handleLabel": "RSI handle",
+    "copy": "Copy",
+    "copied": "Copied",
+    "close": "Close",
+    "thanks": "Thank you, citizen."
   },
   "common": {
     "loading": "Loading...",
