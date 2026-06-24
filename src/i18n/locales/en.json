@@ -21,7 +21,7 @@
         "noLogin": "No login or account required"
       },
       "howItWorks": "How It Works",
-      "howItWorksText": "All timers run in your browser using React and JavaScript. The Executive Hangar timer calculates the current cycle phase from the known 185-minute cycle. For Alpha 4.8 Contested Zone runs, use the manual timers when your team activates printers, opens vault doors, or starts Align & Mine Carinite cave timing. Your timers and checklist are saved in local storage, so they persist even if you close the page.",
+      "howItWorksText": "All timers run in your browser using React and JavaScript. The Executive Hangar timer calculates the current cycle phase from the known 185-minute cycle. For Alpha 4.8.2 Contested Zone runs, use the manual timers when your team activates printers, opens vault doors, or starts Align & Mine Carinite cave timing. Your timers and checklist are saved in local storage, so they persist even if you close the page.",
       "credits": "Credits & Sources",
       "creditsList": {
         "algorithm": "<strong>Timer Data:</strong> Community research & testing",
@@ -85,7 +85,7 @@
     "timeRemaining": "Time Remaining",
     "expired": "EXPIRED",
     "deleteTimer": "Delete timer",
-    "cooldownInfo": "All Keycard Printers (30min) • Alpha 4.8 lists in-game printer timers as unreliable, so start manual timers when your team activates a printer.",
+    "cooldownInfo": "All Keycard Printers (30min) • Alpha 4.8.2 lists in-game printer timers as unreliable, so start manual timers when your team activates a printer.",
     "tabs": {
       "all": "All Zones"
     },
@@ -252,7 +252,7 @@
     },
     "site": {
       "title": "What This Site Does",
-      "description": "This is a Star Citizen Contested Zone timer tool, not a walkthrough. It helps you track keycard printer cooldowns, vault door cycles, the Executive Hangar schedule, Align & Mine Carinite cave openings, and compboard collection progress. Alpha 4.8 changed enough CZ behavior that manual timers are worth keeping open during Pyro runs.",
+      "description": "This is a Star Citizen Contested Zone timer tool, not a walkthrough. It helps you track keycard printer cooldowns, vault door cycles, the Executive Hangar schedule, Align & Mine Carinite cave openings, and compboard collection progress. Alpha 4.8.2 changed enough CZ behavior that manual timers are worth keeping open during Pyro runs.",
       "localStorage": "All timers are local to your device and browser — nothing is sent to a server. If you clear your browser data, your timers reset.",
       "goToDashboard": "Go to Dashboard"
     },
