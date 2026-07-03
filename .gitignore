@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Private planning / research docs (keep local only)
+# Private planning / research docs and notes (keep local only)
 docs/
 
 # Editor directories and files
