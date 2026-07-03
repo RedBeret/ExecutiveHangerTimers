@@ -26,5 +26,3 @@ docs/
 *.sln
 *.sw?
 
-# Internal docs / strategy (kept private, not published)
-docs/
