@@ -62,7 +62,8 @@
       "tip": "<strong>Tip:</strong> For best accuracy, sync the moment you see the phase change. The timer will remember your sync across browser sessions."
     },
     "syncActive": "Manual Sync Active:",
-    "offsetApplied": "Offset of {{offset}} seconds applied"
+    "offsetApplied": "Offset of {{offset}} seconds applied",
+    "clockSkew": "Your device clock appears to be off by about {{seconds}} seconds - timers may be inaccurate. Enable automatic time sync in your OS settings."
   },
   "phases": {
     "green": "GREEN PHASE",
@@ -205,7 +206,7 @@
       "title": "The Zones",
       "checkmate": {
         "name": "Checkmate Station",
-        "item1": "Blue keycard printers (15min)",
+        "item1": "Blue keycard printers (30min)",
         "item2": "Red keycard printers (30min)",
         "item3": "Compboards #1, #2, #3",
         "item4": "Moderate layout — good starting zone"
@@ -275,5 +276,9 @@
     "delete": "Delete",
     "reset": "Reset",
     "confirm": "Confirm"
+  },
+  "docTitle": {
+    "open": "OPEN",
+    "closed": "CLOSED"
   }
 }

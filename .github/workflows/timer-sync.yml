@@ -1,0 +1,58 @@
+name: Timer Sync
+
+# Auto-resync the Executive Hangar cycle constants from exec.xyxyll.com.
+# Patches land roughly weekly, so 4 checks/day picks up a resync within hours.
+# If parsing fails (upstream format change), the job fails and GitHub emails
+# the repo owner - the existing config is never overwritten with bad data.
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: timer-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: npm
+
+      - name: Sync timer config from exec.xyxyll.com
+        id: sync
+        run: node scripts/sync-timer-config.mjs
+
+      - name: Commit updated config
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/timer-config.json
+          git commit -m "resync"
+          git push
+
+      - name: Install dependencies
+        if: steps.sync.outputs.changed == 'true'
+        run: npm ci
+
+      - name: Build
+        if: steps.sync.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        if: steps.sync.outputs.changed == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

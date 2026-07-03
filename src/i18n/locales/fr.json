@@ -62,7 +62,8 @@
       "tip": "<strong>Astuce:</strong> Pour une meilleure précision, synchronisez au moment où vous voyez le changement de phase. Le minuteur mémorisera votre synchronisation entre les sessions du navigateur."
     },
     "syncActive": "Synchronisation manuelle active:",
-    "offsetApplied": "Décalage de {{offset}} secondes appliqué"
+    "offsetApplied": "Décalage de {{offset}} secondes appliqué",
+    "clockSkew": "L'horloge de votre appareil est décalée d'environ {{seconds}} secondes - les minuteurs peuvent être imprécis. Activez la synchronisation automatique de l'heure dans votre système."
   },
   "phases": {
     "green": "PHASE VERTE",
@@ -205,7 +206,7 @@
       "title": "Les Zones",
       "checkmate": {
         "name": "Station Checkmate",
-        "item1": "Imprimantes de carte-clé bleue (15min)",
+        "item1": "Imprimantes de carte-clé bleue (30min)",
         "item2": "Imprimantes de carte-clé rouge (30min)",
         "item3": "Compboards #1, #2, #3",
         "item4": "Disposition modérée — bonne zone pour débuter"
@@ -275,5 +276,9 @@
     "delete": "Supprimer",
     "reset": "Réinitialiser",
     "confirm": "Confirmer"
+  },
+  "docTitle": {
+    "open": "OUVERT",
+    "closed": "FERMÉ"
   }
 }

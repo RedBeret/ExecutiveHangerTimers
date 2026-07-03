@@ -62,7 +62,8 @@
       "tip": "<strong>Suggerimento:</strong> Per la migliore precisione, sincronizza nel momento in cui vedi il cambio di fase. Il timer ricorderà la tua sincronizzazione tra le sessioni del browser."
     },
     "syncActive": "Sincronizzazione Manuale Attiva:",
-    "offsetApplied": "Offset di {{offset}} secondi applicato"
+    "offsetApplied": "Offset di {{offset}} secondi applicato",
+    "clockSkew": "L'orologio del tuo dispositivo è sfasato di circa {{seconds}} secondi - i timer potrebbero essere imprecisi. Attiva la sincronizzazione automatica dell'ora nel sistema."
   },
   "phases": {
     "green": "FASE VERDE",
@@ -205,7 +206,7 @@
       "title": "Le Zone",
       "checkmate": {
         "name": "Stazione Checkmate",
-        "item1": "Stampanti carta chiave blu (15min)",
+        "item1": "Stampanti carta chiave blu (30min)",
         "item2": "Stampanti carta chiave rossa (30min)",
         "item3": "Compboards #1, #2, #3",
         "item4": "Layout moderato — buona zona di partenza"
@@ -275,5 +276,9 @@
     "delete": "Elimina",
     "reset": "Ripristina",
     "confirm": "Conferma"
+  },
+  "docTitle": {
+    "open": "APERTO",
+    "closed": "CHIUSO"
   }
 }

@@ -3,6 +3,7 @@ import { RefreshCw, Rocket, Globe, Clock, ChevronDown, ChevronUp } from 'lucide-
 import { useTranslation } from 'react-i18next'
 import { useExecTimer } from '../hooks/useExecTimer'
 import { PHASES, formatClockTime } from '../utils/timerCalculations'
+import { getClockSkewMs } from '../utils/timerConfig'
 import { PhaseBadge } from './PhaseBadge'
 import { LEDGrid } from './LEDIndicator'
 
@@ -10,6 +11,10 @@ export function ExecutiveHangar() {
   const { t } = useTranslation()
   const { status, offset, resetOffset, syncToPhase } = useExecTimer()
   const [showSyncPanel, setShowSyncPanel] = useState(false)
+
+  // Estimated from the config-fetch Date header; only surface clearly-wrong clocks
+  const clockSkewMs = getClockSkewMs()
+  const clockLooksWrong = Math.abs(clockSkewMs) > 30 * 1000
 
   if (!status) {
     return (
@@ -175,6 +180,14 @@ export function ExecutiveHangar() {
               </div>
             )}
           </div>
+
+          {/* Device Clock Skew Warning */}
+          {clockLooksWrong && (
+            <div className="p-4 bg-amber-500/10 border-2 border-amber-500/30 rounded-xl text-sm text-amber-200 flex items-center gap-3">
+              <Clock className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <div>{t('execHangar.clockSkew', { seconds: Math.round(Math.abs(clockSkewMs) / 1000) })}</div>
+            </div>
+          )}
 
           {/* Sync Offset Warning */}
           {offset !== 0 && (
