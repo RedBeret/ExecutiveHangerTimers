@@ -1,14 +1,8 @@
 // Timer calculation utilities for Executive Hangar and other timers
 
-// Executive Hangar Constants (exact values from exec.xyxyll.com)
-// Updated: Jul 2, 2026 (resync against exec.xyxyll.com)
-const OPEN_DURATION = 3900093 // 65.002 minutes - GREEN/ONLINE phase
-const CLOSE_DURATION = 7200173 // 120.003 minutes - RED/OFFLINE phase
-const CYCLE_DURATION = OPEN_DURATION + CLOSE_DURATION // 11100266 ms = 185.004 minutes
-
-// Reference epoch: Initial open time when GREEN/ONLINE phase started
-// 2026-07-01T09:42:31.076-04:00 (EDT) = 2026-07-01T13:42:31.076Z (UTC)
-const INITIAL_OPEN_TIME = 1782913351076
+// Executive Hangar cycle constants live in timerConfig.js (baked-in fallback
+// + runtime heartbeat that re-fetches /timer-config.json)
+import { getExecConfig } from './timerConfig'
 
 export const PHASES = {
   RED: 'RED',
@@ -16,6 +10,13 @@ export const PHASES = {
 }
 
 export function calculateExecStatus(offsetSeconds = 0) {
+  const {
+    initialOpenTime: INITIAL_OPEN_TIME,
+    openDuration: OPEN_DURATION,
+    closeDuration: CLOSE_DURATION,
+    cycleDuration: CYCLE_DURATION,
+  } = getExecConfig()
+
   const now = Date.now() + (offsetSeconds * 1000)
   const elapsedTimeSinceInitialOpen = now - INITIAL_OPEN_TIME
   const timeInCurrentCycle = elapsedTimeSinceInitialOpen % CYCLE_DURATION
@@ -88,15 +89,15 @@ export function formatTime(milliseconds) {
   return `${minutes}:${String(seconds).padStart(2, '0')}`
 }
 
-// Format a timestamp as a clock time in user's local timezone
+// Format a timestamp as a clock time in user's local timezone.
+// No hour12 override: the locale decides 12h vs 24h (most of the
+// international audience reads 24-hour time).
 export function formatClockTime(timestamp) {
   const date = new Date(timestamp)
 
-  // Format time in user's local timezone (12-hour format with AM/PM)
   return date.toLocaleTimeString([], {
     hour: 'numeric',
     minute: '2-digit',
-    hour12: true
   })
 }
 

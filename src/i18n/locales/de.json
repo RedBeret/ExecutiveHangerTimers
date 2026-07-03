@@ -62,7 +62,8 @@
       "tip": "<strong>Tipp:</strong> Für beste Genauigkeit, synchronisiere in dem Moment, in dem du den Phasenwechsel siehst. Der Timer merkt sich deine Synchronisation über Browser-Sitzungen hinweg."
     },
     "syncActive": "Manuelle Synchronisation aktiv:",
-    "offsetApplied": "Versatz von {{offset}} Sekunden angewendet"
+    "offsetApplied": "Versatz von {{offset}} Sekunden angewendet",
+    "clockSkew": "Deine Systemuhr weicht um ca. {{seconds}} Sekunden ab - Timer können ungenau sein. Aktiviere die automatische Zeitsynchronisation in deinem Betriebssystem."
   },
   "phases": {
     "green": "GRÜNE PHASE",
@@ -205,7 +206,7 @@
       "title": "Die Zonen",
       "checkmate": {
         "name": "Checkmate Station",
-        "item1": "Blaue Schlüsselkarten-Drucker (15min)",
+        "item1": "Blaue Schlüsselkarten-Drucker (30min)",
         "item2": "Rote Schlüsselkarten-Drucker (30min)",
         "item3": "Compboards #1, #2, #3",
         "item4": "Moderates Layout — gute Einstiegszone"
@@ -275,5 +276,9 @@
     "delete": "Löschen",
     "reset": "Zurücksetzen",
     "confirm": "Bestätigen"
+  },
+  "docTitle": {
+    "open": "OFFEN",
+    "closed": "GESCHLOSSEN"
   }
 }

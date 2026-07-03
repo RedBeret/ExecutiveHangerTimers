@@ -62,7 +62,8 @@
       "tip": "<strong>提示:</strong> 为获得最佳准确度,请在看到阶段变化的瞬间同步。计时器将在浏览器会话之间记住您的同步。"
     },
     "syncActive": "手动同步已激活:",
-    "offsetApplied": "已应用 {{offset}} 秒偏移"
+    "offsetApplied": "已应用 {{offset}} 秒偏移",
+    "clockSkew": "您的设备时钟偏差约 {{seconds}} 秒，计时器可能不准确。请在系统设置中开启自动时间同步。"
   },
   "phases": {
     "green": "绿色阶段",
@@ -205,7 +206,7 @@
       "title": "各区域",
       "checkmate": {
         "name": "Checkmate站",
-        "item1": "蓝色钥匙卡打印机(15分钟)",
+        "item1": "蓝色钥匙卡打印机(30分钟)",
         "item2": "红色钥匙卡打印机(30分钟)",
         "item3": "Compboard #1、#2、#3",
         "item4": "中等布局——良好的入门区域"
@@ -275,5 +276,9 @@
     "delete": "删除",
     "reset": "重置",
     "confirm": "确认"
+  },
+  "docTitle": {
+    "open": "开放",
+    "closed": "关闭"
   }
 }

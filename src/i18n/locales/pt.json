@@ -62,7 +62,8 @@
       "tip": "<strong>Dica:</strong> Para melhor precisão, sincronize no momento em que você ver a mudança de fase. O temporizador lembrará sua sincronização entre sessões do navegador."
     },
     "syncActive": "Sincronização Manual Ativa:",
-    "offsetApplied": "Deslocamento de {{offset}} segundos aplicado"
+    "offsetApplied": "Deslocamento de {{offset}} segundos aplicado",
+    "clockSkew": "O relógio do seu dispositivo está com desvio de cerca de {{seconds}} segundos - os temporizadores podem ficar imprecisos. Ative a sincronização automática de hora no sistema."
   },
   "phases": {
     "green": "FASE VERDE",
@@ -205,7 +206,7 @@
       "title": "As Zonas",
       "checkmate": {
         "name": "Estação Checkmate",
-        "item1": "Impressoras de cartão azul (15min)",
+        "item1": "Impressoras de cartão azul (30min)",
         "item2": "Impressoras de cartão vermelho (30min)",
         "item3": "Compboards #1, #2, #3",
         "item4": "Layout moderado — boa zona inicial"
@@ -275,5 +276,9 @@
     "delete": "Excluir",
     "reset": "Redefinir",
     "confirm": "Confirmar"
+  },
+  "docTitle": {
+    "open": "ABERTO",
+    "closed": "FECHADO"
   }
 }

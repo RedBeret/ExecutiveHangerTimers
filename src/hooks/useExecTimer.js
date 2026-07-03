@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { calculateExecStatus } from '../utils/timerCalculations'
+import { getExecConfig } from '../utils/timerConfig'
 import { storage } from '../utils/storage'
 
 export function useExecTimer() {
@@ -33,10 +34,11 @@ export function useExecTimer() {
 
   // Sync to a specific phase starting NOW
   const syncToPhase = (targetPhase) => {
-    const OPEN_DURATION = 3900496 // 65 minutes - GREEN phase
-    const CLOSE_DURATION = 7200917 // 120 minutes - RED phase
-    const CYCLE_DURATION = OPEN_DURATION + CLOSE_DURATION
-    const INITIAL_OPEN_TIME = 1760636604402
+    const {
+      initialOpenTime: INITIAL_OPEN_TIME,
+      openDuration: OPEN_DURATION,
+      cycleDuration: CYCLE_DURATION,
+    } = getExecConfig()
 
     const now = Date.now()
     const timeSinceInitial = now - INITIAL_OPEN_TIME
