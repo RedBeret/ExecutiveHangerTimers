@@ -83,6 +83,9 @@ async function fetchConfig() {
     if (typeof data.roomApi === 'string' && /^https:\/\/[\w./-]+$/.test(data.roomApi)) {
       roomApi = data.roomApi.replace(/\/+$/, '')
     }
+
+    // Let listeners (e.g. the Squad Sync panel) know fresh config arrived
+    window.dispatchEvent(new CustomEvent('cz-timer-config'))
   } catch {
     // Offline or fetch blocked - keep the current (baked-in or last good) config
   }

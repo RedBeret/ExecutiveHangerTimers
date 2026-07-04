@@ -22,6 +22,10 @@ const state = {
   members: 0,
 }
 
+// Re-notify subscribers when the config heartbeat delivers the backend URL,
+// so the Squad Sync panel appears as soon as rooms become available
+window.addEventListener('cz-timer-config', () => emit())
+
 let ws = null
 let listeners = new Set()
 let reconnectAttempt = 0

@@ -26,3 +26,7 @@ docs/
 *.sln
 *.sw?
 
+
+# Playwright artifacts
+test-results/
+playwright-report/
