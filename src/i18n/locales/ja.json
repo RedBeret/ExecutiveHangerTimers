@@ -63,7 +63,21 @@
     },
     "syncActive": "手動同期が有効:",
     "offsetApplied": "{{offset}}秒のオフセットが適用されました",
-    "clockSkew": "デバイスの時計が約{{seconds}}秒ずれています。タイマーが不正確になる可能性があります。OSの自動時刻同期を有効にしてください。"
+    "clockSkew": "デバイスの時計が約{{seconds}}秒ずれています。タイマーが不正確になる可能性があります。OSの自動時刻同期を有効にしてください。",
+    "notifications": {
+      "on": "通知オン",
+      "off": "通知オフ",
+      "blocked": "通知ブロック中",
+      "blockedHint": "ブラウザの設定で通知がブロックされています。このサイトの通知を許可すると、ハンガーの通知を受け取れます。"
+    }
+  },
+  "notifications": {
+    "hangarOpenTitle": "エグゼクティブハンガーが開放中",
+    "hangarOpenBody": "ハンガーが開放されました。閉鎖まで約65分です。",
+    "hangarClosedTitle": "エグゼクティブハンガーが閉鎖",
+    "hangarClosedBody": "ハンガーは閉鎖中です。次の開放5分前に通知します。",
+    "hangarSoonTitle": "あと5分でハンガーが開放",
+    "hangarSoonBody": "エグゼクティブハンガーがまもなく開放されます。準備してください。"
   },
   "phases": {
     "green": "緑フェーズ",

@@ -63,7 +63,21 @@
     },
     "syncActive": "Synchronisation manuelle active:",
     "offsetApplied": "Décalage de {{offset}} secondes appliqué",
-    "clockSkew": "L'horloge de votre appareil est décalée d'environ {{seconds}} secondes - les minuteurs peuvent être imprécis. Activez la synchronisation automatique de l'heure dans votre système."
+    "clockSkew": "L'horloge de votre appareil est décalée d'environ {{seconds}} secondes - les minuteurs peuvent être imprécis. Activez la synchronisation automatique de l'heure dans votre système.",
+    "notifications": {
+      "on": "Alertes activées",
+      "off": "Alertes désactivées",
+      "blocked": "Alertes bloquées",
+      "blockedHint": "Les notifications sont bloquées dans les paramètres de votre navigateur. Autorisez-les pour ce site afin de recevoir les alertes du hangar."
+    }
+  },
+  "notifications": {
+    "hangarOpenTitle": "Le Hangar Exécutif est OUVERT",
+    "hangarOpenBody": "Le hangar vient d'ouvrir — vous avez environ 65 minutes avant sa fermeture.",
+    "hangarClosedTitle": "Hangar Exécutif fermé",
+    "hangarClosedBody": "Le hangar est fermé. Vous recevrez une alerte 5 minutes avant sa réouverture.",
+    "hangarSoonTitle": "Le hangar ouvre dans 5 minutes",
+    "hangarSoonBody": "Le Hangar Exécutif est sur le point d'ouvrir — mettez-vous en position."
   },
   "phases": {
     "green": "PHASE VERTE",

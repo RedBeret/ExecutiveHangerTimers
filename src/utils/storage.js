@@ -5,6 +5,7 @@ const STORAGE_KEYS = {
   COMPBOARDS: 'pyro_compboards',
   EXEC_OFFSET: 'pyro_exec_offset',
   VAULT_SYNC: 'pyro_vault_sync',
+  NOTIFY_HANGAR: 'pyro_notify_hangar',
 }
 
 export const storage = {
@@ -100,5 +101,23 @@ export const storage = {
 
   clearVaultSync() {
     localStorage.removeItem(STORAGE_KEYS.VAULT_SYNC)
+  },
+
+  // Hangar notification opt-in (default off)
+  saveNotifyHangar(enabled) {
+    try {
+      localStorage.setItem(STORAGE_KEYS.NOTIFY_HANGAR, enabled ? 'true' : 'false')
+    } catch (error) {
+      console.error('Error saving notification preference:', error)
+    }
+  },
+
+  loadNotifyHangar() {
+    try {
+      return localStorage.getItem(STORAGE_KEYS.NOTIFY_HANGAR) === 'true'
+    } catch (error) {
+      console.error('Error loading notification preference:', error)
+      return false
+    }
   },
 }

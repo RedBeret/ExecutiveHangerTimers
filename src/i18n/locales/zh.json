@@ -63,7 +63,21 @@
     },
     "syncActive": "手动同步已激活:",
     "offsetApplied": "已应用 {{offset}} 秒偏移",
-    "clockSkew": "您的设备时钟偏差约 {{seconds}} 秒，计时器可能不准确。请在系统设置中开启自动时间同步。"
+    "clockSkew": "您的设备时钟偏差约 {{seconds}} 秒，计时器可能不准确。请在系统设置中开启自动时间同步。",
+    "notifications": {
+      "on": "提醒已开启",
+      "off": "提醒已关闭",
+      "blocked": "提醒被阻止",
+      "blockedHint": "通知已在浏览器设置中被阻止。请允许本站发送通知以接收机库提醒。"
+    }
+  },
+  "notifications": {
+    "hangarOpenTitle": "行政机库已开放",
+    "hangarOpenBody": "机库刚刚开放——距离关闭约有65分钟。",
+    "hangarClosedTitle": "行政机库已关闭",
+    "hangarClosedBody": "机库已关闭。下次开放前5分钟将提醒您。",
+    "hangarSoonTitle": "机库将在5分钟后开放",
+    "hangarSoonBody": "行政机库即将开放——请就位。"
   },
   "phases": {
     "green": "绿色阶段",

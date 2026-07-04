@@ -63,7 +63,21 @@
     },
     "syncActive": "Manual Sync Active:",
     "offsetApplied": "Offset of {{offset}} seconds applied",
-    "clockSkew": "Your device clock appears to be off by about {{seconds}} seconds - timers may be inaccurate. Enable automatic time sync in your OS settings."
+    "clockSkew": "Your device clock appears to be off by about {{seconds}} seconds - timers may be inaccurate. Enable automatic time sync in your OS settings.",
+    "notifications": {
+      "on": "Alerts On",
+      "off": "Alerts Off",
+      "blocked": "Alerts Blocked",
+      "blockedHint": "Notifications are blocked in your browser settings. Allow them for this site to receive hangar alerts."
+    }
+  },
+  "notifications": {
+    "hangarOpenTitle": "Executive Hangar is OPEN",
+    "hangarOpenBody": "The hangar just opened — you have about 65 minutes before it closes.",
+    "hangarClosedTitle": "Executive Hangar closed",
+    "hangarClosedBody": "The hangar is closed. You'll get an alert 5 minutes before it reopens.",
+    "hangarSoonTitle": "Hangar opens in 5 minutes",
+    "hangarSoonBody": "The Executive Hangar is about to open — get in position."
   },
   "phases": {
     "green": "GREEN PHASE",
