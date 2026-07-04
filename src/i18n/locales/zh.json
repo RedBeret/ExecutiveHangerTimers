@@ -145,6 +145,7 @@
   "led": {
     "label": "LED {{number}}",
     "active": "活动",
+    "closed": "封闭",
     "off": "关闭",
     "statusLights": "机库状态灯",
     "realTimeIndicators": "实时LED指示器",

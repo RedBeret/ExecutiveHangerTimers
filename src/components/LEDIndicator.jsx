@@ -1,6 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { Check, X } from 'lucide-react'
 
+// isOn: true = green (open), false = red (closed), null = empty/off
 export function LEDIndicator({ isOn, number, size = 'md', responsive = false }) {
   const { t } = useTranslation()
   const sizeClasses = {
@@ -10,43 +12,62 @@ export function LEDIndicator({ isOn, number, size = 'md', responsive = false }) 
     xl: 'w-24 h-24',
   }
 
+  const stateKey = isOn === true ? 'led.active' : isOn === false ? 'led.closed' : 'led.off'
+
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="relative">
         {/* Outer glow ring */}
-        {isOn && (
+        {isOn === true && (
           <div className={`
             absolute inset-0 ${sizeClasses[size]} rounded-full
             bg-accent-green blur-xl opacity-60 animate-glow-green
+          `} />
+        )}
+        {isOn === false && (
+          <div className={`
+            absolute inset-0 ${sizeClasses[size]} rounded-full
+            bg-accent-red blur-xl opacity-60 animate-glow-red
           `} />
         )}
 
         {/* LED body */}
         <div className="relative">
           <div
+            role="img"
+            aria-label={`${t('led.label', { number })}: ${t(stateKey)}`}
             className={`
               ${sizeClasses[size]} rounded-full border-3 transition-all duration-500
-              flex items-center justify-center
-              ${isOn
+              relative flex items-center justify-center
+              ${isOn === true
                 ? 'bg-gradient-to-br from-accent-green via-green-400 to-accent-green border-green-300 shadow-2xl shadow-accent-green/80 animate-glow-green'
-                : 'bg-gradient-to-br from-dark-800 to-dark-900 border-dark-600 shadow-inner'
+                : isOn === false
+                  ? 'bg-gradient-to-br from-accent-red via-red-400 to-accent-red border-red-300 shadow-2xl shadow-accent-red/80 animate-glow-red'
+                  : 'bg-gradient-to-br from-dark-800 to-dark-900 border-dark-600 shadow-inner'
               }
             `}
           >
             {/* Inner highlight */}
-            {isOn && (
-              <div className="w-1/3 h-1/3 rounded-full bg-white/40 blur-sm" />
+            {isOn !== null && (
+              <div className="absolute w-1/3 h-1/3 rounded-full bg-white/40 blur-sm" />
+            )}
+            {/* Etched state glyph — redundant shape cue so lit states read without color */}
+            {isOn === true && (
+              <Check className="relative w-1/2 h-1/2 text-green-950/60" strokeWidth={3} aria-hidden="true" />
+            )}
+            {isOn === false && (
+              <X className="relative w-1/2 h-1/2 text-red-950/60" strokeWidth={3} aria-hidden="true" />
             )}
           </div>
         </div>
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <span className={`text-xs sm:text-sm font-mono font-bold ${isOn ? 'text-accent-green' : 'text-gray-600'}`}>
+        <span className={`text-xs sm:text-sm font-mono font-bold ${isOn === true ? 'text-accent-green' : isOn === false ? 'text-accent-red' : 'text-gray-600'}`}>
           {t('led.label', { number })}
         </span>
-        <span className={`text-[10px] sm:text-xs font-medium ${isOn ? 'text-green-400' : 'text-gray-700'}`}>
-          {isOn ? t('led.active') : t('led.off')}
+        <span className={`text-[10px] sm:text-xs font-medium ${isOn === true ? 'text-green-400' : isOn === false ? 'text-red-400' : 'text-gray-700'}`}>
+          {t(stateKey)}
         </span>
       </div>
     </div>
