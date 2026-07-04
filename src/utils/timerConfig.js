@@ -18,6 +18,7 @@ const DESIGN_CLOSE_MS = 120 * 60 * 1000
 
 let config = { ...DEFAULT_CONFIG }
 let clockSkewMs = 0
+let roomApi = ''
 
 export function getExecConfig() {
   return {
@@ -31,6 +32,12 @@ export function getExecConfig() {
 // so only differences well above a few seconds are meaningful.
 export function getClockSkewMs() {
   return clockSkewMs
+}
+
+// Run Room backend URL, delivered via timer-config.json so the backend can
+// move (or be disabled) without rebuilding the site. Empty = rooms unavailable.
+export function getRoomApi() {
+  return roomApi
 }
 
 // Reject configs that are malformed or wildly off the designed cycle,
@@ -72,6 +79,9 @@ async function fetchConfig() {
         openDuration: data.openDuration,
         closeDuration: data.closeDuration,
       }
+    }
+    if (typeof data.roomApi === 'string' && /^https:\/\/[\w./-]+$/.test(data.roomApi)) {
+      roomApi = data.roomApi.replace(/\/+$/, '')
     }
   } catch {
     // Offline or fetch blocked - keep the current (baked-in or last good) config

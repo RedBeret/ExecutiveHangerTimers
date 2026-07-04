@@ -88,7 +88,9 @@ if (
   process.exit(0)
 }
 
+// Spread the current config first so unrelated fields (e.g. roomApi) survive
 const next = {
+  ...current,
   initialOpenTime,
   openDuration,
   closeDuration,

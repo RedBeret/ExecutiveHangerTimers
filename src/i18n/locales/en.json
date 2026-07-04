@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "OPEN",
     "closed": "CLOSED"
+  },
+  "room": {
+    "title": "Squad Sync",
+    "subtitle": "Share keycard and vault timers with your group - no accounts, just a code",
+    "create": "Create Room",
+    "join": "Join",
+    "joinPlaceholder": "Code",
+    "leave": "Leave",
+    "members": "{{count}} in run",
+    "connecting": "Connecting...",
+    "error": "Room not found or connection failed",
+    "copyCode": "Copy room code",
+    "shareHint": "Share this code with your squad. Timers anyone starts appear for everyone. Rooms expire ~10h after the last activity."
   }
 }

@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "OFFEN",
     "closed": "GESCHLOSSEN"
+  },
+  "room": {
+    "title": "Squad-Sync",
+    "subtitle": "Teile Keycard- und Tresor-Timer mit deiner Gruppe - keine Konten, nur ein Code",
+    "create": "Raum erstellen",
+    "join": "Beitreten",
+    "joinPlaceholder": "Code",
+    "leave": "Verlassen",
+    "members": "{{count}} im Run",
+    "connecting": "Verbinde...",
+    "error": "Raum nicht gefunden oder Verbindung fehlgeschlagen",
+    "copyCode": "Raumcode kopieren",
+    "shareHint": "Teile diesen Code mit deinem Squad. Gestartete Timer erscheinen bei allen. Räume verfallen ca. 10 Std. nach der letzten Aktivität."
   }
 }

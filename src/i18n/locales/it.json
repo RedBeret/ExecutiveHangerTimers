@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "APERTO",
     "closed": "CHIUSO"
+  },
+  "room": {
+    "title": "Sincronizzazione squadra",
+    "subtitle": "Condividi i timer di keycard e caveau con il tuo gruppo: niente account, solo un codice",
+    "create": "Crea stanza",
+    "join": "Entra",
+    "joinPlaceholder": "Codice",
+    "leave": "Esci",
+    "members": "{{count}} nella run",
+    "connecting": "Connessione...",
+    "error": "Stanza non trovata o connessione fallita",
+    "copyCode": "Copia codice",
+    "shareHint": "Condividi questo codice con la tua squadra. I timer avviati appaiono a tutti. Le stanze scadono ~10 ore dopo l'ultima attività."
   }
 }

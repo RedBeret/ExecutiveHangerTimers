@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "ABIERTO",
     "closed": "CERRADO"
+  },
+  "room": {
+    "title": "Sincronización de escuadrón",
+    "subtitle": "Comparte los temporizadores de tarjetas y bóveda con tu grupo: sin cuentas, solo un código",
+    "create": "Crear sala",
+    "join": "Unirse",
+    "joinPlaceholder": "Código",
+    "leave": "Salir",
+    "members": "{{count}} en la partida",
+    "connecting": "Conectando...",
+    "error": "Sala no encontrada o conexión fallida",
+    "copyCode": "Copiar código",
+    "shareHint": "Comparte este código con tu escuadrón. Los temporizadores iniciados aparecen para todos. Las salas caducan ~10 h tras la última actividad."
   }
 }

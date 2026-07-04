@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "개방",
     "closed": "폐쇄"
+  },
+  "room": {
+    "title": "스쿼드 동기화",
+    "subtitle": "키카드와 금고 타이머를 팀과 공유 - 계정 없이 코드만으로",
+    "create": "방 만들기",
+    "join": "참가",
+    "joinPlaceholder": "코드",
+    "leave": "나가기",
+    "members": "{{count}}명 참여 중",
+    "connecting": "연결 중...",
+    "error": "방을 찾을 수 없거나 연결에 실패했습니다",
+    "copyCode": "방 코드 복사",
+    "shareHint": "이 코드를 스쿼드와 공유하세요. 누군가 시작한 타이머는 모두에게 표시됩니다. 방은 마지막 활동 후 약 10시간 뒤 만료됩니다."
   }
 }

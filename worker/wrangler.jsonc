@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cztimer-rooms",
+  "main": "src/index.js",
+  "compatibility_date": "2026-06-01",
+  "observability": {
+    "enabled": true
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "ROOM",
+        "class_name": "Room"
+      }
+    ]
+  },
+  // SQLite-backed DO storage (required on the free plan, and the modern default)
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["Room"]
+    }
+  ]
+}

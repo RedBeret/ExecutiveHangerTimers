@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "OUVERT",
     "closed": "FERMÉ"
+  },
+  "room": {
+    "title": "Sync d'escouade",
+    "subtitle": "Partagez les minuteurs de cartes et de coffre avec votre groupe - pas de compte, juste un code",
+    "create": "Créer un salon",
+    "join": "Rejoindre",
+    "joinPlaceholder": "Code",
+    "leave": "Quitter",
+    "members": "{{count}} dans le run",
+    "connecting": "Connexion...",
+    "error": "Salon introuvable ou connexion échouée",
+    "copyCode": "Copier le code",
+    "shareHint": "Partagez ce code avec votre escouade. Les minuteurs lancés apparaissent pour tous. Les salons expirent ~10 h après la dernière activité."
   }
 }

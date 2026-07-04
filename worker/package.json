@@ -1,0 +1,14 @@
+{
+  "name": "cztimer-rooms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Ephemeral squad-sync rooms for CZ Timer",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.107.0"
+  }
+}

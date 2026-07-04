@@ -280,5 +280,18 @@
   "docTitle": {
     "open": "ABERTO",
     "closed": "FECHADO"
+  },
+  "room": {
+    "title": "Sincronização de esquadrão",
+    "subtitle": "Compartilhe os temporizadores de cartões e cofre com seu grupo - sem contas, só um código",
+    "create": "Criar sala",
+    "join": "Entrar",
+    "joinPlaceholder": "Código",
+    "leave": "Sair",
+    "members": "{{count}} na run",
+    "connecting": "Conectando...",
+    "error": "Sala não encontrada ou falha na conexão",
+    "copyCode": "Copiar código",
+    "shareHint": "Compartilhe este código com seu esquadrão. Temporizadores iniciados aparecem para todos. Salas expiram ~10h após a última atividade."
   }
 }

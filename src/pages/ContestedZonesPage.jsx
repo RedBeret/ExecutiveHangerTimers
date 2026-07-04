@@ -3,6 +3,7 @@ import { ContestedZones } from '../components/ContestedZones'
 import { CompboardChecklist } from '../components/CompboardChecklist'
 import { QuickReference } from '../components/QuickReference'
 import { PatchNotice } from '../components/PatchNotice'
+import { RoomPanel } from '../components/RoomPanel'
 import { Swords, Target, Zap, Gem } from 'lucide-react'
 
 const tabs = [
@@ -36,6 +37,9 @@ export function ContestedZonesPage() {
         </div>
 
         <PatchNotice />
+
+        {/* Squad Sync Room */}
+        <RoomPanel />
 
         {/* Location Tabs */}
         <div className="flex flex-wrap gap-2 justify-center">
