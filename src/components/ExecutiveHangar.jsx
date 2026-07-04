@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { RefreshCw, Rocket, Globe, Clock, ChevronDown, ChevronUp } from 'lucide-react'
+import { RefreshCw, Rocket, Globe, Clock, ChevronDown, ChevronUp, Bell, BellOff } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useExecTimer } from '../hooks/useExecTimer'
+import { useHangarNotifications } from '../hooks/useHangarNotifications'
 import { PHASES, formatClockTime } from '../utils/timerCalculations'
 import { getClockSkewMs } from '../utils/timerConfig'
 import { PhaseBadge } from './PhaseBadge'
@@ -10,6 +11,7 @@ import { LEDGrid } from './LEDIndicator'
 export function ExecutiveHangar() {
   const { t } = useTranslation()
   const { status, offset, resetOffset, syncToPhase } = useExecTimer()
+  const notifications = useHangarNotifications(status)
   const [showSyncPanel, setShowSyncPanel] = useState(false)
 
   // Estimated from the config-fetch Date header; only surface clearly-wrong clocks
@@ -125,6 +127,32 @@ export function ExecutiveHangar() {
                 <RefreshCw className="w-4 h-4" />
                 {t('execHangar.resetSync')}
               </button>
+
+              {notifications.supported && (
+                <button
+                  onClick={notifications.toggle}
+                  className={`btn btn-secondary flex items-center gap-2 px-6 py-3 min-h-[48px] hover:scale-105 active:scale-95 transition-all duration-300 ${
+                    notifications.blocked
+                      ? 'text-amber-400 border-amber-500/50'
+                      : notifications.active
+                        ? 'text-accent-green border-accent-green/50'
+                        : ''
+                  }`}
+                  aria-label="Toggle hangar phase notifications"
+                  title={notifications.blocked ? t('execHangar.notifications.blockedHint') : undefined}
+                >
+                  {notifications.active ? (
+                    <Bell className="w-4 h-4" />
+                  ) : (
+                    <BellOff className="w-4 h-4" />
+                  )}
+                  {notifications.blocked
+                    ? t('execHangar.notifications.blocked')
+                    : notifications.active
+                      ? t('execHangar.notifications.on')
+                      : t('execHangar.notifications.off')}
+                </button>
+              )}
 
               <div className="flex-1 text-center sm:text-left">
                 <p className="text-sm text-gray-500">

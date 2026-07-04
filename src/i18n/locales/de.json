@@ -63,7 +63,21 @@
     },
     "syncActive": "Manuelle Synchronisation aktiv:",
     "offsetApplied": "Versatz von {{offset}} Sekunden angewendet",
-    "clockSkew": "Deine Systemuhr weicht um ca. {{seconds}} Sekunden ab - Timer können ungenau sein. Aktiviere die automatische Zeitsynchronisation in deinem Betriebssystem."
+    "clockSkew": "Deine Systemuhr weicht um ca. {{seconds}} Sekunden ab - Timer können ungenau sein. Aktiviere die automatische Zeitsynchronisation in deinem Betriebssystem.",
+    "notifications": {
+      "on": "Alarme an",
+      "off": "Alarme aus",
+      "blocked": "Alarme blockiert",
+      "blockedHint": "Benachrichtigungen sind in den Browser-Einstellungen blockiert. Erlaube sie für diese Seite, um Hangar-Alarme zu erhalten."
+    }
+  },
+  "notifications": {
+    "hangarOpenTitle": "Executive Hangar ist OFFEN",
+    "hangarOpenBody": "Der Hangar hat gerade geöffnet – du hast etwa 65 Minuten, bevor er schließt.",
+    "hangarClosedTitle": "Executive Hangar geschlossen",
+    "hangarClosedBody": "Der Hangar ist geschlossen. Du erhältst 5 Minuten vor der nächsten Öffnung einen Alarm.",
+    "hangarSoonTitle": "Hangar öffnet in 5 Minuten",
+    "hangarSoonBody": "Der Executive Hangar öffnet gleich – bring dich in Position."
   },
   "phases": {
     "green": "GRÜNE PHASE",
