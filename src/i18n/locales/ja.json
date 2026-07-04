@@ -145,6 +145,7 @@
   "led": {
     "label": "LED{{number}}",
     "active": "点灯",
+    "closed": "閉鎖",
     "off": "消灯",
     "statusLights": "ハンガーステータスライト",
     "realTimeIndicators": "リアルタイムLEDインジケーター",

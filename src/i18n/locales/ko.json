@@ -145,6 +145,7 @@
   "led": {
     "label": "LED {{number}}",
     "active": "활성",
+    "closed": "폐쇄",
     "off": "꺼짐",
     "statusLights": "격납고 상태등",
     "realTimeIndicators": "실시간 LED 표시기",

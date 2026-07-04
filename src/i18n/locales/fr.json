@@ -145,6 +145,7 @@
   "led": {
     "label": "LED {{number}}",
     "active": "ACTIF",
+    "closed": "FERMÉ",
     "off": "ÉTEINT",
     "statusLights": "Lumières d'état du hangar",
     "realTimeIndicators": "Indicateurs LED en temps réel",
