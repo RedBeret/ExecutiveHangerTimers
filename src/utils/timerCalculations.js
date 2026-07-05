@@ -2,7 +2,7 @@
 
 // Executive Hangar cycle constants live in timerConfig.js (baked-in fallback
 // + runtime heartbeat that re-fetches /timer-config.json)
-import { getExecConfig } from './timerConfig'
+import { getExecConfig } from './timerConfig.js'
 
 export const PHASES = {
   RED: 'RED',

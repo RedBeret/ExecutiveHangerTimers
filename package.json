@@ -14,7 +14,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test --config test/playwright.config.js",
+    "test:unit": "node --test \"test/unit/**/*.test.mjs\"",
+    "test": "npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
     "i18next": "^25.6.0",
