@@ -5,11 +5,11 @@
 // requires updating that one JSON file — no rebuild, and users pick it up
 // within one heartbeat without refreshing the page.
 
-// Baked-in fallback (resync 2026-07-02 against exec.xyxyll.com)
+// Baked-in fallback (resync 2026-08-27 against exec.xyxyll.com)
 const DEFAULT_CONFIG = {
-  initialOpenTime: 1782913351076, // 2026-07-01T13:42:31.076Z - GREEN phase start
-  openDuration: 3900093, // 65.002 minutes - GREEN/ONLINE phase
-  closeDuration: 7200173, // 120.003 minutes - RED/OFFLINE phase
+  initialOpenTime: 1787767941122, // 2026-08-26T18:12:21.122Z - GREEN phase start
+  openDuration: 3900361, // 65.006 minutes - GREEN/ONLINE phase
+  closeDuration: 7200666, // 120.011 minutes - RED/OFFLINE phase
 }
 
 const HEARTBEAT_MS = 15 * 60 * 1000
